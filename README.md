@@ -1,0 +1,13 @@
+# My blog
+
+[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](/LICENSE)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-lightblue)](/code_of_conduct.md)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+
+
+## Licence
+Licensed under 3-Clause BSD, see [LICENSE](/LICENSE).
+
+## Code of conduct
+I'm committed to providing a friendly, safe, and welcoming environment for all. Please read and
+respect the [code of conduct](/code_of_conduct.md).
