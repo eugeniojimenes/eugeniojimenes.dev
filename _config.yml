@@ -1,8 +1,15 @@
+title: "CallMarx.dev"
+tagline: "Desenvolvedor senior, disléxico e esquerdopata convicto"
+description: "Blog/diário sobre minha relação de \"Credo, que delícia!\" com TI."
+url: "https://callmarx.dev"
+author: "Eugenio A. Jimenes"
+image: "/assets/images/eu.webp"
 language: "pt-BR"
-url: "https://callmarx.dev" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
-title: "CallMarx.dev" # the name of your site, e.g. ACME Corp.
-name: "Eugenio Augusto Jimenes"
+baseurl: ""
+twitter:
+  username: leminski_se
+  card: summary
+
 markdown: kramdown
 highlighter: rouge
 excerpt_separator: <!-- excerpt-end -->
@@ -11,6 +18,7 @@ word_count: 160
 plugins:
   - jekyll-postcss
   - jekyll-paginate-v2
+  - jekyll-seo-tag
 
 postcss:
   cache: false
