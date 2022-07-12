@@ -5,9 +5,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-/* To Do: both syntax-highlight templates are acusing low accessibility in Chromium Lighthouse check. */
-/* @import "assets/css/syntax-hightlight/monokai"; */
-@import "assets/css/syntax-hightlight/native";
+@import "assets/css/syntax-highlight/highcontrast-monokai";
 
 /* image align left */
 .align-left {
