@@ -2,7 +2,7 @@
 layout: post
 title:  "Diário disléxico - Elixir: Aquele clássico apanhadão"
 date:   2021-05-23 18:11:49 -0300
-tags: Elixir Learn
+tags: Elixir
 image: /assets/images/elixir-logo.webp
 image_alt: "Elixir Logo"
 description: >-

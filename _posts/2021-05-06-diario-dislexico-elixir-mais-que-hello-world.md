@@ -2,7 +2,7 @@
 layout: post
 title:  "Diário disléxico - Elixir: Um pouco mais que um \"Hello World\""
 date:   2021-05-06 22:26:09 -0300
-tags: Elixir Learn
+tags: Elixir
 image: /assets/images/elixir-logo.webp
 image_alt: "Elixir Logo"
 description: >-

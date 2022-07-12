@@ -1,7 +1,7 @@
 <turbo-frame id="listing-posts" class="flex flex-col">
   <div class="self-center w-full lg:w-11/12 flex flex-row-reverse sm:flex-row">
-    <h2 class="invisible sm:visible mx-2 font-semibold text-lg md:text-xl lg:text-2xl text-stone-500">Últimas publicações</h2>
-    <div class="invisible sm:visible mt-4 grow border-dashed border-t-2 border-stone-300"></div>
+    <h2 class="hidden sm:block mx-2 font-semibold text-lg md:text-xl lg:text-2xl text-stone-500">Últimas publicações</h2>
+    <div class="hidden sm:block mt-4 grow border-dashed border-t-2 border-stone-300"></div>
     {% if paginator.total_pages > 1 %}
       <div class="inline-flex items-center -space-x-px">
         {% unless paginator.previous_page %}

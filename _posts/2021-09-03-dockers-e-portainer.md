@@ -2,7 +2,7 @@
 layout: post
 title:  "Hoje eu aprendi: Gerenciar dockers locais com Portainer CE"
 date:   2021-09-03 12:09:32 -0300
-tags: Hoje-eu-aprendi Config Docker
+tags: TIL Config Docker
 image: /assets/images/portainer-docker.webp
 image_alt: "Portainer + Docker Logo"
 description: >-

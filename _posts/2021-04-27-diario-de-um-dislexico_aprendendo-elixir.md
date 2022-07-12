@@ -2,7 +2,7 @@
 layout: post
 title:  "Diário de um disléxico: Aprendendo Elixir"
 date:   2021-04-27 20:35:15 -0300
-tags: Elixir Learn
+tags: Elixir
 image: /assets/images/elixir-logo.webp
 image_alt: "Elixir Logo"
 description: >-

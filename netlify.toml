@@ -1,0 +1,9 @@
+[build]
+  command = "bundle exec jekyll build"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "14"
+  NPM_VERSION = "8"
+  JEKYLL_ENV = "production"
+  NODE_ENV = "production"
