@@ -8,7 +8,7 @@ language: "pt-BR"
 baseurl: ""
 twitter:
   username: leminski_se
-  card: summary
+  card: summary_large_image
 
 markdown: kramdown
 highlighter: rouge
@@ -61,10 +61,12 @@ include:
   - _pages
 exclude:
   - .gitignore
+  - .rubocop.yml
   - code_of_conduct.md
   - Gemfile
   - Gemfile.lock
   - LICENSE
+  - netlify.toml
   - node_modules
   - package-lock.json
   - package.json
