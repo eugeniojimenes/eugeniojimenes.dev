@@ -4,6 +4,7 @@ title:  "Tutorial: Rails7, Tailwind e Hotwire - Parte 2"
 date:   2021-12-19 14:42:03 -0300
 tags: Tutorial Rails Ruby Tailwind Hotwire
 image: /assets/images/hotwire-turbo.webp
+image_alt: "Hotwire Turbo Logo"
 description: >-
   Parte 2: Renderização parcial com Hotwire Turbo - Tutorial sobre Rails 7 com esbuild, tailwind e
   Hotwire (Turbo e Stimulus). Como desenvolver um aplicação estilo Kanban, com cards/tarefas e
@@ -97,7 +98,7 @@ Afeta apenas elementos dentro da tag turbo-frame com DOM ID. |  Afeta qualquer t
 **OBS**: Não pretendo utilizar o *Turbo Frames* neste projeto. Talvez eu repense isso para
 aproveitar a funcionalidade de *lazily load*, mas se for o caso adicionarei um post separado sobre
 isso.
-{: .notice--info}
+{: .note-info }
 
 ### Começando apenas com *Turbo Stream*
 Para explicar separadamente o modo *render* `turbo_stream` eu incluí o código desta subparte na
@@ -219,7 +220,7 @@ excluir um *chore* em <http://localhost:3000/chores>{:target="_blank"}, é o seg
 **OBS**: Note que não há um carregamento total da página a cada inclusão ou exclusão, a página é
 recarregada parcialmente via
 [*fetch*](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API/Using_Fetch){:target="_blank"}.
-{: .notice--info}
+{: .note-info }
 
 
 Porém, se você abrir duas janelas de <http://localhost:3000/chores>{:target="_blank"} e incluir ou
@@ -311,13 +312,10 @@ como as outras renderizações parciais. Mantive aqui o `turbo_stream` para sess
 que faz total sentido já que não precisamos limpar o *form* nas outras sessões, inclusive se
 fizermos isso poderemos apagar o *form* de um outro usuário que o está preenchendo e não submeteu
 ainda.
-{: .notice--info}
+{: .note-info }
 
 Pronto! Basta subir o projeto com `bin/dev` e acessar em mais de uma janela
 <http://localhost:3000/chores>{:target="_blank"}, você deve obter este resultado final:
 ![Turbo-Stream with Broadcast](/assets/gifs/turbo-stream--with--broadcast.gif){: .align-center}
 
-<div class="tenor-gif-embed" data-postid="14693686" data-share-method="host" data-aspect-ratio="1.78771" data-width="100%">
-  <a href="https://tenor.com/view/nice-finger-gone-well-done-happy-woohoo-gif-14693686"></a>
-</div>
-<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+![Nice Michael Scott - gif](https://c.tenor.com/S_wekPtfKm4AAAAd/nice-michael-scott.gif){: .align-center}

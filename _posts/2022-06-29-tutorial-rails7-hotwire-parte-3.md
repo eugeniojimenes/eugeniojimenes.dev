@@ -4,6 +4,7 @@ title:  "Tutorial: Rails7, Tailwind e Hotwire - Parte 3"
 date:   2022-06-29 21:34:03 -0300
 tags: Tutorial Rails Ruby Tailwind Hotwire
 image: /assets/images/stimulus-logo.webp
+image_alt: "Hotwire Stimulus Logo"
 description: >-
   Parte 3: Modal para inserção e edição com Stimulus. Rails 7 com esbuild, tailwind e
   Hotwire (Turbo e Stimulus) - Como desenvolver um aplicação estilo Kanban, com cards/tarefas e
@@ -11,6 +12,7 @@ description: >-
 categories: blog
 header:
   og_image: assets/images/stimulus-logo.webp
+
 ---
 
 Na [parte anterior]({% post_url 2021-12-19-tutorial-rails7-hotwire-parte-2 %}){:target="_blank"}
@@ -133,7 +135,7 @@ porque eu espero poder renderizar o *modal* de inserção em qualquer página da
 se trata de Kanban, o usuário provavelmente gostaria de inserir um novo card em qualquer página,
 mas isso poderia ser feito, por exemplo, apenas quando estamos vendo todos os cards, ou seja, em
 "app/views/chores/index.html.erb".
-{: .notice--info}
+{: .note-info }
 
 ### Primeiros passados com Stimulus
 Primeiro gerei um "novo stimulus" no projeto, com seguinte comando e saída:
@@ -584,8 +586,4 @@ instalado e configurado o RSpec. Quem sabe eu faço isso no futuro, não sei ain
 
 Por agora, é isso.
 
-<div class="tenor-gif-embed" data-postid="24697418" data-share-method="host" data-aspect-ratio="1" data-width="100%">
-  <a href="https://tenor.com/view/baby-yoda-love-cute-gif-24697418"></a>
-  <a href="https://tenor.com/search/baby-gifs">Baby GIFs</a>
-</div>
-<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+![Baby Yoda - gif](https://c.tenor.com/JSyRTClMMQAAAAAd/baby-yoda.gif){: .align-center}

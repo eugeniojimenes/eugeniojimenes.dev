@@ -4,6 +4,7 @@ title:  "Busca em texto otimizada com a Gem pg_search - Parte I"
 date:   2021-01-17 22:58:53 -0300
 tags: Ruby Rails Optimization PostgreSQL Config
 image: /assets/images/text-search.webp
+image_alt: "Magnifying glass on a text"
 description: >-
   Destrinchando a funcionalidade “Full Text Searching" do PostgreSQL com a Gem pg_search
   em uma aplicação Ruby on Rails - Parte I
@@ -126,7 +127,7 @@ textsearchdb=# SELECT
 ```
 
 **Obs:** As letras ‘t’ e ‘f’ aqui significam, respectivamente, à *true* e *false*.
-{: .notice--info}
+{: .note-info }
 
 Com a função ```ts_rank``` podemos classificar os resultados da busca, podendo ordenar da mais alta
 para a mais baixa quando buscamos um termo em múltiplos documentos.

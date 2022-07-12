@@ -4,6 +4,7 @@ title:  "Controller magro e model gordo, mas não perca o foco"
 date:   2020-12-17 09:46:13 -0300
 tags: Ruby Rails DesignPatterns
 image: /assets/images/mvc-wiki.webp
+image_alt: "MVC Diagram - Wikipedia"
 description: >-
   Mantra “Skinny Controller, Fat Model”, padrão MVC e conceito DRY. É o velho desfaio do código
   limpo e claro. Veja exemplos em Ruby on Rails.
@@ -104,7 +105,7 @@ buscada, enfim, apenas remove os acentos com *unaccent* do PostgreSQL. Existem i
 de *Full Text Searching*, como indexação léxica, caracteres-coringa, ranqueamento de palavras etc.
 Mas isso é tema para outro momento, ~~quem sabe.~~ &#10144;
 [Busca em texto otimizada com a Gem pg_search]({% post_url 2021-01-17-busca-texto-otimizada-com-pg-search-p1 %}){:target="_blank"}
-{: .notice--info}
+{: .note-info }
 
 ## Sempre bom controlar o colesterol
 

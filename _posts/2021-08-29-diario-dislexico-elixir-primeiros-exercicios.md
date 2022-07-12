@@ -4,6 +4,7 @@ title:  "Diário disléxico - Elixir: Os primeiros exercícios"
 date:   2021-08-29 21:49:12 -0300
 tags: Elixir Learn
 image: /assets/images/elixir-logo.webp
+image_alt: "Elixir Logo"
 description: >-
   Sobre os primeiros exercícios de Elixir do exercism.io
 categories: blog
@@ -26,10 +27,11 @@ agora e o que eu aprendi/utilizei em cada.
 - **Bob**: *Regex* com `String.match?` vs funções auxiliares como `String.trim`,
 `String.downcase` e `String.ends_with?`
 
-## Word Count
+![Gim Gimnasio - gif](https://c.tenor.com/Q7qPxkgvueAAAAAd/gim-gimnasio.gif){: .align-center .img-increase }
 
+## Word Count
 O enunciado pode ser obtido [aqui](https://exercism.org/tracks/elixir/exercises/word-count){:target="_blank"}.
-{: .notice--primary}
+{: .note-info }
 
 Exercício simples, perfeito para aplicar a estrutura *pipe* sem muita dificuldade. Entendi melhor
 o uso de `String.split` que possui um terceiro argumento opcional, com `trim: true` strings vazias
@@ -54,7 +56,7 @@ end
 ## RNA Transcription
 
 O enunciado pode ser obtido [aqui](https://exercism.org/tracks/elixir/exercises/rna-transcription){:target="_blank"}.
-{: .notice--primary}
+{: .note-info }
 
 Aprendi que `?` + `caractere` devolve o seu *codepoint*, além disso podemos usar o acesso de um
 *map* como função com uso de `&`, ou seja, a consulta do valor de uma chave de um *map* pode ser
@@ -88,7 +90,7 @@ end
 ## Nucleotide Count
 
 O enunciado pode ser obtido [aqui](https://exercism.org/tracks/elixir/exercises/nucleotide-count){:target="_blank"}.
-{: .notice--primary}
+{: .note-info }
 
 Além de reaplicar os conceitos de *codepoint* e *map* do problema anterior, foi possível verificar
 como `Enum.reduce` pode trazer uma solução de melhor performance.
@@ -143,7 +145,7 @@ end
 ## Accumulate
 
 O enunciado pode ser obtido [aqui](https://exercism.org/tracks/elixir/exercises/accumulate){:target="_blank"}.
-{: .notice--primary}
+{: .note-info }
 
 Gostei bastante deste exercício. Mesmo tendo uma solução aparentemente direta e simples, pude
 compreender o ganho que temos com a múltipla definição de funções, já que o Elixir distingue cada
@@ -179,7 +181,7 @@ end
 ## Secret Handshake
 
 O enunciado pode ser obtido [aqui](https://exercism.org/tracks/elixir/exercises/secret-handshake){:target="_blank"}.
-{: .notice--primary}
+{: .note-info }
 
 Foi ótimo para relembrar os conceitos de
 [Lógica binária](https://pt.wikipedia.org/wiki/L%C3%B3gica_bin%C3%A1ria){:target="_blank"}. Com a
@@ -225,12 +227,12 @@ end
 **OBS**: Caso ainda o uso de `Enum.reduce/3` esteja confuso para você, recomendo muito a leitura
 [disso](https://inquisitivedeveloper.com/lwm-elixir-31/#enumreduce3){:target="_blank"} para além do
 que explica na [documentação oficial](https://hexdocs.pm/elixir/1.12/Enum.html#reduce/3){:target="_blank"}
-{: .notice--info}
+{: .note-warning }
 
 ## Roman Numerals
 
 O enunciado pode ser obtido [aqui](https://exercism.org/tracks/elixir/exercises/roman-numerals){:target="_blank"}.
-{: .notice--primary}
+{: .note-info }
 
 O divertido mesmo foi descobrir que números romanos possuem uma lógica recursiva de tradução da
 base decimal. Acabei fazendo duas soluções: uma "manual" e outra recursiva (confesso que vi a
@@ -305,7 +307,7 @@ end
 ## Beer Song
 
 O enunciado pode ser obtido [aqui](https://exercism.org/tracks/elixir/exercises/beer-song){:target="_blank"}.
-{: .notice--primary}
+{: .note-info }
 
 Nada muito sofisticado, apenas te "empurra" a conhecer/utilizar `Enum.map_join` e de beber umas com
 os amigos (te odeio Covid).
@@ -355,7 +357,7 @@ end
 ## Bob
 
 O enunciado pode ser obtido [aqui](https://exercism.org/tracks/elixir/exercises/bob){:target="_blank"}.
-{: .notice--primary}
+{: .note-info }
 
 Confesso que dei umas coladinhas em outras soluções para fazer este exercício. Sempre tive uma
 preguiça monumental de apreender profundamente *regex*, no final das contas pode ser solucionado com
@@ -390,7 +392,7 @@ defmodule Bob do
 end
 ```
 
-# Meu aprendizado com Elixir e a trilha do exercism.io
+## Meu aprendizado com Elixir e a trilha do exercism.io
 
 Fiquei encantado com a plataforma. Os exercícios são muito bem feitos e os instrutores que revisam,
 corrigem ou aprovam sua solução, foram todos muito legais. É a polemica pedagogia do "se vira" -
@@ -402,4 +404,4 @@ continuar essa trilha até o final. Todas as minhas soluções e avanços manten
 <https://github.com/callmarx/aprendendo_elixir>{:target="_blank"}.
 
 Por agora, é isso.
-<div class="tenor-gif-embed" data-postid="10835076" data-share-method="host" data-aspect-ratio="1.22293" data-width="100%"><a href="https://tenor.com/view/cat-ignore-gotta-sleep-now-night-gif-10835076"></a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+![cat ignore and gotta sleep - gif](https://c.tenor.com/ZIXvD3e9dt4AAAAS/cat-ignore.gif){: .align-start .img-increase }

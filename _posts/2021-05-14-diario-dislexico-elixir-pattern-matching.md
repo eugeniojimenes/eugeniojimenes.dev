@@ -4,6 +4,7 @@ title:  "Diário disléxico - Elixir: preciso falar sobre \"Pattern Matching\""
 date:   2021-05-14 19:27:21 -0300
 tags: Elixir Learn
 image: /assets/images/elixir-logo.webp
+image_alt: "Elixir Logo"
 description: >-
   Essa parte provavelmente vai parecer confusa e desnecessária, mas confie, "pattern matching" é
   uma característica poderosa do Elixir.
@@ -34,7 +35,7 @@ iex> 4 = x
 **Curiosidade**: Caso queira remover a numeração das linhas e habilitar histórico de comandos para
 o seu ```iex```, consulte este tutorial
 <https://www.toptechskills.com/elixir-phoenix-tutorials-courses/how-to-change-prompt-in-iex-elixir-tutorial-examples/>{:target="_blank"}.
-{: .notice--info}
+{: .note-info }
 
 A atribuição ```x = 3``` ocorre como a maioria das linguagens, mas o que aconteceu com ```3 = x```?
 Retornou ```3``` e não um erro como o caso seguinte, ou seja, foi uma expressão válida. Quando essa
@@ -144,7 +145,7 @@ iex> Greeter1.hello no_name
     iex:2: Greeter1.hello/1
 ```
 **Curiosidade**: O operador ```<>``` é usado para concatenar strings.
-{: .notice--info}
+{: .note-info }
 
 Quando invocamos a função com ```my_cat = %{name: "Nila", age: "16", favorite_hobby: "sleep"}```
 ela "olha" para a chave ```name:``` do *map* e ignora o resto. Como ```no_name = %{age: "35", favorite_hobby: "coding"}```
@@ -225,8 +226,8 @@ iex> Greeter4.hello "Eugenio", "pt"
 ```
 **Obs**: No exemplo, ```defp phrase``` é uma função privada e seu comportamento é o padrão: só pode
 ser invocada internamente do seu escopo, ou seja, dentro de ```defmodule```.
-{: .notice--warning}
+{: .note-warning }
 
 Por agora, é isso.
 
-<div class="tenor-gif-embed" data-postid="8793778" data-share-method="host" data-width="100%" data-aspect-ratio="1.33"><a href="https://tenor.com/view/thumbsup-gif-8793778"></a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+![Thumbsup - gif](https://c.tenor.com/DfgYj_VhPGcAAAAC/thumbsup-%D8%A7%D9%84%D8%A5%D8%A8%D9%87%D8%A7%D9%85.gif){: .align-start}

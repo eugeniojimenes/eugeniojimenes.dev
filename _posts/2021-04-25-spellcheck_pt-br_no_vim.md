@@ -4,6 +4,7 @@ title:  "Hoje eu aprendi: configurar verificador ortográfico PT-BR no editor Vi
 date:   2021-04-25 14:02:53 -0300
 tags: Hoje-eu-aprendi Vim Config
 image: /assets/images/vim-br.webp
+image_alt: "Vim + Reginaldo Rossi"
 description: >-
   Como configurar verificador ortográfico (spellcheck) para português brasileiro no seu vim.
 categories: blog
@@ -33,7 +34,7 @@ $ unzip -x VeroptBRV320AOC.oxt
 ```
 **Obs**: Caso não baixe, dê erro 404, por exemplo, verifique no site do libreoffice se o link não mudou ou
 expirou.
-{: .notice--warning}
+{: .note-warning }
 
 Agora vamos utilizar o próprio **vim** para compilar o arquivo de correção em português brasileiro:
 
@@ -73,4 +74,4 @@ autocmd FileType md,markdown,txt,text, setlocal spell spelllang=pt,en
 ```
 
 Pronto! Minha dislexia agradece.
-<div class="tenor-gif-embed" data-postid="14911721" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/teacher-drinking-beer-dos-equis-gif-14911721"></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+![Dyslexia cure - gif](https://c.tenor.com/Frkh91Ts3i8AAAAC/dyslexia-cure.gif){: .align-center }

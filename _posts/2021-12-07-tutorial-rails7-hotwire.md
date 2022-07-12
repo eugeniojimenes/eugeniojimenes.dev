@@ -4,6 +4,7 @@ title:  "Tutorial: Rails7, Tailwind e Hotwire"
 date:   2021-12-07 17:48:12 -0300
 tags: Tutorial Rails Ruby Tailwind Hotwire
 image: /assets/images/rails7-tailwind-hotwire.webp
+image_alt: "Rails 7 + Tailwind + Hotwire Logo"
 description: >-
   Tutorial sobre Rails 7 com esbuild, tailwind e Hotwire(Turbo e Stimulus). Como desenvolver um
   aplicação estilo Kanban, com cards/tarefas e persistência simultânea via websockets.
@@ -22,7 +23,7 @@ versão 7, recém lançada em modo alfa, em meus projetos pessoais.
 **OBS:** Pretendo escrever alguns artigos sobre minhas cabeçadas com NestJS e Typescript. Alguns
 temas que pretendo abordar é *TypeOrm* com *migrations* e aplicação Multitenant usando PostgreSQL
 RLS.
-{: .notice--info}
+{: .note-info }
 
 ## Objetivo Geral
 Neste tutorial eu pretendo desenvolver (e aprender) utilizando Rails 7, esbuild, Tailwind e Hotwire
@@ -259,7 +260,4 @@ E acesse <http://localhost:3000/> e veja a clássica telinha do Rails.
 ![welcome-rails](/assets/images/welcome-rails.webp){: .align-center}
 
 Por agora, é isso.
-<div class="tenor-gif-embed" data-postid="17519616" data-share-method="host" data-aspect-ratio="1" data-width="100%">
-  <a href="https://tenor.com/view/cat-leaving-leave-oops-bye-gif-17519616"></a>
-</div>
-<script type="text/javascript" async src="https://tenor.com/embed.js"/>
+![cat leaving - gif](https://c.tenor.com/uICGiTPlUpgAAAAd/cat-leaving.gif){: .align-center }

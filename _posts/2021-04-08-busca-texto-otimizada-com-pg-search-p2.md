@@ -4,6 +4,7 @@ title:  "Busca em texto otimizada com a Gem pg_search - Parte II"
 date:   2021-04-08 19:18:53 -0300
 tags: Ruby Rails Optimization PostgreSQL Config
 image: /assets/images/greek-tablet.webp
+image_alt: "Greek Tablet"
 description: >-
   Destrinchando a funcionalidade "Full Text Searching" do PostgreSQL com a Gem pg_search
   em uma aplicação Ruby on Rails - Parte II
@@ -20,8 +21,8 @@ e me comprometi a explicar com um projetinho Ruby on Rails através da Gema
 [PgSearch](https://github.com/Casecommons/pg_search){:target="_blank"}, vamos lá então.
 <!-- excerpt-end -->
 
-<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 74.023%;"><iframe src="https://giphy.com/embed/VbnUQpnihPSIgIXuZv" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen scrolling="no" allow="encrypted-media"></iframe></div>
-<br/>
+![cat notebook - gif](https://c.tenor.com/ogsH7Ailje8AAAAd/cat-funny-cat.gif){: .align-center }
+
 ## Git clone e diverta-se!
 
 O projeto completo está disponível em <https://github.com/callmarx/fts_example>{:target="_blank"}.
@@ -38,7 +39,7 @@ $ make prepare-db
 **Obs**: O comando `make up` ocupa o terminal em questão pois exibe, em tempo real, o log do Rails. 
 Para sair, basta dar CTRL+C; isso interrompe o `rails server`, mas o *container* continuará
 rodando em segundo plano (*background*).
-{: .notice--info}
+{: .note-info }
 
 Você pode testar o desempenho das buscas tanto em requisições completas com
 [cURL](https://curl.se){:target="_blank"}, [Postman](https://www.postman.com){:target="_blank"} ou
@@ -160,7 +161,7 @@ textual.
 - Atualiza todos os artigos para preencher `:tsv` da mesma forma que o *trigger* descrito.
 
 Note que com isto utilizei uma estratégia dupla de otimização: ***tsvector*** + ***GIN index***.
-{: .notice--warning}
+{: .note-warning }
 
 Os métodos de busca estão no model, sendo `.bad_search` implementado com o simples `ilike`
 do SQL e `.good_search` com a gema. O código, disponível em `app/models/article.rb`, é o
@@ -217,11 +218,8 @@ do modelo. Defini em ambas os métodos de busca para quando o argumento for nulo
 de maneira a simplificar a lógica no controller.
 
 ## Resultados
+![mysterious ball - gif](https://c.tenor.com/EEWzvvipqQwAAAAd/mysterious-ball.gif){: .align-center }
 
-<div class="tenor-gif-embed" data-postid="8171427" data-share-method="host" data-width="100%" data-aspect-ratio="1.78494623655914"><a href="https://tenor.com/view/mysterious-mysteriousa-mysteriousb-gif-8171427">Mysterious GIF</a> from <a href="https://tenor.com/search/mysterious-gifs">Mysterious GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-
-<br/>
-<br/>
 Antes de pontuarmos o desempenho, vale lembrar que inflexões de palavras como conjugação verbal,
 gênero, plural etc, não deveria interferir na integridade da busca, ou seja, no nosso contexto com
 essa API, na quantidade de artigos selecionados. Se um usuário busca, por exemplo, por *amendoins*,

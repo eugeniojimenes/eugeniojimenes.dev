@@ -5,6 +5,8 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/* To Do: both syntax-highlight templates are acusing low accessibility in Chromium Lighthouse check. */
+/* @import "assets/css/syntax-hightlight/monokai"; */
 @import "assets/css/syntax-hightlight/native";
 
 /* image align left */
@@ -32,6 +34,19 @@
   margin-right: auto;
 }
 
+.img-increase {
+  width: 50%;
+  height: auto;
+}
+
 .language-plaintext {
   @apply bg-stone-200 rounded-md
+}
+
+.note-info {
+  @apply py-4 px-6 text-sm sm:text-base lg:text-xl bg-sky-100/70 rounded-md
+}
+
+.note-warning {
+  @apply py-4 px-6 text-sm sm:text-base lg:text-xl bg-orange-100/70 rounded-md
 }

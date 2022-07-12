@@ -4,6 +4,7 @@ title:  "Diário disléxico - Elixir: Um pouco mais que um \"Hello World\""
 date:   2021-05-06 22:26:09 -0300
 tags: Elixir Learn
 image: /assets/images/elixir-logo.webp
+image_alt: "Elixir Logo"
 description: >-
   Começando pelo básico: curiosidades, instalação, configuração e o clássico "Hello World".
 categories: blog
@@ -86,7 +87,7 @@ iex> String.split("Duas palavras", " ")
 ```
 **Obs**: Mais a diante explico melhor, e com mais exemplos, as interações do console acima. Caso
 esteja perdido ~~como eu fiquei~~ para sair do ```iex```, basta dar CTRL+C duas vezes.
-{: .notice--warning}
+{: .note-warning }
 
 Existem diversas funcionalidades contempladas pelo ```mix``` como podemos ver em
 <https://hexdocs.pm/mix/Mix.html>{:target="_blank"}. Para esta primeira parte utilizei para criar
@@ -119,7 +120,7 @@ versão.
 **Curiosidade**: Arquivos de extensão ```.ex``` são compilados pelo Elixir para arquivos ```.beam```,
 que é o *bytecode* interpretado pela máquina virtual do Erlang, enquanto os de
 extensão ```.exs``` rodam como *script*, ou seja, compilados e disponibilizados em memória RAM.
-{: .notice--info}
+{: .note-info }
 
 ## Um pouco sobre tipos de dados e operações básicas
 
@@ -145,7 +146,7 @@ iex> rem 4, 2
 **Curiosidade**: Podemos notar que a divisão com ```/``` retorna um *float*, mesmo sendo inteira.
 Alguns funções gerais já são disponibilizadas globalmente e, da mesma forma que o Ruby, os
 parenteses de uma chamada de função não é obrigatório.
-{: .notice--info}
+{: .note-info }
 
 Os tipos básicos de dados são: *integers*, *floats*, *strings*, *booleans*, *atoms*, *lists*,
 *tuples* e *maps*. Suporta também notações de atalho para inserir números binários, octais e
@@ -217,7 +218,7 @@ iex> byte_size("I'm a binary guy")
 **Curiosidade**: Através de ```IO.puts``` podemos ver a saída de uma *string* com a quebra literal
 de linha. O módulo ```IO``` traz diversas funções de entrada e saída - *Input & Output*, irei
 abordar mais sobre isso nos próximos posts.
-{: .notice--info}
+{: .note-info }
 
 Sobre *lists*, *tuples* e *maps* eu pretendo explicar mais a fundo nas próximas partes. Tratam-se
 de estruturas de dados com diversas operações e peculiaridades. Os dados em Elixir (e na maioria
@@ -227,8 +228,8 @@ que não vemos aqui o conceito direto de *array*, quer seria uma especie de list
 acessíveis (indexáveis) e mutáveis, logo não imutáveis.
 
 ## E vamos pro "Hello World"
-<div class="tenor-gif-embed" data-postid="5220607" data-share-method="host" data-width="100%" data-aspect-ratio="1.3333333333333333"><a href="https://tenor.com/view/thumbsup-cool-great-nice-notbad-gif-5220607"></a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-<br/>
+![thumbs up cool meme - gif](https://c.tenor.com/aSAUONK9oEcAAAAC/thumbs-up-cool.gif){: .align-center .img-increase}
+
 Acessando nosso projeto, criado com ```mix new hello```, temos a seguinte base no arquivo ```hello/lib/hello.ex```:
 
 ```elixir
@@ -295,7 +296,7 @@ Isto porque o Elixir refere as funções por nome + aridade (quantidade de argum
 **Obs**: É possível ainda ter mais de uma função com o mesmo nome e aridade, diferenciando-as pela
 condição feita com os argumentos em cada uma. Isso faz com que tenha bem menos *if/else* em seus
 códigos Elixir.
-{: .notice--warning}
+{: .note-warning }
 
 Para executar as alterações basta rodar o ```recompile``` no terminal ```iex``` aberto anteriormente
 
@@ -313,4 +314,4 @@ iex> Hello.hello "Eugenio", "Nila"
 
 Por agora, é isso.
 
-<div class="tenor-gif-embed" data-postid="8843762" data-share-method="host" data-width="100%" data-aspect-ratio="1.25"><a href="https://tenor.com/view/noice-nice-click-gif-8843762"></a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+![Noice nice meme - gif](https://c.tenor.com/H6sjheSkU1wAAAAC/noice-nice.gif){: .align-center .img-increase}

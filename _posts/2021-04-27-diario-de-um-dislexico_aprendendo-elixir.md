@@ -4,6 +4,7 @@ title:  "Diário de um disléxico: Aprendendo Elixir"
 date:   2021-04-27 20:35:15 -0300
 tags: Elixir Learn
 image: /assets/images/elixir-logo.webp
+image_alt: "Elixir Logo"
 description: >-
   Decidi estudar a linguagem Elixir e reportar aqui minhas conquistas e tropeços.
 categories: blog
@@ -31,4 +32,4 @@ Pensei em avançar um pouco nisso antes de fazer este anuncio aqui, talvez já t
 e anotações sobre, mas como eu quero muito e preciso me cobrar para não postergar, vou usar isso
 como desculpa (sim, usar meu próprio blog como auto-chantagem).
 
-<div class="tenor-gif-embed" data-postid="7723689" data-share-method="host" data-width="100%" data-aspect-ratio="1.0"><a href="https://tenor.com/view/think-smart-gif-7723689">Think Smart Meme GIF</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+![think smart meme - gif](https://c.tenor.com/qRq6uenJInkAAAAS/think-smart-meme.gif){: .align-center .img-increase}

@@ -4,6 +4,7 @@ title:  "Diário disléxico - Elixir: Aquele clássico apanhadão"
 date:   2021-05-23 18:11:49 -0300
 tags: Elixir Learn
 image: /assets/images/elixir-logo.webp
+image_alt: "Elixir Logo"
 description: >-
   Uma "rápida" síntese de mais alguns conceitos antes de ir para resolução de exercícios.
 categories: blog
@@ -24,7 +25,7 @@ ao tutorial oficial, disponível em <https://elixir-lang.org/getting-started/cas
 e em <https://elixirschool.com/en/lessons/basics/control-structures/>{:target="_blank"}, exceto a
 parte do ```with```, que dei uma atenção maior. Então sinta-se à vontade em pular para o próximo
 tópico. Pelo menos me serviu pra fixar o conteúdo, que inclusive é o proposito disso aqui.
-{: .notice--warning}
+{: .note-warning }
 
 Uma breve explicação das estruturas ```case```, ```cond```, ```if/else/unless```, ```with``` e
 blocos com ```do/end```.
@@ -58,7 +59,7 @@ end
 **Obs**: Cuidado com o escopo, no segundo exemplo a variável ```x = 2``` é atribuída e
 disponibilizada dentro da condição dela. Se, por exemplo, você fizer ```x = 7``` antes do ```case```,
 depois dele verá que *x* ainda vale 7, ou seja, não é reescrito.
-{: .notice--warning}
+{: .note-warning }
 
 Você pode usar o operador ```^``` antes de uma variável para fazer a condição sob ela. Para
 definir uma condição *default*, que sempre será válida, basta utilizar ```_```.
@@ -233,7 +234,7 @@ case Map.fetch(only_first, :first) do
 end
 :error
 ```
-<div class="notice--warning">
+<div class="note-warning">
  <p><strong>Obs</strong>: Note como a direção das flechas apontam a "direção de partida" da execução e, consequentemente, leitura do código:</p>
   <ul>
     <li>Quando temos <code class="language-plaintext highlighter-rouge">-></code> em <code class="language-plaintext highlighter-rouge">case</code>, significa que se o conteúdo <strong>à esquerda</strong> da flecha der <em>match</em> com o argumento do <code class="language-plaintext highlighter-rouge">case</code>, executamos então o que segue a direita dela.</li>
@@ -379,8 +380,7 @@ Síntese sobre função anonima, função nomeada e *pattern matching* em funç�
 **Funções Anonimas**
 {: .notice--relative--primary}
 
-<div class="tenor-gif-embed" data-postid="18985404" data-share-method="host" data-width="100%" data-aspect-ratio="1.3351206434316354"><a href="https://tenor.com/view/imanonymous-anonymous-larry-david-anonymous-curb-anonymous-gif-18985404"></a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-<br/>
+![I'm Anonymous - gif](https://c.tenor.com/OKpsYunjQx0AAAAd/imanonymous-anonymous.gif){: .align-center}
 
 Definidas entre os termos ```fn``` e ```end```, funções anonimas podem ter qualquer número de
 argumentos e múltiplos blocos de execução separados com ```->```, sendo à esquerda da flecha os
@@ -663,4 +663,4 @@ iex> Greeter.hello ["Eugenio", "Lucas", "Tomaz"]
 
 Por agora, é isso.
 
-<div class="tenor-gif-embed" data-postid="18638117" data-share-method="host" data-width="100%" data-aspect-ratio="1.546583850931677"><a href="https://tenor.com/view/done-so-done-im-done-monkey-throw-gif-18638117"></a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+![done so done - gif](https://c.tenor.com/uTjqYsH_j-YAAAAd/done-so-done.gif){: .align-center}

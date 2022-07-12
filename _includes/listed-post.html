@@ -43,7 +43,7 @@
       {% if post.image %}
         <div class="mb-2 md:mr-4 md:mb-0 md:w-4/12 ">
           <a class="bg-gray-100" href="{{ post.url }}" data-turbo="false">
-            <img class="object-contain mx-auto mt-4 mb-2 md:mb-4 xl:my-auto md:h-80 rounded 2xl:mb-3 hover:opacity-40 transition duration-200 ease-in-out" alt="{{ post.title }}" src="{{ post.image }}"/></a>
+            <img class="object-contain mx-auto mt-4 mb-2 md:mb-4 xl:my-auto md:h-80 rounded 2xl:mb-3 hover:opacity-40 transition duration-200 ease-in-out" alt="{{ post.image_alt }}" src="{{ post.image }}"/></a>
         </div>
       {% endif %}
       <div class="flex-1">

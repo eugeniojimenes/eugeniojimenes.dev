@@ -4,6 +4,7 @@ title:  "Tutorial: Rails7, Tailwind e Hotwire - Parte 1"
 date:   2021-12-09 11:12:54 -0300
 tags: Tutorial Rails Ruby Tailwind Hotwire
 image: /assets/images/tailwind.webp
+image_alt: "Tailwind Logo"
 description: >-
   Parte 1: Montando um layout com Tailwind - Tutorial sobre Rails 7 com esbuild, tailwind e
   Hotwire(Turbo e Stimulus). Como desenvolver um aplicação estilo Kanban, com cards/tarefas e
@@ -133,7 +134,7 @@ instalar e referenciar o framework.
 **UPDATE**: No momento em que estava escrevendo este post saiu a
 [versão 3 do tailwind](https://tailwindcss.com/blog/tailwindcss-v3){:target="_blank"} e mudou tudo
 que tinha customizado 🤡. Inclui a atualização para nova versão no repositório.
-{: .notice--info}
+{: .note-info }
 
 Eu fiz algumas customizações para exemplificar aqui no blog, mas recomendo a leitura da
 [documentação oficial](https://tailwindcss.com/docs/configuration){:target="_blank"}, muito boa
@@ -300,9 +301,7 @@ deve obter este resultado:
 
 E isso **sem uma ~~*fucking*~~ linha** de JavaScript e CSS!
 
-<div class="tenor-gif-embed" data-postid="7714163" data-share-method="host" data-aspect-ratio="1" data-width="100%">
-  <a href="https://tenor.com/view/friends-matt-leblanc-matt-shock-omg-gif-7714163"></a>
-</div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+![Friends Matt Leblanc - gif](https://c.tenor.com/ykVAsEud6fwAAAAC/friends-matt-leblanc.gif){: .align-start}
 
 ### Como pode?!
 Vou tentar explicar aqui algumas das classes do Tailwind que inclui HTML das quais permitiram esse
@@ -401,10 +400,7 @@ Você pode ver mais sobre isso em
 [canal do Adam Wathan no YouTube](https://www.youtube.com/channel/UCy1H38XrN7hi7wHSClfXPqQ){:target="_blank"}
 há várias *lives* gravadas em que ele monta um layout do zero com Tailwind, mexendo apenas com HTML,
 muito bom!
-{: .notice--info}
+{: .note-info }
 
 Por agora, é isso.
-<div class="tenor-gif-embed" data-postid="16435573" data-share-method="host" data-aspect-ratio="1.5311" data-width="100%">
-  <a href="https://tenor.com/view/cat-driving-leaving-meow-im-leaving-right-meow-gif-16435573">
-</div>
-<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+![Cat driving - gif](https://c.tenor.com/UrRng6Gv67UAAAAC/cat-driving.gif){: .align-start}
