@@ -7,6 +7,8 @@ image: "/assets/images/eu.webp"
 language: "pt-BR"
 baseurl: ""
 
+google_analytics: G-M04ER887TV
+
 twitter:
   username: leminski_se
   card: summary_large_image

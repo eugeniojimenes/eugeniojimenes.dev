@@ -8,9 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Source+Code+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' }}">
-    <script type="module">
-      import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
-    </script>
     {% seo %}
   </head>
   <body class="bg-beige-100">
@@ -19,5 +16,9 @@
       {{content}}
       {% include footer.html %}
     </div>
+    {% include analytics.html %}
+    <script type="module">
+      import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
+    </script>
   </body>
 </html>
