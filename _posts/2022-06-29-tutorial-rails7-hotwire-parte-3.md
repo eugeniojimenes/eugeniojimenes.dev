@@ -3,15 +3,14 @@ layout: post
 title:  "Tutorial: Rails7, Tailwind e Hotwire - Parte 3"
 date:   2022-06-29 21:34:03 -0300
 tags: Tutorial Rails Ruby Tailwind Hotwire
-image: /assets/images/stimulus-logo.webp
+main_image: /assets/images/stimulus-logo.webp
+image: /assets/images/og/stimulus-logo.webp
 image_alt: "Hotwire Stimulus Logo"
 description: >-
   Parte 3: Modal para inserção e edição com Stimulus. Rails 7 com esbuild, tailwind e
   Hotwire (Turbo e Stimulus) - Como desenvolver um aplicação estilo Kanban, com cards/tarefas e
   persistência simultânea via websockets.
 categories: blog
-header:
-  og_image: assets/images/stimulus-logo.webp
 
 ---
 

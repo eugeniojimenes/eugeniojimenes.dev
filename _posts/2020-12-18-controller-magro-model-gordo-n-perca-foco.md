@@ -3,14 +3,13 @@ layout: post
 title:  "Controller magro e model gordo, mas não perca o foco"
 date:   2020-12-17 09:46:13 -0300
 tags: Ruby Rails DesignPatterns
+main_image: /assets/images/mvc-wiki.webp
 image: /assets/images/mvc-wiki.webp
 image_alt: "MVC Diagram - Wikipedia"
 description: >-
   Mantra “Skinny Controller, Fat Model”, padrão MVC e conceito DRY. É o velho desfaio do código
   limpo e claro. Veja exemplos em Ruby on Rails.
 categories: blog
-header:
-  og_image: assets/posts/fat-cat-draw.webp
 
 ---
 

@@ -3,13 +3,12 @@ layout: post
 title:  "Hoje eu aprendi: Gerenciar dockers locais com Portainer CE"
 date:   2021-09-03 12:09:32 -0300
 tags: TIL Config Docker
+main_image: /assets/images/portainer-docker.webp
 image: /assets/images/portainer-docker.webp
 image_alt: "Portainer + Docker Logo"
 description: >-
   Mini tutorial de gerenciamento local de contêineres com Portainer CE.
 categories: blog
-header:
-  og_image: assets/images/portainer-docker-ogimage.webp
 
 ---
 
