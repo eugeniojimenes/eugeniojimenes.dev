@@ -6,9 +6,13 @@ author: "Eugenio A. Jimenes"
 image: "/assets/images/eu.webp"
 language: "pt-BR"
 baseurl: ""
+
 twitter:
   username: leminski_se
   card: summary_large_image
+
+facebook:
+  app_id: 723752958736659
 
 markdown: kramdown
 highlighter: rouge
