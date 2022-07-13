@@ -3,8 +3,7 @@ layout: post
 title:  "Tutorial: Rails7, Tailwind e Hotwire - Parte 2"
 date:   2021-12-19 14:42:03 -0300
 tags: Tutorial Rails Ruby Tailwind Hotwire
-main_image: /assets/images/hotwire-turbo.webp
-image: /assets/images/hotwire-turbo.webp
+image: /assets/svg/hotwire-turbo.svg
 image_alt: "Hotwire Turbo Logo"
 description: >-
   Parte 2: Renderização parcial com Hotwire Turbo - Tutorial sobre Rails 7 com esbuild, tailwind e

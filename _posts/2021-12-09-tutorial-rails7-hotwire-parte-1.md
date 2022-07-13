@@ -3,8 +3,7 @@ layout: post
 title:  "Tutorial: Rails7, Tailwind e Hotwire - Parte 1"
 date:   2021-12-09 11:12:54 -0300
 tags: Tutorial Rails Ruby Tailwind Hotwire
-main_image: /assets/images/tailwind.webp
-image: /assets/images/tailwind.webp
+image: /assets/svg/tailwind.svg
 image_alt: "Tailwind Logo"
 description: >-
   Parte 1: Montando um layout com Tailwind - Tutorial sobre Rails 7 com esbuild, tailwind e

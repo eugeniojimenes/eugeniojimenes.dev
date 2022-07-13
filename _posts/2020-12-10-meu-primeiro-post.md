@@ -3,7 +3,6 @@ layout: post
 title:  "Meu primeiro post"
 date:   2020-12-10 10:36:29 -0300
 tags: GitHubPages
-main_image: /assets/images/meditation.webp
 image: /assets/images/meditation.webp
 image_alt: "brain meditation"
 description: >-

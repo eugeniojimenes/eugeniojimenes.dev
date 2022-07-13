@@ -3,7 +3,6 @@ layout: post
 title:  "Controller magro e model gordo, mas não perca o foco"
 date:   2020-12-17 09:46:13 -0300
 tags: Ruby Rails DesignPatterns
-main_image: /assets/images/mvc-wiki.webp
 image: /assets/images/mvc-wiki.webp
 image_alt: "MVC Diagram - Wikipedia"
 description: >-

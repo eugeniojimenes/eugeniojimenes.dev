@@ -3,7 +3,6 @@ layout: post
 title:  "Hoje eu aprendi: configurar verificador ortográfico PT-BR no editor Vim"
 date:   2021-04-25 14:02:53 -0300
 tags: TIL Vim Config
-main_image: /assets/images/vim-br.webp
 image: /assets/images/vim-br.webp
 image_alt: "Vim + Reginaldo Rossi"
 description: >-

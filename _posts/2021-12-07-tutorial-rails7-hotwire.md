@@ -3,8 +3,7 @@ layout: post
 title:  "Tutorial: Rails7, Tailwind e Hotwire"
 date:   2021-12-07 17:48:12 -0300
 tags: Tutorial Rails Ruby Tailwind Hotwire
-main_image: /assets/images/rails7-tailwind-hotwire.webp
-image: /assets/images/rails7-tailwind-hotwire.webp
+image: /assets/svg/rails7-tailwind-hotwire.svg
 image_alt: "Rails 7 + Tailwind + Hotwire Logo"
 description: >-
   Tutorial sobre Rails 7 com esbuild, tailwind e Hotwire(Turbo e Stimulus). Como desenvolver um

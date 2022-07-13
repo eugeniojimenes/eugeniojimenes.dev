@@ -4,6 +4,14 @@
 
 # My blog
 
+I finally built it in my own domain with Jekyll, Tailwind and Turbo Frame. Deployed it with Netlify.
+
+## To Do
+
+  - Smooth scrolling to anchor links
+  - Mult Language
+  - Dark mode layout
+
 ## Licence
 Licensed under 3-Clause BSD, see [LICENSE](/LICENSE).
 
