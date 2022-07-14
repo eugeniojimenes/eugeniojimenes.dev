@@ -3,7 +3,8 @@ layout: post
 title:  "Diário disléxico: Agora com meu próprio domínio"
 date:   2022-07-13 20:12:51 -0300
 tags: Jekyll Hotwire Tailwind 
-image: /assets/svg/jekyll-netlify.svg
+main_image: /assets/svg/jekyll-netlify.svg
+image: /assets/images/jekyll-netlify.webp
 image_alt: "Jekyll and Netlify logos"
 description: >-
   Refiz meu blog com Jekyll, Tailwind e Hotwire Turbo.
