@@ -3,14 +3,14 @@ tagline: "Desenvolvedor senior, disléxico e esquerdopata convicto"
 description: "Blog/diário sobre minha relação de \"Credo, que delícia!\" com TI."
 url: "https://callmarx.dev"
 author: "Eugenio A. Jimenes"
-main_image: "/assets/images/eu.webp"
+image: "/assets/images/eu.webp"
 language: "pt-BR"
 baseurl: ""
 
 google_analytics: G-M04ER887TV
 
 twitter:
-  username: leminski_se
+  username: callmarx_dev
   card: summary_large_image
 
 facebook:
