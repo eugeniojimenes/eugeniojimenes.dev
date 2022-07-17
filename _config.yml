@@ -79,3 +79,4 @@ exclude:
   - postcss.config.js
   - README.md
   - tailwind.config.js
+  - webpack.config.js

@@ -9,16 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Source+Code+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' }}">
     {% seo %}
+    {% include analytics.html %}
+    <script type="module">
+      import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
+    </script>
+    <script type="text/javascript" src="/dist/bundle.js"></script>
   </head>
-  <body class="bg-beige-100">
+  <body class="bg-beige-100" data-controller="hello">
     <div class="container mx-auto px-6 md:px-4">
       {% include header.html %}
       {{content}}
       {% include footer.html %}
     </div>
-    {% include analytics.html %}
-    <script type="module">
-      import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
-    </script>
   </body>
 </html>
