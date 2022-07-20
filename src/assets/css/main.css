@@ -5,7 +5,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@import "assets/css/syntax-highlight/highcontrast-monokai";
+@import "src/assets/css/syntax-highlight/highcontrast-monokai";
 
 /* image align left */
 .align-left {

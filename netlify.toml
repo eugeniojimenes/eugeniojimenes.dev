@@ -1,6 +1,6 @@
 [build]
-  command = "npm run prod"
-  publish = "_site"
+  command = "npm run build:prod"
+  publish = "src/_site"
 
 [build.environment]
   NODE_VERSION = "14"

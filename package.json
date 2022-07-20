@@ -1,9 +1,10 @@
 {
   "scripts": {
-    "develop:jekyll": "export JEKYLL_ENV=development && bundle exec jekyll serve --draft --livereload --incremental --watch",
+    "clear": "bundle exec jekyll clean -s src -d src/_site",
+    "develop:jekyll": "export JEKYLL_ENV=development && bundle exec jekyll serve -s src -d src/_site -b '' --draft --livereload --incremental --watch",
     "develop:webpack": "export NODE_ENV=development && webpack --mode development --watch --progress --color",
     "build:prod": "export NODE_ENV=production && export JEKYLL_ENV=production && npm run build:webpack && npm run build:jekyll",
-    "build:jekyll": "bundle exec jekyll build",
+    "build:jekyll": "bundle exec jekyll build -s src -d src/_site --verbose --trace",
     "build:webpack": "webpack --progress --config webpack.config.js"
   },
   "dependencies": {
