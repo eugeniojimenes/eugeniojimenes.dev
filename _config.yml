@@ -25,6 +25,7 @@ plugins:
   - jekyll-postcss
   - jekyll-paginate-v2
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 postcss:
   cache: false

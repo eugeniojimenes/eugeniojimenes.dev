@@ -1,4 +1,9 @@
 <header class="flex justify-between pt-6 pb-3 border-b-2 border-stone-400">
+  <div data-controller="hello">
+    <input type="text" class="border-2 shadow"
+      data-hello-target="name">
+    <button data-action="click->hello#greet">Greet</button>
+  </div>
   <a class="font-marker text-3xl md:text-4xl text-stone-900 hover:opacity-40 transition duration-200 ease-in-out" href="/">{{ site.title }}</a>
   <div class="flex justify-between">
     <a class="flex text-stone-900 hover:opacity-40 transition duration-200 ease-in-out" href="/tags/" aria-label="Tags icon">

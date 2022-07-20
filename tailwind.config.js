@@ -9,6 +9,7 @@ module.exports = {
     './_posts/**/.md',
     './*.{md,html}',
   ],
+  darkMode: 'class',
   theme: {
     screens: {
       'xs': '448px',
