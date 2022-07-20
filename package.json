@@ -1,9 +1,10 @@
 {
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/webpack --progress --config webpack.config.js && bundle exec jekyll build",
-    "start": "export NODE_ENV=development && export JEKYLL_ENV=development && bash -c \"./node_modules/.bin/webpack --watch --progress --color | tee -i >(bundle exec jekyll serve --livereload --incremental)\"",
-    "prod": "export NODE_ENV=production && export JEKYLL_ENV=production && npm run build"
+    "develop:jekyll": "export JEKYLL_ENV=development && bundle exec jekyll serve --draft --livereload --incremental --watch",
+    "develop:webpack": "export NODE_ENV=development && webpack --mode development --watch --progress --color",
+    "build:prod": "export NODE_ENV=production && export JEKYLL_ENV=production && npm run build:webpack && npm run build:jekyll",
+    "build:jekyll": "bundle exec jekyll build",
+    "build:webpack": "webpack --progress --config webpack.config.js"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.2",
