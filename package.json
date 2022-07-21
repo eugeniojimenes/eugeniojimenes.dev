@@ -1,31 +1,31 @@
 {
   "scripts": {
     "clear": "bundle exec jekyll clean -s src -d src/_site",
-    "develop:jekyll": "export JEKYLL_ENV=development && bundle exec jekyll serve -s src -d src/_site -b '' --draft --livereload --incremental --watch",
+    "develop:jekyll": "export JEKYLL_ENV=development && bundle exec jekyll serve -s src -d src/_site -b '' --draft --incremental --livereload --watch",
     "develop:webpack": "export NODE_ENV=development && webpack --mode development --watch --progress --color",
-    "develop:postcss": "export JEKYLL_ENV=development && postcss src/assets/css/main.css --output src/_site/assets/css/main.css --watch",
-    "build:prod": "export NODE_ENV=production && export JEKYLL_ENV=production && npm run build:postcss && npm run build:webpack && npm run build:jekyll",
+    "build:prod": "export NODE_ENV=production && export JEKYLL_ENV=production && npm run build:webpack && npm run build:jekyll",
     "build:jekyll": "bundle exec jekyll build -s src -d src/_site --verbose --trace",
-    "build:webpack": "webpack --progress --config webpack.config.js",
-    "build:postcss": "postcss src/assets/css/main.css --output src/_site/assets/css/main.css"
+    "build:webpack": "webpack --progress --config webpack.config.js"
   },
   "dependencies": {
     "@hotwired/stimulus": "^3.1.0",
     "@hotwired/stimulus-webpack-helpers": "^1.0.1",
     "@hotwired/turbo": "^7.1.0",
     "@tailwindcss/typography": "^0.5.2",
-    "autoprefixer": "^10.4.7",
-    "cssnano": "^5.1.12",
-    "postcss": "^8.4.14",
-    "postcss-cli": "^10.0.0",
-    "postcss-import": "^14.1.0",
-    "postcss-nested": "^5.0.6",
     "tailwindcss": "^3.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.18.6",
     "@babel/preset-env": "^7.18.6",
+    "autoprefixer": "^10.4.7",
     "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "cssnano": "^5.1.12",
+    "mini-css-extract-plugin": "^2.6.1",
+    "postcss": "^8.4.14",
+    "postcss-loader": "^7.0.1",
+    "serialize-javascript": "^6.0.0",
+    "style-loader": "^3.3.1",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0"
   }

@@ -1,8 +1,8 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@import "syntax-highlight/highcontrast-monokai";
+@import "css/syntax-highlight/highcontrast-monokai";
 
 /* image align left */
 .align-left {
@@ -34,9 +34,9 @@
   height: auto;
 }
 
-/* .language-plaintext { */
-/*   @apply px-1 py-1 bg-stone-200 font-medium rounded-md dark:text-stone-600 */
-/* } */
+.language-plaintext {
+  @apply px-1 py-1 bg-stone-200 font-medium rounded-md dark:text-stone-600
+}
 
 .note-info {
   @apply py-4 px-6 text-sm sm:text-base lg:text-xl bg-sky-100/70 rounded-md

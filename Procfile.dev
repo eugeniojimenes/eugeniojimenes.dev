@@ -1,3 +1,2 @@
 jekyll: npm run develop:jekyll
 webpack: npm run develop:webpack
-postcss: npm run develop:postcss
