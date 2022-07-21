@@ -37,9 +37,9 @@
   height: auto;
 }
 
-.language-plaintext {
-  @apply bg-stone-200 rounded-md
-}
+/* .language-plaintext { */
+/*   @apply px-1 py-1 bg-stone-200 font-medium rounded-md dark:text-stone-600 */
+/* } */
 
 .note-info {
   @apply py-4 px-6 text-sm sm:text-base lg:text-xl bg-sky-100/70 rounded-md

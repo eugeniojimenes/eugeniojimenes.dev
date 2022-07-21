@@ -1,0 +1,8 @@
+<!-- This must be placed inside the head tag before the body tag to avoid FOUC (flash of unstyled content) when changing pages or themes -->
+<script>
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+</script>

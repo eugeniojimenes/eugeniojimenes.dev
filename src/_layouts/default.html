@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/main.css' }}">
     {% seo %}
     {% include analytics.html %}
-    <script type="module">
-      import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
-    </script>
+    {% include head-darkmode-check.html %}
     <script type="text/javascript" src="{{ '/dist/bundle.js' }}"></script>
   </head>
   <body class="bg-beige-100 dark:bg-black">
