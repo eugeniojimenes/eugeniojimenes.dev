@@ -1,11 +1,8 @@
----
----
-
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@import "src/assets/css/syntax-highlight/highcontrast-monokai";
+@import "syntax-highlight/highcontrast-monokai";
 
 /* image align left */
 .align-left {

@@ -22,7 +22,6 @@ excerpt_separator: <!-- excerpt-end -->
 word_count: 160
 
 plugins:
-  - jekyll-postcss
   - jekyll-paginate-v2
   - jekyll-seo-tag
   - jekyll-sitemap
