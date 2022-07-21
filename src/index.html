@@ -14,19 +14,15 @@ pagination:
 <div class="flex flex-col pt-6 md:pt-12 lg:w-11/12 mx-auto">
   <div class="w-full flex flex-col-reverse md:flex-row justify-between mb-8 md:mb-16 lg:mb-24">
     <div class="self-start md:self-center md:w-1/3 mt-4 md:mt-0 flex flex-row md:flex-col justify-start md:justify-between">
-      <img class="self-center h-24 w-24 xs:h-28 xs:w-28 sm:h-32 sm:w-32 md:h-36 md:w-36 lg:h-40 lg:w-40 xl:h-48 xl:w-48 rounded-full border-double border-4 border-beige-500 shadow-lg" src="{{ page.image }}" alt="Rounded avatar">
+      <img class="self-center h-24 w-24 xs:h-28 xs:w-28 sm:h-32 sm:w-32 md:h-36 md:w-36 lg:h-40 lg:w-40 xl:h-48 xl:w-48 rounded-full border-double border-4 border-beige-500 dark:border-gray-600 shadow-lg dark:shadow-gray-600" src="{{ page.image }}" alt="Rounded avatar">
       <div class="flex justify-center self-center md:mt-4 ml-4 md:ml-0">
-        {% for network in site.data.social-networks %}
-          <a class="py-2 mr-2" href="{{ network.link }}" rel="noopener noreferrer nofollow" target="_blank">
-            <img class="h-8 w-8 hover:opacity-40 transition duration-200 ease-in-out" src="{{ network.logo }}" alt="{{ network.name }}" />
-          </a>
-        {% endfor %}
+        {% include social-networks.html %}
       </div>
     </div>
-    <div class="md:w-3/4 prose prose-base prose-a:text-sky-800 prose-p:font-codepro prose-p:text-stone-800 prose-h2:font-codepro md:prose-lg lg:prose-2xl">
+    <div class="md:w-3/4 prose prose-custom prose-base prose-p:font-codepro prose-h2:font-codepro md:prose-lg lg:prose-2xl dark:prose-invert">
       {% capture home_content %}{% include home-content.md %}{% endcapture %}
       {{ home_content | markdownify }}
     </div>
   </div>
-   {% include listed-post.html posts=paginator.posts align="start" %}
+  {% include listed-post.html posts=paginator.posts align="start" %}
 </div>

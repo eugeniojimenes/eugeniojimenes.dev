@@ -1,0 +1,5 @@
+{% for network in site.data.social-networks %}
+  <a class="py-2 mr-2 h-8 w-8 text-black dark:text-gray-200 hover:opacity-40 transition duration-200 ease-in-out" href="{{ network.link }}" rel="noopener noreferrer nofollow" target="_blank">
+    {{ network.logo }}
+  </a>
+{% endfor %}

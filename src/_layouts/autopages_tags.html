@@ -22,7 +22,7 @@ layout: default
 <div class="flex flex-col pt-6 md:pt-12 lg:w-11/12 mx-auto">
   <turbo-frame id="listing-tags">
     <div class="flex flex-col mb-8">
-      <h1 class="text-center text-stone-800 text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-8">
+      <h1 class="text-center text-stone-800 dark:text-stone-200 text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-8">
         {% if page.autopage.display_name %}Posts sob a tag '{{ page.title }}'{% else %}{{ page.title }}{% endif %}
       </h1>
       <div class="grid justify-items-stretch gap-2 md:gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:w-11/12 lg:mx-auto">

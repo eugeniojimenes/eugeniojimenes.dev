@@ -50,7 +50,7 @@ module.exports = {
             '--tw-prose-pre-bg': theme('colors.stone[800]'),
             '--tw-prose-th-borders': theme('colors.stone[300]'),
             '--tw-prose-td-borders': theme('colors.stone[200]'),
-            '--tw-prose-invert-body': theme('colors.stone[300]'),
+            '--tw-prose-invert-body': theme('colors.stone[200]'),
             '--tw-prose-invert-headings': theme('colors.white'),
             '--tw-prose-invert-lead': theme('colors.stone[400]'),
             '--tw-prose-invert-links': theme('colors.sky[400]'),

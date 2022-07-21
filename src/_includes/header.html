@@ -1,23 +1,18 @@
 <header class="flex justify-between pt-6 pb-3 border-b-2 border-stone-400">
-  <div data-controller="hello">
-    <input type="text" class="border-2 shadow"
-      data-hello-target="name">
-    <button data-action="click->hello#greet">Greet</button>
-  </div>
+  <a class="font-marker text-3xl md:text-4xl text-stone-900 dark:text-stone-200 hover:opacity-40 transition duration-200 ease-in-out" href="/">{{ site.title }}</a>
   <div data-controller="dark-mode">
     <button data-action="click->dark-mode#useDarkMode">Dark Mode</button>
     <button data-action="click->dark-mode#useLightMode">Light Mode</button>
   </div>
-  <a class="font-marker text-3xl md:text-4xl text-stone-900 hover:opacity-40 transition duration-200 ease-in-out" href="/">{{ site.title }}</a>
-  <div class="flex justify-between">
-    <a class="flex text-stone-900 hover:opacity-40 transition duration-200 ease-in-out" href="/tags/" aria-label="Tags icon">
+  <div class="flex justify-between text-stone-900 dark:text-gray-200">
+    <a class="flex hover:opacity-40 transition duration-200 ease-in-out" href="/tags/" aria-label="Tags icon">
       <svg class="w-6 h-6 mt-1" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
         <path d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
         <path d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043-7.457-7.457z"/>
       </svg>
       <strong class="hidden mt-1 ml-1 md:block">Tags</strong>
     </a>
-    <a class="flex ml-4 text-stone-900 hover:opacity-40 transition duration-200 ease-in-out" href="/about/" aria-label="coffee cup icon">
+    <a class="flex ml-4 hover:opacity-40 transition duration-200 ease-in-out" href="/about/" aria-label="coffee cup icon">
       <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
         <path d="M13 20h-7c-2.174-3.004-4-6.284-4-12h15c0 5.667-1.88 9.089-4 12zm5.119-10c-.057.701-.141 1.367-.252 2h1.55c-.449 1.29-1.5 2.478-2.299 2.914-.358 1.038-.787 1.981-1.26 2.852 3.274-1.143 5.846-4.509 6.142-7.766h-3.881zm-7.745-3.001c4.737-4.27-.98-4.044.117-6.999-3.783 3.817 1.409 3.902-.117 6.999zm-2.78.001c3.154-2.825-.664-3.102.087-5.099-2.642 2.787.95 2.859-.087 5.099zm9.406 15h-15v2h15v-2z"/>
       </svg>

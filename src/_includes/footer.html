@@ -1,11 +1,7 @@
 <footer class="mt-4 mb-20 pt-3 border-t-2 border-stone-400 dark:border-stone-100">
   <div class="container mx-auto">
-    <div class="flex mb-2">
-      {% for network in site.data.social-networks %}
-        <a class="py-2 mr-2" href="{{ network.link }}" rel="noopener noreferrer nofollow" target="_blank">
-          <img class="h-8 w-8 hover:opacity-40 transition duration-200 ease-in-out" src="{{ network.logo }}" alt="{{ network.name }}" />
-        </a>
-      {% endfor %}
+    <div class="flex mb-6">
+      {% include social-networks.html %}
     </div>
     <div class="text-sm text-gray-600 dark:text-gray-200">
       <span>
