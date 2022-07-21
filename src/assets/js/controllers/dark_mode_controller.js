@@ -4,7 +4,8 @@ export default class extends Controller {
   static targets = [ "darkIcon", "lightIcon" ]
 
   connect() {
-    console.log(`Hello, I'm the Stimulus DarkModeController`)
+    // console.log(`Hello, I'm the Stimulus DarkModeController`)
+
     // Change the icons inside the button based on previous settings
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       this.lightIconTarget.classList.remove('hidden');

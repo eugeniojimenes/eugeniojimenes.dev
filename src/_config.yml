@@ -65,18 +65,3 @@ defaults:
 
 include:
   - _pages
-exclude:
-  - .gitignore
-  - .rubocop.yml
-  - code_of_conduct.md
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
-  - netlify.toml
-  - node_modules
-  - package-lock.json
-  - package.json
-  - postcss.config.js
-  - README.md
-  - tailwind.config.js
-  - webpack.config.js

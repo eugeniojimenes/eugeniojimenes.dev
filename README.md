@@ -8,9 +8,10 @@ I finally built it in my own domain with Jekyll, Tailwind and Turbo Frame. Deplo
 
 ## To Do
 
-  - Smooth scrolling to anchor links
+  - ~~Dark mode layout~~ --> Done!
   - Mult Language
-  - Dark mode layout
+  - Retire my old GithubPage (redirect each link to my domain)
+  - Smooth scrolling to anchor links
 
 ## Licence
 Licensed under 3-Clause BSD, see [LICENSE](/LICENSE).
