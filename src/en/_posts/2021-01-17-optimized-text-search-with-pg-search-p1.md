@@ -186,4 +186,4 @@ in the next part I'll show how to apply some of them with the
 [PgSearch gem](https://github.com/Casecommons/pg_search){:target="_blank"} in a silly Ruby on Rails
 application.
 
-[Link tp part II]({% post_url pt-br/2021-04-08-busca-texto-otimizada-com-pg-search-p2 %}){:target="_blank"}
+[Link to part II]({% post_url pt-br/2021-04-08-busca-texto-otimizada-com-pg-search-p2 %}){:target="_blank"}

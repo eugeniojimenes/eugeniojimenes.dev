@@ -1,6 +1,7 @@
 ---
 layout: index
 title: "CallMarx.dev"
+locale: pt_BR
 main_image: /assets/images/eu.webp
 image: /assets/images/eu.webp
 description: >-

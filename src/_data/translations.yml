@@ -1,0 +1,12 @@
+selectLang:
+  en_US: "Select Your Language"
+  pt_BR: "Selecione sua língua"
+developedWith:
+  en_US: Developed with the <a href="https://jekyllrb.com" rel="noopener noreferrer nofollow" target="_blank"><b>Jekyll</b></a> and <a href="https://tailwindcss.com" rel="noopener noreferrer nofollow" target="_blank"><b>Tailwind</b></a> framework, under the<a href="https://choosealicense.com/licenses/bsd-3-clause/" rel="noopener noreferrer nofollow" target="_blank"><b>3-Clause BSD</b></a>.
+  pt_BR: Desenvolvido com o framework <a href="https://jekyllrb.com" rel="noopener noreferrer nofollow" target="_blank"><b>Jekyll</b></a> e <a href="https://tailwindcss.com" rel="noopener noreferrer nofollow" target="_blank"><b>Tailwind</b></a>, sob a licença <a href="https://choosealicense.com/licenses/bsd-3-clause/" rel="noopener noreferrer nofollow" target="_blank"><b>3-Clause BSD</b></a>.
+differentLanguage:
+  en_US: "Read this page in Brazilian Portuguese"
+  pt_BR: "Leia essa página em inglês"
+latestPosts:
+  en_US: Latest posts
+  pt_BR: Últimas postagens
