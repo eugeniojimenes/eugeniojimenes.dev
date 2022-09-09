@@ -2,6 +2,8 @@
 layout: post
 title:  "Tutorial: Rails7, Tailwind e Hotwire - Parte 2"
 date:   2021-12-19 14:42:03 -0300
+locale: pt_BR
+lang-ref: rails7-tailwind-hotwire-2
 tags: Tutorial Rails Ruby Tailwind Hotwire
 main_image: /assets/svg/hotwire-turbo.svg
 image: /assets/images/hotwire-turbo.webp
@@ -14,7 +16,7 @@ categories: blog
 
 ---
 
-Na [parte anterior]({% post_url 2021-12-09-tutorial-rails7-hotwire-parte-1 %}){:target="_blank"}
+Na [parte anterior]({% post_url pt-br/2021-12-09-tutorial-rails7-hotwire-parte-1 %}){:target="_blank"}
 deste tutorial eu expliquei como customizar e utilizar o Tailwind sem uma linha sequer de CSS e
 JavaScript. Agora vou abordar um pouco sobre o pacote
 [Hotwire Turbo](https://turbo.hotwired.dev){:target="_blank"}.
@@ -24,8 +26,8 @@ JavaScript. Agora vou abordar um pouco sobre o pacote
 A meta é desenvolver (e aprender) utilizando Rails 7, esbuild, Tailwind e Hotwire (Turbo e
 Stimulus), mas meu foco será mais sobre o pacote Hotwire e como ele pode nos ajudar. Conforme
 avanço nos estudos e na implementação, vou complementando este tutorial. Por enquanto temos:
-* [Parte 0: Rails 7]({% post_url 2021-12-07-tutorial-rails7-hotwire %}){:target="_blank"}
-* [Parte 1: Tailwind]({% post_url 2021-12-09-tutorial-rails7-hotwire-parte-1 %}){:target="_blank"}
+* [Parte 0: Rails 7]({% post_url pt-br/2021-12-07-tutorial-rails7-hotwire %}){:target="_blank"}
+* [Parte 1: Tailwind]({% post_url pt-br/2021-12-09-tutorial-rails7-hotwire-parte-1 %}){:target="_blank"}
 * [Parte 2: Hotwire Turbo](#etapa-2---hotwire-turbo) → página atual
 * ~~Parte 3: Hotwire Stimulus~~ → em breve
 
@@ -104,7 +106,7 @@ Para explicar separadamente o modo *render* `turbo_stream` eu incluí o código 
 *branch* [blog-part-2.1](https://github.com/callmarx/LearningHotwire/tree/blog-part-2.1){:target="_blank"}.
 
 No `ChoresController` que geramos com `rails generate scaffold` na
-[etapa anterior]({% post_url 2021-12-09-tutorial-rails7-hotwire-parte-1 %}#um-simples-scaffold){:target="_blank"}
+[etapa anterior]({% post_url pt-br/2021-12-09-tutorial-rails7-hotwire-parte-1 %}#um-simples-scaffold){:target="_blank"}
 deste tutorial, por padrão o Rails incluiu múltiplos formatos de renderização, no caso HTML e JSON.
 Como incluímos `gem "turbo-rails"` no Gemfile, temos acesso também à renderização via *Turbo Stream*,
 bastando adicionar `format.turbo_stream` dentro do bloco `respond_to do |format|`. Fazendo isso

@@ -2,6 +2,8 @@
 layout: post
 title:  "Tutorial: Rails7, Tailwind e Hotwire"
 date:   2021-12-07 17:48:12 -0300
+locale: pt_BR
+lang-ref: rails7-tailwind-hotwire-0
 tags: Tutorial Rails Ruby Tailwind Hotwire
 main_image: /assets/svg/rails7-tailwind-hotwire.svg
 image: /assets/images/rails7-tailwind-hotwire.webp
@@ -30,8 +32,8 @@ Neste tutorial eu pretendo desenvolver (e aprender) utilizando Rails 7, esbuild,
 Conforme avanço nos estudos e na implementação, vou complementando este tutorial. Por enquanto
 temos:
 * [Parte 0: Rails 7](#etapa-zero---rails-7) → página atual
-* [Parte 1: Tailwind]({% post_url 2021-12-09-tutorial-rails7-hotwire-parte-1 %}){:target="_blank"}
-* [Parte 2: Hotwire Turbo]({% post_url 2021-12-19-tutorial-rails7-hotwire-parte-2 %}){:target="_blank"}
+* [Parte 1: Tailwind]({% post_url pt-br/2021-12-09-tutorial-rails7-hotwire-parte-1 %}){:target="_blank"}
+* [Parte 2: Hotwire Turbo]({% post_url pt-br/2021-12-19-tutorial-rails7-hotwire-parte-2 %}){:target="_blank"}
 * ~~Parte 3: Hotwire Stimulus~~ → em breve
 
 O pano de fundo é uma aplicação estilo Kanban, com um quadro em que podemos incluir, ver, editar e

@@ -2,7 +2,9 @@
 layout: post
 title:  "Diário disléxico: Agora com meu próprio domínio"
 date:   2022-07-13 20:12:51 -0300
-tags: Jekyll Hotwire Tailwind 
+locale: pt_BR
+lang-ref: now-with-my-domain
+tags: Jekyll Hotwire Tailwind
 main_image: /assets/svg/jekyll-netlify.svg
 image: /assets/images/jekyll-netlify.webp
 image_alt: "Jekyll and Netlify logos"
@@ -27,7 +29,7 @@ currículo/portfólio. Em meados de Dezembro de 2020, aproveitei o [Github Pages
 para montar um blog/diário, sem nenhuma pretensão de divulgação, apenas com intuito de me
 ~~forçar~~ estimular a ter alguma organização e foco no que eu vinha estudando e desenvolvendo.
 
-Como escrevi no meu [primeiro post]({% post_url 2020-12-10-meu-primeiro-post %}){:target="_blank"},
+Como escrevi no meu [primeiro post]({% post_url pt-br/2020-12-10-meu-primeiro-post %}){:target="_blank"},
 eu sempre invejei (no bom sentido) os blogs sobre programação, seja os com extensos e valiosos
 tutoriais ou mesmo os com pequenos, e tão valiosos quanto, artigos do tipo **TIL** -
 *"Today I Learned"*. Agora eu tenho meu humilde cantinho tecnológico.

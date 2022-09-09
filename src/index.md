@@ -8,6 +8,7 @@ description: >-
   esquerdopata convicto - CallMarx, sacou?
 pagination:
   enabled: true
+  locale: pt_BR
 
 ---
 

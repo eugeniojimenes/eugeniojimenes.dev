@@ -2,6 +2,8 @@
 layout: post
 title:  "Tutorial: Rails7, Tailwind e Hotwire - Parte 1"
 date:   2021-12-09 11:12:54 -0300
+locale: pt_BR
+lang-ref: rails7-tailwind-hotwire-1
 tags: Tutorial Rails Ruby Tailwind Hotwire
 main_image: /assets/svg/tailwind.svg
 image: /assets/images/tailwind.webp
@@ -14,7 +16,7 @@ categories: blog
 
 ---
 
-Na [parte anterior]({% post_url 2021-12-07-tutorial-rails7-hotwire %}){:target="_blank"} deste
+Na [parte anterior]({% post_url pt-br/2021-12-07-tutorial-rails7-hotwire %}){:target="_blank"} deste
 tutorial, expliquei como configurar o Rails 7, com suas novas opções e como "dockerizei" os bancos
 de dados PostgreSQL e Redis. Agora vou abordar um pouco sobre Tailwind.
 <!-- excerpt-end -->
@@ -23,9 +25,9 @@ de dados PostgreSQL e Redis. Agora vou abordar um pouco sobre Tailwind.
 A meta é desenvolver (e aprender) utilizando Rails 7, esbuild, Tailwind e Hotwire (Turbo e
 Stimulus), mas meu foco será mais sobre o pacote Hotwire e como ele pode nos ajudar. Conforme
 avanço nos estudos e na implementação, vou complementando este tutorial. Por enquanto temos:
-* [Parte 0: Rails 7]({% post_url 2021-12-07-tutorial-rails7-hotwire %}){:target="_blank"}
+* [Parte 0: Rails 7]({% post_url pt-br/2021-12-07-tutorial-rails7-hotwire %}){:target="_blank"}
 * [Parte 1: Tailwind](#etapa-1---tailwind) → página atual
-* [Parte 2: Hotwire Turbo]({% post_url 2021-12-19-tutorial-rails7-hotwire-parte-2 %}){:target="_blank"}
+* [Parte 2: Hotwire Turbo]({% post_url pt-br/2021-12-19-tutorial-rails7-hotwire-parte-2 %}){:target="_blank"}
 * ~~Parte 3: Hotwire Stimulus~~ → em breve
 
 O pano de fundo é uma aplicação estilo Kanban, com um quadro em que podemos incluir, ver, editar e
@@ -126,7 +128,7 @@ cabe à nós editar, mas Tailwind é mamão com mel, confia.
 Para customizar ou incluir funcionalidades basta editar o arquivo
 [tailwind.config.js](https://github.com/callmarx/LearningHotwire/blob/blog-part-0/tailwind.config.js){:target="_blank"}
 na raiz do projeto. Na
-[parte anterior]({% post_url 2021-12-07-tutorial-rails7-hotwire %}){:target="_blank"} deste
+[parte anterior]({% post_url pt-br/2021-12-07-tutorial-rails7-hotwire %}){:target="_blank"} deste
 tutorial, quando criamos o projeto com a *flag* `--css tailwind` o Rails já nos faz o trabalho de
 instalar e referenciar o framework.
 

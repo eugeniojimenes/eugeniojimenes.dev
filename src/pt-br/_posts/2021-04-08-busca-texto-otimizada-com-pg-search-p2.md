@@ -2,6 +2,8 @@
 layout: post
 title:  "Busca em texto otimizada com a Gem pg_search - Parte II"
 date:   2021-04-08 19:18:53 -0300
+locale: pt_BR
+lang-ref: optimized-text-search-2
 tags: Ruby Rails Optimization PostgreSQL Config
 image: /assets/images/greek-tablet.webp
 image_alt: "Greek Tablet"
@@ -12,7 +14,7 @@ categories: blog
 
 ---
 
-Na [parte I]({% post_url 2021-01-17-busca-texto-otimizada-com-pg-search-p1 %}){:target="_blank"}
+Na [parte I]({% post_url pt-br/2021-01-17-busca-texto-otimizada-com-pg-search-p1 %}){:target="_blank"}
 deste post eu expliquei um pouco sobre o conceito e as funcionalidades de
 [Full Text Searching do PostgreSQL](https://www.postgresql.org/docs/current/textsearch-intro.html){:target="_blank"}
 e me comprometi a explicar com um projetinho Ruby on Rails através da Gema

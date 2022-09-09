@@ -2,6 +2,8 @@
 layout: post
 title:  "Meu primeiro post"
 date:   2020-12-10 10:36:29 -0300
+locale: pt_BR
+lang-ref: my-first-post
 tags: GitHubPages
 image: /assets/images/meditation.webp
 image_alt: "brain meditation"

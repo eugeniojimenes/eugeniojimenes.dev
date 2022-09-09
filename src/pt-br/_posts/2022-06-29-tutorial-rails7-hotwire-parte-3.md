@@ -2,6 +2,8 @@
 layout: post
 title:  "Tutorial: Rails7, Tailwind e Hotwire - Parte 3"
 date:   2022-06-29 21:34:03 -0300
+locale: pt_BR
+lang-ref: rails7-tailwind-hotwire-3
 tags: Tutorial Rails Ruby Tailwind Hotwire
 main_image: /assets/svg/stimulus.svg
 image: /assets/images/stimulus.webp
@@ -14,7 +16,7 @@ categories: blog
 
 ---
 
-Na [parte anterior]({% post_url 2021-12-19-tutorial-rails7-hotwire-parte-2 %}){:target="_blank"}
+Na [parte anterior]({% post_url pt-br/2021-12-19-tutorial-rails7-hotwire-parte-2 %}){:target="_blank"}
 deste tutorial eu expliquei como utilizar a renderização parcial de html com `turbo_stream` do
 [Hotwire Turbo](https://turbo.hotwired.dev){:target="_blank"}, o que nos permitiu mostrar os cards
 recém inseridos ou excluídos do nosso humilde protótipo de Kanban. Agora vou abordar sobre
@@ -25,9 +27,9 @@ o pacote [Hotwire Stimulus](https://stimulus.hotwired.dev/){:target="_blank"}.
 A meta é desenvolver (e aprender) utilizando Rails 7, esbuild, Tailwind e Hotwire (Turbo e
 Stimulus), mas meu foco será mais sobre o pacote Hotwire e como ele pode nos ajudar. Conforme
 avanço nos estudos e na implementação, vou complementando este tutorial. Por enquanto temos:
-* [Parte 0: Rails 7]({% post_url 2021-12-07-tutorial-rails7-hotwire %}){:target="_blank"}
-* [Parte 1: Tailwind]({% post_url 2021-12-09-tutorial-rails7-hotwire-parte-1 %}){:target="_blank"}
-* [Parte 2: Hotwire Turbo]({% post_url 2021-12-19-tutorial-rails7-hotwire-parte-2 %}){:target="_blank"}
+* [Parte 0: Rails 7]({% post_url pt-br/2021-12-07-tutorial-rails7-hotwire %}){:target="_blank"}
+* [Parte 1: Tailwind]({% post_url pt-br/2021-12-09-tutorial-rails7-hotwire-parte-1 %}){:target="_blank"}
+* [Parte 2: Hotwire Turbo]({% post_url pt-br/2021-12-19-tutorial-rails7-hotwire-parte-2 %}){:target="_blank"}
 * [Parte 3: Hotwire Stimulus](#etapa-3---hotwire-stimulus) → página atual
 
 O pano de fundo é uma aplicação estilo Kanban, com um quadro em que podemos incluir, ver, editar e
@@ -50,7 +52,7 @@ será controlado por JS através do Hotwire Stimulus. Dividi essa etapa em 3 *br
 
 ### Foi só falar que eu não ia usar Turbo Frame que...
 Na etapa anterior, na parte que faço uma breve explicação sobre a diferença entre
-[turbo-frame e turbo-stream]({% post_url 2021-12-19-tutorial-rails7-hotwire-parte-2 %}#turbo-frame-vs-turbo-stream){:target="_blank"},
+[turbo-frame e turbo-stream]({% post_url pt-br/2021-12-19-tutorial-rails7-hotwire-parte-2 %}#turbo-frame-vs-turbo-stream){:target="_blank"},
 coloquei uma observação dizendo que não pretendia utilizar o Turbo Frame e eis que surge a
 oportunidade: com ele podemos renderizar dinamicamente o formulário do *chore* para o usuário,
 quando ele precisar inserir ou editar.

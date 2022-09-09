@@ -2,6 +2,8 @@
 layout: post
 title:  "Busca em texto otimizada com a Gem pg_search - Parte I"
 date:   2021-01-17 22:58:53 -0300
+locale: pt_BR
+lang-ref: optimized-text-search-1
 tags: Ruby Rails Optimization PostgreSQL Config
 image: /assets/images/text-search.webp
 image_alt: "Magnifying glass on a text"
@@ -186,4 +188,4 @@ na próxima parte vou mostrar como aplicá-las com a
 [Gem PgSearch](https://github.com/Casecommons/pg_search){:target="_blank"} em projetinho Ruby on
 Rails.
 
-[Link para parte II]({% post_url 2021-04-08-busca-texto-otimizada-com-pg-search-p2 %}){:target="_blank"}
+[Link para parte II]({% post_url pt-br/2021-04-08-busca-texto-otimizada-com-pg-search-p2 %}){:target="_blank"}
