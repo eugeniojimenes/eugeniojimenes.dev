@@ -1,6 +1,7 @@
 ---
 title: About me
 layout: post
+locale: en_US
 description: >-
   Developer, geek, dyslexic, linux fanboy, coffee hipster/addict and staunch
   leftist - CallMarx, get it?
