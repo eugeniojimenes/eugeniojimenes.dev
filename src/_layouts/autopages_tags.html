@@ -8,29 +8,35 @@ layout: default
 
 {% assign tags_list = '' %}
 {% for tag in site.tags %}
-    {% assign tags_list = tags_list | append: tag[1].size | append: ',' | append: tag[0] | append: ';' %} 
+    {% assign tags_list = tags_list | append: tag[1].size | append: ',' | append: tag[0] | append: ';' %}
 {% endfor %}
 {% assign tags_list = tags_list | split: ';' %}
 {% assign tags_list = tags_list | sort %}
 {% assign sorted_tags = '' %}
 {% for tag in tags_list reversed %}
     {% assign name = tag | split: ',' %}
-    {% assign sorted_tags = sorted_tags | append: name[1] | append: ';' %} 
+    {% assign sorted_tags = sorted_tags | append: name[1] | append: ';' %}
 {% endfor %}
 {% assign sorted_tags = sorted_tags | split: ';' %}
+{% if page.locale == 'en_US' %}
+  {% assign root_path = '/en/' %}
+{% else %}
+  {% assign root_path = '/' %}
+{% endif %}
 
 <div class="flex flex-col pt-6 md:pt-12 lg:w-11/12 mx-auto">
   <turbo-frame id="listing-tags">
     <div class="flex flex-col mb-8">
       <h1 class="text-center text-stone-800 dark:text-stone-200 text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-8">
-        {% if page.autopage.display_name %}Posts sob a tag '{{ page.title }}'{% else %}{{ page.title }}{% endif %}
+        {{ page.title }}
       </h1>
       <div class="grid justify-items-stretch gap-2 md:gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:w-11/12 lg:mx-auto">
         {% for tag in sorted_tags %}
-          {% if page.autopage.display_name == tag %}
-            <a class="justify-self-start py-1 px-3 text-sm xs:text-base sm:text-lg md:text-xl font-codepro rounded shadow-lg bg-sky-200 text-sky-800 opacity-40 hover:opacity-80 hover:bg-stone-200 hover:text-stone-800 transition duration-300 ease-in-out" href="/tags/" data-turbo-frame="listing-tags">{{ tag }}</a>
+          {% assign tag_slugify = tag | slugify %}
+          {% if page.selected_tag == tag_slugify %}
+        <a class="justify-self-start py-1 px-3 text-sm xs:text-base sm:text-lg md:text-xl font-codepro rounded shadow-lg bg-sky-200 text-sky-800 opacity-40 hover:opacity-80 hover:bg-stone-200 hover:text-stone-800 transition duration-300 ease-in-out" href="{{ root_path }}tags/" data-turbo-frame="listing-tags">{{ tag }}</a>
           {% else %}
-            <a class="justify-self-start py-1 px-3 text-sm xs:text-base sm:text-lg md:text-xl font-codepro rounded shadow-lg bg-stone-300 text-stone-800 hover:bg-sky-200 hover:text-sky-800 transition duration-300 ease-in-out"  href="/tags/{{ tag | slugify }}" data-turbo-frame="listing-tags">{{ tag }}</a>
+        <a class="justify-self-start py-1 px-3 text-sm xs:text-base sm:text-lg md:text-xl font-codepro rounded shadow-lg bg-stone-300 text-stone-800 hover:bg-sky-200 hover:text-sky-800 transition duration-300 ease-in-out"  href="{{ root_path }}tags/{{ tag_slugify }}" data-turbo-frame="listing-tags">{{ tag }}</a>
           {% endif %}
         {% endfor %}
       </div>

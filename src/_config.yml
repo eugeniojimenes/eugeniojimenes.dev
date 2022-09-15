@@ -39,23 +39,6 @@ pagination:
     before: 2
     after: 2
 
-autopages:
-  enabled: true
-  categories:
-    enabled: false
-  collections:
-    enabled: false
-  tags:
-    layouts:
-      - 'autopages_tags.html'
-    title: ':tag' # :tag is replaced by the tag name
-    permalink: '/tags/:tag'
-    silent: false
-    slugify:
-      mode: 'default'   # :tag is slugified.
-      case: false
-    enabled: true
-
 defaults:
   - scope:
       path: "_posts"

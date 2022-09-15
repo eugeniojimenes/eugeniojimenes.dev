@@ -10,6 +10,6 @@
   </svg>
   <span class="ml-2" title="Estimated read time">
     {% assign words = include.content | strip_html | number_of_words %}
-    {{ words | divided_by: site.word_count | at_least: 2 }} minutos de leitura.
+    {{ words | divided_by: site.word_count | at_least: 2 }} {{ site.data.translations.minutesReading[page.locale] }}.
   </span>
 </div>
