@@ -1,10 +1,15 @@
 {% if page.locale == 'en_US' %}
   {% assign root_path = '/en/' %}
+  {% assign translated_locale = 'pt_BR' %}
 {% else %}
   {% assign root_path = '/' %}
+  {% assign translated_locale = 'en_US' %}
 {% endif %}
 <header class="flex justify-between pt-6 pb-3 border-b-2 border-stone-400 dark:border-stone-100">
-  <a class="font-marker text-3xl md:text-4xl text-stone-900 dark:text-stone-200 hover:opacity-40 transition duration-200 ease-in-out" href="{{ root_path }}">{{ site.title }}</a>
+  <div class="flex justify-between text-stone-900 dark:text-gray-200">
+    {% include translate-icon.html translated_locale=translated_locale %}
+  </div>
+  <a class="font-marker text-2xl xs:text-3xl md:text-4xl text-stone-900 dark:text-stone-200 hover:opacity-40 transition duration-200 ease-in-out" href="{{ root_path }}">{{ site.title }}</a>
   <div class="flex justify-between text-stone-900 dark:text-gray-200" data-controller="dark-mode">
     <a class="flex hover:opacity-40 transition duration-200 ease-in-out" href="{{ root_path }}tags/" aria-label="Tags icon">
       <svg class="w-6 h-6 mt-1" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
