@@ -9,7 +9,6 @@ image: /assets/images/elixir-logo.webp
 image_alt: "Elixir Logo"
 description: >-
   Uma "rápida" síntese de mais alguns conceitos antes de ir para resolução de exercícios.
-categories: blog
 
 ---
 

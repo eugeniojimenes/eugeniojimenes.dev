@@ -9,7 +9,6 @@ image: /assets/images/elixir-logo.webp
 image_alt: "Elixir Logo"
 description: >-
   Começando pelo básico: curiosidades, instalação, configuração e o clássico "Hello World".
-categories: blog
 
 ---
 

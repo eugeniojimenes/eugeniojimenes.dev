@@ -9,7 +9,6 @@ image: /assets/images/portainer-docker.webp
 image_alt: "Portainer + Docker Logo"
 description: >-
   Mini tutorial de gerenciamento local de contêineres com Portainer CE.
-categories: blog
 
 ---
 

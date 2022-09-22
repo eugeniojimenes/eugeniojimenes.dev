@@ -9,7 +9,6 @@ image: /assets/images/elixir-logo.webp
 image_alt: "Elixir Logo"
 description: >-
   Decidi estudar a linguagem Elixir e reportar aqui minhas conquistas e tropeços.
-categories: blog
 
 ---
 

@@ -11,7 +11,6 @@ image_alt: "Rails 7 + Tailwind + Hotwire Logo"
 description: >-
   Tutorial sobre Rails 7 com esbuild, tailwind e Hotwire(Turbo e Stimulus). Como desenvolver um
   aplicação estilo Kanban, com cards/tarefas e persistência simultânea via websockets.
-categories: blog
 
 ---
 

@@ -10,7 +10,6 @@ image_alt: "MVC Diagram - Wikipedia"
 description: >-
   "Skinny Controller, Fat Model" mantra, MVC pattern and DRY concept. It's the old clean and clear
   code challenge. See examples in Ruby on Rails.
-categories: blog
 
 ---
 

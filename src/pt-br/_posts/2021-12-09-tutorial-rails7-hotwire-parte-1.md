@@ -12,7 +12,6 @@ description: >-
   Parte 1: Montando um layout com Tailwind - Tutorial sobre Rails 7 com esbuild, tailwind e
   Hotwire(Turbo e Stimulus). Como desenvolver um aplicação estilo Kanban, com cards/tarefas e
   persistência simultânea via websockets.
-categories: blog
 
 ---
 

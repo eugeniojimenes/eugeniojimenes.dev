@@ -12,7 +12,6 @@ description: >-
   Parte 3: Modal para inserção e edição com Stimulus. Rails 7 com esbuild, tailwind e
   Hotwire (Turbo e Stimulus) - Como desenvolver um aplicação estilo Kanban, com cards/tarefas e
   persistência simultânea via websockets.
-categories: blog
 
 ---
 

@@ -9,7 +9,6 @@ image: /assets/images/vim-br.webp
 image_alt: "Vim + Reginaldo Rossi"
 description: >-
   Como configurar verificador ortográfico (spellcheck) para português brasileiro no seu vim.
-categories: blog
 
 ---
 

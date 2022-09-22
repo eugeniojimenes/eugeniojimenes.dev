@@ -10,7 +10,6 @@ image_alt: "brain meditation"
 description: >-
   Criei vergonha na cara e parei de ficar apenas babando nos inúmeros blogs sobre programação que
   encontramos pela imensidão da internet do gênero “What I Learned Today”.
-categories: blog
 
 ---
 

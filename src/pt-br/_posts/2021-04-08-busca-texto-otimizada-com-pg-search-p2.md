@@ -10,7 +10,6 @@ image_alt: "Greek Tablet"
 description: >-
   Destrinchando a funcionalidade "Full Text Searching" do PostgreSQL com a Gem pg_search
   em uma aplicação Ruby on Rails - Parte II
-categories: blog
 
 ---
 

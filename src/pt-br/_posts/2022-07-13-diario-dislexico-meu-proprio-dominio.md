@@ -10,7 +10,6 @@ image: /assets/images/jekyll-netlify.webp
 image_alt: "Jekyll and Netlify logos"
 description: >-
   Refiz meu blog com Jekyll, Tailwind e Hotwire Turbo.
-categories: blog
 
 ---
 

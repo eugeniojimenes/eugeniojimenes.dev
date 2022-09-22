@@ -10,7 +10,6 @@ image_alt: "MVC Diagram - Wikipedia"
 description: >-
   Mantra “Skinny Controller, Fat Model”, padrão MVC e conceito DRY. É o velho desfaio do código
   limpo e claro. Veja exemplos em Ruby on Rails.
-categories: blog
 
 ---
 

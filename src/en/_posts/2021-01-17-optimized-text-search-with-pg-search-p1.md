@@ -10,7 +10,6 @@ image_alt: "Magnifying glass on a text"
 description: >-
   Breaking down PostgreSQL's "Full Text Searching" functionality with pg_search gem in a
   Ruby on Rails application - Part I
-categories: blog
 
 ---
 

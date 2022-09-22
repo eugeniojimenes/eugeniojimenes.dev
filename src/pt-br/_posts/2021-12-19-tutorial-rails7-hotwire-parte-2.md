@@ -12,7 +12,6 @@ description: >-
   Parte 2: Renderização parcial com Hotwire Turbo - Tutorial sobre Rails 7 com esbuild, tailwind e
   Hotwire (Turbo e Stimulus). Como desenvolver um aplicação estilo Kanban, com cards/tarefas e
   persistência simultânea via websockets.
-categories: blog
 
 ---
 

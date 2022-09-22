@@ -10,7 +10,6 @@ image_alt: "Elixir Logo"
 description: >-
   Essa parte provavelmente vai parecer confusa e desnecessária, mas confie, "pattern matching" é
   uma característica poderosa do Elixir.
-categories: blog
 
 ---
 

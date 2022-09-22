@@ -3,7 +3,7 @@
   {% if translated_post %}
     {% assign translated_url=translated_post.url %}
   {% else %}
-    {% assign translated_url="Não há tradução!" %}
+    {% assign translated_url=false %}
   {% endif %}
 {% else %}
   {% if include.translated_locale == 'en_US' %}
@@ -12,7 +12,12 @@
     {% assign translated_url=page.url | remove_first: "/en" | remove_first: "index.html" | remove_first: ".html" %}
   {% endif %}
 {% endif %}
-<a class="flex hover:opacity-40 transition duration-200 ease-in-out" href="{{ translated_url }}" aria-label="Tags icon">
+
+{% if translated_url %}
+  <a class="flex hover:opacity-40 transition duration-200 ease-in-out" href="{{ translated_url }}" aria-label="Tags icon">
+{% else %}
+  <span class="flex opacity-40">
+{% endif %}
   {% if translated_locale == 'en_US' %}
     <svg class="w-8 h-8 mt-1" fill="currentColor" viewBox="0 0 122.88 100.06">
       <style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;}</style>
@@ -78,6 +83,9 @@
       </g>
     </svg>
   {% endif %}
-  <strong class="hidden mt-1 ml-1 md:block">{{ translated_url }}</strong>
-</a>
+{% if translated_url %}
+  </a>
+{% else %}
+  </span>
+{% endif %}
 

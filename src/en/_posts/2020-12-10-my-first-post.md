@@ -10,7 +10,6 @@ image_alt: "brain meditation"
 description: >-
   I got my shit together and stopped being jealous of the numerous programming blogs that we can
   find in the immensity of the internet like "What I Learned Today".
-categories: blog
 
 ---
 
