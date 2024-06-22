@@ -8,7 +8,7 @@ tags: TIL Ruby Rails Etag Cache
 image: /assets/images/paper-tag.webp
 image_alt: "A light brown paper label attached with a piece of jute rope."
 description: >-
-  When and how to use Etgas in Rails.
+  When and how to use Etags in Rails.
 
 ---
 
