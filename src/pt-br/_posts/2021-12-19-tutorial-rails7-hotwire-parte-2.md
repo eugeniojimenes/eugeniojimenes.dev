@@ -28,7 +28,7 @@ avanço nos estudos e na implementação, vou complementando este tutorial. Por 
 * [Parte 0: Rails 7]({% post_url pt-br/2021-12-07-tutorial-rails7-hotwire %}){:target="_blank"}
 * [Parte 1: Tailwind]({% post_url pt-br/2021-12-09-tutorial-rails7-hotwire-parte-1 %}){:target="_blank"}
 * [Parte 2: Hotwire Turbo](#etapa-2---hotwire-turbo) → página atual
-* ~~Parte 3: Hotwire Stimulus~~ → em breve
+* [Part 3: Hotwire Stimulus]({% post_url pt-br/2022-06-29-tutorial-rails7-hotwire-parte-3 %}){:target="_blank"}
 
 O pano de fundo é uma aplicação estilo Kanban, com um quadro em que podemos incluir, ver, editar e
 excluir os cards/tarefas e isso ser persistido simultaneamente via *websockets* para todas as
