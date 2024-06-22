@@ -2,7 +2,7 @@
 layout: post
 title:  "Tutorial: Rails7, Tailwind, and Hotwire - Part 3"
 date:   2022-06-29 21:34:03 -0300
-locale: pt_BR
+locale: en_US
 lang-ref: rails7-tailwind-hotwire-3
 tags: Tutorial Rails Ruby Tailwind Hotwire
 main_image: /assets/svg/stimulus.svg
