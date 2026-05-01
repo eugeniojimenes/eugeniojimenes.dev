@@ -8,8 +8,8 @@ Personal blog at https://callmarx.dev — Jekyll + Tailwind + Hotwire, deployed 
 - **Styling:** Tailwind CSS 3.1.4 (PostCSS pipeline, dark mode via `class` strategy)
 - **JS:** Hotwire (Turbo 7.1, Stimulus 3.1) bundled by Webpack 5
 - **Plugins:** `jekyll-paginate-v2`, `jekyll-seo-tag`, `jekyll-sitemap`
-- **Ruby:** 3.2.2 (`.ruby-version`) — managed via Bundler
-- **Node:** 21 / NPM 10 (per `netlify.toml`)
+- **Ruby:** 3.4.9 (`.ruby-version`, `mise.toml`) — managed via Bundler
+- **Node:** 22 LTS / NPM 10 (per `netlify.toml`, `mise.toml`)
 - **Hosting:** Netlify (`netlify.toml` drives build)
 - **Process manager:** Foreman via `Procfile.dev`
 
@@ -132,14 +132,14 @@ Pagination uses `jekyll-paginate-v2` (`per_page: 4`, descending by date), wrappe
 
 ## Lint / format
 
-- **Rubocop** (`.rubocop.yml`) — only the plugin (`tag_page_plugin.rb`) is Ruby. Pinned to Ruby 3.2.2 target. `MethodLength` max 15. Run with `bundle exec rubocop` before committing changes to `_plugins/`.
+- **Rubocop** (`.rubocop.yml`) — only the plugin (`tag_page_plugin.rb`) is Ruby. Pinned to Ruby 3.4 target. `MethodLength` max 15. Run with `bundle exec rubocop` before committing changes to `_plugins/`.
 - No JS/CSS linter configured.
 
 ## Deploy
 
 - Netlify watches the GitHub repo. Pushes to `develop` (configured branch) trigger `npm run build:prod`.
 - Build env (`netlify.toml`):
-  - `NODE_VERSION=21`, `NPM_VERSION=10`, `RUBY_VERSION=3.2.2`
+  - `NODE_VERSION=22`, `NPM_VERSION=10`, `RUBY_VERSION=3.4.9`
   - `JEKYLL_ENV=production`, `NODE_ENV=production` (gates Google Analytics injection in `_includes/analytics.html`)
 - Output dir: `src/_site`.
 
@@ -157,13 +157,9 @@ Most pins are behind. Order them by impact / risk:
 
 | Component | Current | Latest | Notes |
 |---|---|---|---|
-| Ruby | 3.2.2 | 4.0.2 | major. Update `.ruby-version`, `Gemfile`, `.rubocop.yml` (`TargetRubyVersion`), `netlify.toml`. |
-| Jekyll | 4.3.3 | 4.3.x | likely just patch — `bundle update jekyll`. |
-| Tailwind | 3.1.4 | 4.2 | **breaking**. New Oxide engine, CSS-first `@theme` config, `bg-gradient-to-*` → `bg-linear-to-*`, drops legacy aliases. Run `npx @tailwindcss/upgrade`. Browser support tightens (Safari 16.4+, Chrome 111+, FF 128+). |
+| Tailwind | 3.1.4 | 4.2 | **breaking**. New Oxide engine, CSS-first `@theme` config, `bg-gradient-to-*` → `bg-linear-to-*`, drops legacy aliases. Run `npx @tailwindcss/upgrade`. Browser support tightens (Safari 16.4+, Chrome 111+, FF 128+). Migrate webpack pipeline to `@tailwindcss/webpack` (drops `postcss-loader`, `postcss-import`, `autoprefixer`). |
 | @hotwired/turbo | 7.1.0 | 8.0.23 | major — review Turbo 8 changelog, especially morphing + view transitions. |
-| @hotwired/stimulus | 3.1.0 | 3.x latest | minor. |
-| webpack | 5.73.0 | 5.x latest | patch/minor. Consider whether Tailwind v4's Vite plugin is worth a migration off webpack entirely. |
-| Babel + loaders | 7.18.x | 7.2x | minor. |
-| Node | 21 | 22 LTS | Netlify default is now 22 — bump `NODE_VERSION` in `netlify.toml`. |
+| @hotwired/stimulus | 3.1.0 | 3.2.2 | minor. |
+| Babel + loaders | 7.18.x | 7.2x | minor. Bundle alongside Tailwind v4 PR (build pipeline rewrite). |
 | Twitter link | active | dead-ish | `twitter.com/callmarx_dev` → consider X domain or remove. |
 | `deploy` branch | stale | — | delete locally + on origin. |
