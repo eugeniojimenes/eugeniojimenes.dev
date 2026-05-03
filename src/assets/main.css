@@ -1,47 +1,68 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
-@import "css/syntax-highlight/highcontrast-monokai";
+@custom-variant dark (&:where(.dark, .dark *));
 
-/* image align left */
-.align-left {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  float: left;
-  margin-right: 1em;
+@theme {
+  --breakpoint-xs: 28rem;
+
+  --spacing-112: 28rem;
+
+  --color-beige-100: #f8f5f1;
+  --color-beige-200: #f1eae4;
+  --color-beige-300: #eae3d7;
+  --color-beige-400: #e4daca;
+  --color-beige-500: #ddd1bd;
+  --color-beige-600: #d6c8b0;
+  --color-beige-700: #d0bfa3;
+  --color-beige-800: #c9b596;
+  --color-beige-900: #c2ac8a;
+
+  --font-marker:  "Permanent Marker", cursive;
+  --font-codepro: "Source Code Pro", monospace;
 }
 
-/* image align right */
-.align-right {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  float: right;
-  margin-left: 1em;
+@utility prose-custom {
+  --tw-prose-body:           var(--color-stone-700);
+  --tw-prose-headings:       var(--color-stone-900);
+  --tw-prose-lead:           var(--color-stone-600);
+  --tw-prose-links:          var(--color-sky-800);
+  --tw-prose-bold:           var(--color-stone-900);
+  --tw-prose-counters:       var(--color-stone-500);
+  --tw-prose-bullets:        var(--color-stone-300);
+  --tw-prose-hr:             var(--color-stone-200);
+  --tw-prose-quotes:         var(--color-stone-900);
+  --tw-prose-quote-borders:  var(--color-stone-200);
+  --tw-prose-captions:       var(--color-stone-500);
+  --tw-prose-code:           var(--color-stone-900);
+  --tw-prose-pre-code:       var(--color-stone-200);
+  --tw-prose-pre-bg:         var(--color-stone-800);
+  --tw-prose-th-borders:     var(--color-stone-300);
+  --tw-prose-td-borders:     var(--color-stone-200);
+  --tw-prose-invert-body:          var(--color-stone-200);
+  --tw-prose-invert-headings:      var(--color-white);
+  --tw-prose-invert-lead:          var(--color-stone-400);
+  --tw-prose-invert-links:         var(--color-sky-400);
+  --tw-prose-invert-bold:          var(--color-white);
+  --tw-prose-invert-counters:      var(--color-stone-400);
+  --tw-prose-invert-bullets:       var(--color-stone-600);
+  --tw-prose-invert-hr:            var(--color-stone-700);
+  --tw-prose-invert-quotes:        var(--color-stone-100);
+  --tw-prose-invert-quote-borders: var(--color-stone-700);
+  --tw-prose-invert-captions:      var(--color-stone-400);
+  --tw-prose-invert-code:          var(--color-white);
+  --tw-prose-invert-pre-code:      var(--color-stone-300);
+  --tw-prose-invert-pre-bg:        rgb(0 0 0 / 50%);
+  --tw-prose-invert-th-borders:    var(--color-stone-600);
+  --tw-prose-invert-td-borders:    var(--color-stone-700);
 }
 
-/* image align center */
-.align-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+@import "./css/syntax-highlight/highcontrast-monokai.css";
 
-.img-increase {
-  width: 50%;
-  height: auto;
-}
+.align-left   { display: block; margin-left: auto; margin-right: auto; float: left;  margin-right: 1em; }
+.align-right  { display: block; margin-left: auto; margin-right: auto; float: right; margin-left: 1em; }
+.align-center { display: block; margin-left: auto; margin-right: auto; }
+.img-increase { width: 50%; height: auto; }
 
-/* .language-plaintext { */
-/*   @apply px-1 py-1 bg-stone-200 font-medium rounded-md dark:text-stone-600 */
-/* } */
-
-.note-info {
-  @apply py-4 px-6 text-sm sm:text-base lg:text-xl bg-sky-100/70 rounded-md dark:bg-sky-400/20
-}
-
-.note-warning {
-  @apply py-4 px-6 text-sm sm:text-base lg:text-xl bg-orange-100/70 rounded-md dark:bg-orange-400/20
-}
+.note-info    { @apply py-4 px-6 text-sm sm:text-base lg:text-xl bg-sky-100/70    rounded-md dark:bg-sky-400/20; }
+.note-warning { @apply py-4 px-6 text-sm sm:text-base lg:text-xl bg-orange-100/70 rounded-md dark:bg-orange-400/20; }
