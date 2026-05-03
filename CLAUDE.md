@@ -5,7 +5,7 @@ Personal blog at https://callmarx.dev — Jekyll + Tailwind + Hotwire, deployed 
 ## Stack snapshot
 
 - **Static generator:** Jekyll 4.3.x (`src/` source → `src/_site/` output)
-- **Styling:** Tailwind CSS 3.1.4 (PostCSS pipeline, dark mode via `class` strategy)
+- **Styling:** Tailwind CSS 4.x (CSS-first `@theme` config in `src/assets/main.css`, `@tailwindcss/webpack` loader, dark mode via `class` strategy through `@custom-variant`)
 - **JS:** Hotwire (Turbo 8.x, Stimulus 3.2.x) bundled by Webpack 5 — page morphing + View Transitions enabled via `<meta>` tags in `_layouts/default.html`
 - **Plugins:** `jekyll-paginate-v2`, `jekyll-seo-tag`, `jekyll-sitemap`
 - **Ruby:** 3.4.9 (`.ruby-version`, `mise.toml`) — managed via Bundler
@@ -29,7 +29,7 @@ src/
 │   └── tag_page_plugin.rb  # generates /tags/:slug for both locales
 ├── assets/
 │   ├── main.js           # Webpack entry — imports main.css + Turbo + Stimulus auto-loader
-│   ├── main.css          # @tailwind directives + custom utilities (.align-*, .note-*)
+│   ├── main.css          # Tailwind v4 CSS-first config (@theme, @utility prose-custom, @custom-variant dark) + custom utilities (.align-*, .note-*)
 │   ├── js/controllers/   # Stimulus controllers (dark_mode_controller.js)
 │   └── css/syntax-highlight/  # Rouge theme (highcontrast-monokai)
 ├── index.md              # PT-BR home (default locale)
@@ -116,11 +116,13 @@ Pagination uses `jekyll-paginate-v2` (`per_page: 4`, descending by date), wrappe
 ## Asset pipeline
 
 - Webpack entry: `src/assets/main.js` → emits `src/assets/main-bundle.js` + `main-bundle.css` (extracted via `mini-css-extract-plugin`).
+- CSS pipeline: `css-loader` → `@tailwindcss/webpack` (no PostCSS, no `postcss.config.js`, no `tailwind.config.js`). All Tailwind setup lives in `src/assets/main.css`.
 - Stimulus controllers auto-loaded from `src/assets/js/controllers/**/*.js` via `@hotwired/stimulus-webpack-helpers`.
-- Tailwind config (`tailwind.config.js`):
-  - `darkMode: 'class'` (toggled by dark-mode controller; persisted in `localStorage.theme`; FOUC guard in `_includes/head-darkmode-check.html`).
-  - Custom `beige` palette and `xs: 448px` breakpoint.
-  - `@tailwindcss/typography` with custom `prose-custom` variant.
+- Tailwind config — declared inside `src/assets/main.css`:
+  - `@import "tailwindcss"` + `@plugin "@tailwindcss/typography"`.
+  - `@custom-variant dark (&:where(.dark, .dark *))` — class-strategy dark mode (toggled by dark-mode controller, persisted in `localStorage.theme`; FOUC guard in `_includes/head-darkmode-check.html`).
+  - `@theme {}` block: custom `beige` palette (`--color-beige-*`), `xs` breakpoint (`--breakpoint-xs: 28rem`), `--spacing-112`, `--font-marker`, `--font-codepro`.
+  - `@utility prose-custom` defines all `--tw-prose-*` tokens (typography plugin v4 entrypoint).
   - Fonts: `Permanent Marker` (`font-marker`), `Source Code Pro` (`font-codepro`) — loaded from Google Fonts in `_layouts/default.html`.
 - `main-bundle.*` is gitignored — webpack must run before Jekyll (the `bin/build` script and Netlify config both order it that way).
 
@@ -153,11 +155,9 @@ Pagination uses `jekyll-paginate-v2` (`per_page: 4`, descending by date), wrappe
 
 ## Upgrade backlog (May 2026)
 
-Most pins are behind. Order them by impact / risk:
+Stack pins are current. Remaining cleanup:
 
 | Component | Current | Latest | Notes |
 |---|---|---|---|
-| Tailwind | 3.1.4 | 4.2 | **breaking**. New Oxide engine, CSS-first `@theme` config, `bg-gradient-to-*` → `bg-linear-to-*`, drops legacy aliases. Run `npx @tailwindcss/upgrade`. Browser support tightens (Safari 16.4+, Chrome 111+, FF 128+). Migrate webpack pipeline to `@tailwindcss/webpack` (drops `postcss-loader`, `postcss-import`, `autoprefixer`). |
-| Babel + loaders | 7.18.x | 7.2x | minor. Bundle alongside Tailwind v4 PR (build pipeline rewrite). |
 | Twitter link | active | dead-ish | `twitter.com/callmarx_dev` → consider X domain or remove. |
 | `deploy` branch | stale | — | delete locally + on origin. |
