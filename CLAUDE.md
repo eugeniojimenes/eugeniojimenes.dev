@@ -6,7 +6,7 @@ Personal blog at https://callmarx.dev — Jekyll + Tailwind + Hotwire, deployed 
 
 - **Static generator:** Jekyll 4.3.x (`src/` source → `src/_site/` output)
 - **Styling:** Tailwind CSS 3.1.4 (PostCSS pipeline, dark mode via `class` strategy)
-- **JS:** Hotwire (Turbo 7.1, Stimulus 3.1) bundled by Webpack 5
+- **JS:** Hotwire (Turbo 8.x, Stimulus 3.2.x) bundled by Webpack 5 — page morphing + View Transitions enabled via `<meta>` tags in `_layouts/default.html`
 - **Plugins:** `jekyll-paginate-v2`, `jekyll-seo-tag`, `jekyll-sitemap`
 - **Ruby:** 3.4.9 (`.ruby-version`, `mise.toml`) — managed via Bundler
 - **Node:** 22 LTS / NPM 10 (per `netlify.toml`, `mise.toml`)
@@ -158,8 +158,6 @@ Most pins are behind. Order them by impact / risk:
 | Component | Current | Latest | Notes |
 |---|---|---|---|
 | Tailwind | 3.1.4 | 4.2 | **breaking**. New Oxide engine, CSS-first `@theme` config, `bg-gradient-to-*` → `bg-linear-to-*`, drops legacy aliases. Run `npx @tailwindcss/upgrade`. Browser support tightens (Safari 16.4+, Chrome 111+, FF 128+). Migrate webpack pipeline to `@tailwindcss/webpack` (drops `postcss-loader`, `postcss-import`, `autoprefixer`). |
-| @hotwired/turbo | 7.1.0 | 8.0.23 | major — review Turbo 8 changelog, especially morphing + view transitions. |
-| @hotwired/stimulus | 3.1.0 | 3.2.2 | minor. |
 | Babel + loaders | 7.18.x | 7.2x | minor. Bundle alongside Tailwind v4 PR (build pipeline rewrite). |
 | Twitter link | active | dead-ish | `twitter.com/callmarx_dev` → consider X domain or remove. |
 | `deploy` branch | stale | — | delete locally + on origin. |
