@@ -10,9 +10,9 @@
   "dependencies": {
     "@babel/core": "^7.18.9",
     "@babel/preset-env": "^7.18.9",
-    "@hotwired/stimulus": "^3.1.0",
+    "@hotwired/stimulus": "^3.2.2",
     "@hotwired/stimulus-webpack-helpers": "^1.0.1",
-    "@hotwired/turbo": "^7.1.0",
+    "@hotwired/turbo": "^8.0.23",
     "@tailwindcss/typography": "^0.5.2",
     "autoprefixer": "^10.4.7",
     "babel-loader": "^8.2.5",
