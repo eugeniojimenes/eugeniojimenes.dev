@@ -2,10 +2,10 @@
 layout: index
 title: "EugenioJimenes.dev"
 locale: en_US
-main_image: /assets/images/eu.webp
-image: /assets/images/eu.webp
+main_image: /assets/images/eu-v2.webp
+image: /assets/images/eu-v2.webp
 description: >-
-  Senior Software Developer · Rails since 2012 · dyslexic, linux fanboy,
+  Senior Ruby on Rails Engineer, 8+ yrs Rails, dyslexic, linux fanboy,
   coffee hipster/addict.
 pagination:
   enabled: true
@@ -15,6 +15,6 @@ pagination:
 
 ## Eugenio A. Jimenes
 
-Senior Software Developer · Rails since 2012 · Based in Brazil (UTC−3), open to remote roles paid in USD/EUR.
+Senior Ruby on Rails Engineer, 8+ yrs Rails, based in Brazil (UTC−3), open to remote roles in English-speaking teams. Career break since Jan 2026, prepping for senior remote.
 
-Bachelor degree in Computer Science from University of São Paulo. Working in the area since 2012. Despite being curious and passionate about technology I maintain my ambiguous relation of "**Yikes, what a delight!**" with IT in the classic battle of managing expectations, focus and frustration.
+Bachelor's degree in Computer Science from University of São Paulo. Working in the area since 2012. Despite being curious and passionate about technology I maintain my ambiguous **"Pain and joy"** relationship with IT in the classic battle of managing expectations, focus, and frustration.
