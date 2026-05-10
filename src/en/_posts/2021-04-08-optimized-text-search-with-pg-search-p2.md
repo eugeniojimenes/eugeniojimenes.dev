@@ -24,7 +24,7 @@ and I committed to explain with a little Ruby on Rails project through
 
 ## Git clone and enjoy it!
 
-The complete project is available at <https://github.com/callmarx/fts_example>{:target="_blank"}.
+The complete project is available at <https://github.com/eugeniojimenes/fts_example>{:target="_blank"}.
 To run it you just need Docker installed and configured on your linux and run the following commands
 in different terminals:
 
@@ -245,11 +245,11 @@ If we repeat the searches above with some conjugation of the same verb as "*proi
 of forbidden in Portuguese), the query `.bad_search` will select other articles, whereas with
 `.good_search` we keep the same 13 articles since `tsvector` works with [lexemes](https://radames.manosso.nom.br/linguagem/gramatica/morfologia/lexema/){:target="_blank"},
 what guarantees to cover all the inflections of the term searched. These Postman queries can be
-imported by the file [fts_example.postman_collection.json](https://raw.githubusercontent.com/callmarx/fts_example/main/fts_example.postman_collection.json){:target="_blank"},
+imported by the file [fts_example.postman_collection.json](https://raw.githubusercontent.com/eugeniojimenes/fts_example/main/fts_example.postman_collection.json){:target="_blank"},
 also available in the project.
 
 To evaluate the performance I implemented some tasks to measure the execution time. Searches are
-performed using a [list of 485 words](https://raw.githubusercontent.com/callmarx/fts_example/main/lib/tasks/present_words.txt){:target="_blank"},
+performed using a [list of 485 words](https://raw.githubusercontent.com/eugeniojimenes/fts_example/main/lib/tasks/present_words.txt){:target="_blank"},
 explicitly present in the articles, that is, each of the words returns at least one article with
 `.bad_search`. This way we avoid empty queries with the bad method, but present with the good
 method, which would affect the quality of the test. However, as demonstrated earlier,

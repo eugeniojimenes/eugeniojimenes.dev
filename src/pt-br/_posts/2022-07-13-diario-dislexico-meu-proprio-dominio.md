@@ -49,7 +49,7 @@ atender o padrão [WCAG](https://www.w3.org/WAI/WCAG2AA-Conformance){:target="_b
 acessibilidade.
 
 Como disse inicialmente, pretendo lançar um *template* com tudo que fiz aqui. Até lá o código deste
-blog está disponível [neste repositório](https://github.com/callmarx/callmarx.dev){:target="_blank"}.
+blog está disponível [neste repositório](https://github.com/eugeniojimenes/eugeniojimenes.dev){:target="_blank"}.
 
 ## Proximos passos
 

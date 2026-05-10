@@ -24,7 +24,7 @@ os exercícios sobre a linguagem do <https://exercism.io>{:target="_blank"}.
 
 A ideia aqui é fazer uma mistura de um diário de estudo com tutorial de ensino sob a minha
 perspectiva. Tudo será compartilhado no repositório público que criei no meu GitHub -
-<https://github.com/callmarx/aprendendo_elixir>{:target="_blank"}, além disso ~~espero~~ irei fazer
+<https://github.com/eugeniojimenes/aprendendo_elixir>{:target="_blank"}, além disso ~~espero~~ irei fazer
 uma sequência de posts sobre meus avanços com a tecnologia, compartilhar ganhos e frustrações.
 
 Pensei em avançar um pouco nisso antes de fazer este anuncio aqui, talvez já ter alguns exercícios

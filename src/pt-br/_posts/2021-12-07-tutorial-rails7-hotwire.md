@@ -38,14 +38,14 @@ temos:
 O pano de fundo é uma aplicação estilo Kanban, com um quadro em que podemos incluir, ver, editar e
 excluir os cards/tarefas e isso ser persistido simultaneamente via *websockets* para todas as
 sessões abertas da aplicação. Todo código esta disponível neste
-[repositório](https://github.com/callmarx/LearningHotwire){:target="_blank"}. Note que incluí
-algumas [*branches*](https://github.com/callmarx/LearningHotwire/branches/all){:target="_blank"} que
+[repositório](https://github.com/eugeniojimenes/LearningHotwire){:target="_blank"}. Note que incluí
+algumas [*branches*](https://github.com/eugeniojimenes/LearningHotwire/branches/all){:target="_blank"} que
 representam as partes abordadas aqui.
 
 ## Etapa Zero - Rails 7
 Nesta parte inicial, explico como configurar o Rails 7, com suas novas opções, e como "dockerizar"
 os bancos de dados PostgreSQL e Redis. O resultado final desta etapa é o disponível na *branch*
-[blog-part-0](https://github.com/callmarx/LearningHotwire/tree/blog-part-0){:target="_blank"}.
+[blog-part-0](https://github.com/eugeniojimenes/LearningHotwire/tree/blog-part-0){:target="_blank"}.
 
 ### Criando um novo projeto com Rails 7
 Utilizei as seguintes versões para este projeto:
@@ -80,7 +80,7 @@ como *CSS processor/framework* (`--css tailwind`). Estas novas flags corresponde
 automaticamente no Gemfile.
 
 ### Algumas inclusões
-No [Gemfile](https://github.com/callmarx/LearningHotwire/blob/blog-part-0/Gemfile){:target="_blank"}
+No [Gemfile](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-0/Gemfile){:target="_blank"}
 eu removi os comentários e inclui algumas gemas ficando assim:
 
 ```ruby
@@ -127,14 +127,14 @@ o [turbo-rails](https://github.com/hotwired/turbo-rails){:target="_blank"}.
 Nos blocos de `:development` e `:test` inclui algumas gemas para teste e lint. Não sei ainda se vou
 ou não desenvolver testes, mas na dúvida instalei o RSpec com o comando padrão
 `rails generate rspec:install` e inclui arquivos de configuração como
-[.reek.yml](https://github.com/callmarx/LearningHotwire/blob/blog-part-0/.reek.yml){:target="_blank"},
-[.rubocop.yml](https://github.com/callmarx/LearningHotwire/blob/blog-part-0/.rubocop.yml){:target="_blank"},
-[.rubycritic.yml](https://github.com/callmarx/LearningHotwire/blob/blog-part-0/.rubycritic.yml){:target="_blank"},
+[.reek.yml](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-0/.reek.yml){:target="_blank"},
+[.rubocop.yml](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-0/.rubocop.yml){:target="_blank"},
+[.rubycritic.yml](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-0/.rubycritic.yml){:target="_blank"},
 entre outros.
 
 ### Docker
 Para facilitar o desenvolvimento eu "dockerizei" o PostgreSQL e Redis com o seguinte
-[docker-compose.yml](https://github.com/callmarx/LearningHotwire/blob/blog-part-0/docker-compose.yml){:target="_blank"}:
+[docker-compose.yml](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-0/docker-compose.yml){:target="_blank"}:
 
 ```yml
 # docker-compose.yml
@@ -175,9 +175,9 @@ volumes:
 ```
 
 Para se comunicar com esses bancos alterei o
-[config/database.yml](https://github.com/callmarx/LearningHotwire/blob/blog-part-0/config/database.yml){:target="_blank"}
+[config/database.yml](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-0/config/database.yml){:target="_blank"}
 e o
-[config/cable.yml](https://github.com/callmarx/LearningHotwire/blob/blog-part-0/config/cable.yml){:target="_blank"}:
+[config/cable.yml](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-0/config/cable.yml){:target="_blank"}:
 
 ```yml
 # config/database.yml
@@ -219,14 +219,14 @@ Com as novas inclusões de *JavaScript bundler* e *CSS processor/framework*, o R
 subir todo o ambiente de desenvolvimento a gema
 [*foreman*](https://github.com/ddollar/foreman){:target="_blank"} que chama os processos listados
 no arquivo
-[Procfile.dev](https://github.com/callmarx/LearningHotwire/blob/blog-part-0/Procfile.dev){:target="_blank"}.
+[Procfile.dev](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-0/Procfile.dev){:target="_blank"}.
 Isso tudo porque não mais apenas o servidor do Rails precisa ser executado em modo *watch*, ou
 seja, em modo de reload automático (em inglês chamamos de *watch process*), mas agora também essas
 duas novas inclusões.
 
 Como incluímos o PostgreSQL e Redis no docker, podemos incluir também a chamada `docker-compose up`
 no
-[Procfile.dev](https://github.com/callmarx/LearningHotwire/blob/blog-part-0/Procfile.dev){:target="_blank"},
+[Procfile.dev](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-0/Procfile.dev){:target="_blank"},
 ficando assim:
 
 ```text

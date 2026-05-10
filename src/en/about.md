@@ -3,10 +3,12 @@ title: About me
 layout: post
 locale: en_US
 description: >-
-  Developer, geek, dyslexic, linux fanboy, coffee hipster/addict and staunch
-  leftist - CallMarx, get it?
+  Senior Software Developer · Rails since 2012 · dyslexic, linux fanboy,
+  coffee hipster/addict.
 
 ---
+
+Senior Software Developer · Rails since 2012 · Based in Brazil (UTC−3), open to remote roles paid in USD/EUR.
 
 Developer, geek, dyslexic, linux fanboy, coffee hipster/addict and with a mix of the typical accent
 of an Italian immigration neighborhood of São Paulo, the largest city in Brazil.

@@ -1,17 +1,13 @@
 title: "CallMarx.dev"
 tagline: "Desenvolvedor senior, disléxico e esquerdopata convicto"
 description: "Blog/diário sobre minha relação de \"Credo, que delícia!\" com TI."
-url: "https://callmarx.dev"
+url: "https://eugeniojimenes.dev"
 author: "Eugenio A. Jimenes"
 image: "/assets/images/eu.webp"
 language: "pt-BR"
 baseurl: ""
 
 google_analytics: G-M04ER887TV
-
-twitter:
-  username: callmarx_dev
-  card: summary_large_image
 
 facebook:
   app_id: 723752958736659

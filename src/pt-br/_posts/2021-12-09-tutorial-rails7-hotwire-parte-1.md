@@ -32,14 +32,14 @@ avanço nos estudos e na implementação, vou complementando este tutorial. Por 
 O pano de fundo é uma aplicação estilo Kanban, com um quadro em que podemos incluir, ver, editar e
 excluir os cards/tarefas e isso ser persistido simultaneamente via *websockets* para todas as
 sessões abertas da aplicação. Todo código esta disponível neste
-[repositório](https://github.com/callmarx/LearningHotwire){:target="_blank"}. Note que incluí
-algumas [*branches*](https://github.com/callmarx/LearningHotwire/branches/all){:target="_blank"} que
+[repositório](https://github.com/eugeniojimenes/LearningHotwire){:target="_blank"}. Note que incluí
+algumas [*branches*](https://github.com/eugeniojimenes/LearningHotwire/branches/all){:target="_blank"} que
 representam as partes abordadas aqui.
 
 ## Etapa 1 - Tailwind
 Nesta parte explico como utilizar e customizar o Tailwind. O resultado final desta etapa é o
 disponível na *branch*
-[blog-part-1](https://github.com/callmarx/LearningHotwire/tree/blog-part-1){:target="_blank"}.
+[blog-part-1](https://github.com/eugeniojimenes/LearningHotwire/tree/blog-part-1){:target="_blank"}.
 
 ### Um simples *scaffold*
 Antes de começar a brincar com HTML ~~e CSS~~ eu gerei um conjunto simples de *models*,
@@ -50,7 +50,7 @@ $ rails generate scaffold chore title:string content:text
 ```
 
 E também um
-[db/seeds.rb](https://github.com/callmarx/LearningHotwire/blob/blog-part-1/db/seeds.rb){:target="_blank"}
+[db/seeds.rb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-1/db/seeds.rb){:target="_blank"}
 para já termos algo à visualizar no *index*.
 ```ruby
 # db/seeds.rb
@@ -125,7 +125,7 @@ cabe à nós editar, mas Tailwind é mamão com mel, confia.
 
 ### Customizando Tailwind
 Para customizar ou incluir funcionalidades basta editar o arquivo
-[tailwind.config.js](https://github.com/callmarx/LearningHotwire/blob/blog-part-0/tailwind.config.js){:target="_blank"}
+[tailwind.config.js](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-0/tailwind.config.js){:target="_blank"}
 na raiz do projeto. Na
 [parte anterior]({% post_url pt-br/2021-12-07-tutorial-rails7-hotwire %}){:target="_blank"} deste
 tutorial, quando criamos o projeto com a *flag* `--css tailwind` o Rails já nos faz o trabalho de
@@ -204,7 +204,7 @@ aqui <https://tailwindcss.com/docs/customizing-spacing>{:target="_blank"}.
 Sem mais delongas, depois de ~~me cansar de ficar enfeitando as páginas~~ um tempinho
 experimentando eu alterei os seguintes arquivos.
 
-Em [app/views/chores/index.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-1/app/views/chores/index.html.erb){:target="_blank"}
+Em [app/views/chores/index.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-1/app/views/chores/index.html.erb){:target="_blank"}
 ```erb
 <!-- app/views/chores/index.html.erb -->
 <div class="z-0 flex flex-col justify-start h-screen justify-items-center bg-slate-300">
@@ -221,7 +221,7 @@ Em [app/views/chores/index.html.erb](https://github.com/callmarx/LearningHotwire
 </div>
 ```
 
-Em [app/views/chores/_chore.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-1/app/views/chores/_chore.html.erb){:target="_blank"}
+Em [app/views/chores/_chore.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-1/app/views/chores/_chore.html.erb){:target="_blank"}
 ```erb
 <!-- app/views/chores/_chore.html.erb -->
 <div
@@ -262,7 +262,7 @@ Em [app/views/chores/_chore.html.erb](https://github.com/callmarx/LearningHotwir
 </div>
 ```
 
-E em [app/views/chores/_form.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-1/app/views/chores/_form.html.erb){:target="_blank"}
+E em [app/views/chores/_form.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-1/app/views/chores/_form.html.erb){:target="_blank"}
 ```erb
 <!-- app/views/chores/_form.html.erb -->
 <%= form_with(model: chore) do |form| %>
@@ -294,7 +294,7 @@ E em [app/views/chores/_form.html.erb](https://github.com/callmarx/LearningHotwi
 <% end %>
 ```
 Essas alterações correspondem basicamente ao que há na *branch*
-[blog-part-1](https://github.com/callmarx/LearningHotwire/tree/blog-part-1){:target="_blank"}.
+[blog-part-1](https://github.com/eugeniojimenes/LearningHotwire/tree/blog-part-1){:target="_blank"}.
 Então, agora se você subir o projeto com `bin/dev` e acessar <http://localhost:3000/chores>{:target="_blank"},
 deve obter este resultado:
 ![Tailwind Result](/assets/gifs/tailwind-result.gif){: .align-center}
@@ -308,7 +308,7 @@ Vou tentar explicar aqui algumas das classes do Tailwind que inclui HTML das qua
 resultado.
 
 **Primeiro** vamos as *divs* que separam o "quadro de tarefas" da "inserção de uma nova tarefa" em
-[app/views/chores/index.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-1/app/views/chores/index.html.erb){:target="_blank"}.
+[app/views/chores/index.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-1/app/views/chores/index.html.erb){:target="_blank"}.
 Na *div* de inserção, temos:
 ```erb
 <!-- app/views/chores/index.html.erb -->
@@ -344,7 +344,7 @@ alterando para `overflow-visible`, tornando as tarefas visíveis. Novamente, com
 `transition transform duration-600 ease-linear` à isso para termos a transição gradual.
 
 **Agora** vamos as tarefas, no arquivo
-[app/views/chores/_chore.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-1/app/views/chores/_chore.html.erb){:target="_blank"},
+[app/views/chores/_chore.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-1/app/views/chores/_chore.html.erb){:target="_blank"},
 para explicar os efeitos de "aumentar o card da tarefa" e o de "exibir os ícones de edição e
 remoção".
 

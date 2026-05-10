@@ -400,7 +400,7 @@ vezes não será otimizada e/ou 100% correta.
 
 Tenho outras demandas de estudo, não sei quando vou conseguir voltar a mexer, mas pretendo
 continuar essa trilha até o final. Todas as minhas soluções e avanços mantenho no repositório
-<https://github.com/callmarx/aprendendo_elixir>{:target="_blank"}.
+<https://github.com/eugeniojimenes/aprendendo_elixir>{:target="_blank"}.
 
 Por agora, é isso.
 ![cat ignore and gotta sleep - gif](https://c.tenor.com/ZIXvD3e9dt4AAAAS/cat-ignore.gif){: .align-start .img-increase }

@@ -8,3 +8,15 @@
   RUBY_VERSION = "3.4.9"
   JEKYLL_ENV = "production"
   NODE_ENV = "production"
+
+[[redirects]]
+  from = "https://callmarx.dev/*"
+  to = "https://eugeniojimenes.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.callmarx.dev/*"
+  to = "https://eugeniojimenes.dev/:splat"
+  status = 301
+  force = true
