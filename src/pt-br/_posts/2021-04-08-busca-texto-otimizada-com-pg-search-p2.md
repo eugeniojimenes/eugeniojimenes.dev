@@ -24,7 +24,7 @@ e me comprometi a explicar com um projetinho Ruby on Rails através da Gema
 
 ## Git clone e diverta-se!
 
-O projeto completo está disponível em <https://github.com/callmarx/fts_example>{:target="_blank"}.
+O projeto completo está disponível em <https://github.com/eugeniojimenes/fts_example>{:target="_blank"}.
 Para executar basta ter o Docker instalado e configurado em seu linux e executar os seguintes
 comandos em distintos terminais:
 
@@ -246,12 +246,12 @@ artigos já que o `tsvector` trabalha com
 [lexemas](https://radames.manosso.nom.br/linguagem/gramatica/morfologia/lexema/){:target="_blank"},
 o que garante abranger todas as inflexões do termo buscado. Essas consultas pelo Postman podem ser
 importadas pelo arquivo
-[fts_example.postman_collection.json](https://raw.githubusercontent.com/callmarx/fts_example/main/fts_example.postman_collection.json){:target="_blank"},
+[fts_example.postman_collection.json](https://raw.githubusercontent.com/eugeniojimenes/fts_example/main/fts_example.postman_collection.json){:target="_blank"},
 também disponível no projeto.
 
 Para avaliar o desempenho implementei algumas tasks para medir o tempo de execução. As buscas são
 feitas através de uma
-[lista de 485 palavras](https://raw.githubusercontent.com/callmarx/fts_example/main/lib/tasks/present_words.txt){:target="_blank"},
+[lista de 485 palavras](https://raw.githubusercontent.com/eugeniojimenes/fts_example/main/lib/tasks/present_words.txt){:target="_blank"},
 explicitamente presentes nos artigos, ou seja, cada uma das palavras retorna pelo menos um artigo
 com `.bad_search`. Dessa forma evitamos consultas vazias com o método ruim, mas presentes com o
 método bom, o que afetaria a qualidade do teste. De qualquer forma, como demonstrado anteriormente,

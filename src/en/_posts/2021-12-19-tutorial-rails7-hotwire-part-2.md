@@ -33,16 +33,16 @@ we have:
 The backdrop is a Kanban-style application, featuring a board where we can include, view, edit,
 and delete cards/tasks, with simultaneous persistence via *websockets* for all open sessions
 of the application. All code is available in this
-[repository](https://github.com/callmarx/LearningHotwire){:target="_blank"}. Note that it includes
-some [*branches*](https://github.com/callmarx/LearningHotwire/branches/all){:target="_blank"} that
+[repository](https://github.com/eugeniojimenes/LearningHotwire){:target="_blank"}. Note that it includes
+some [*branches*](https://github.com/eugeniojimenes/LearningHotwire/branches/all){:target="_blank"} that
 represent the parts covered here.
 
 ## Step 2 - Hotwire Turbo
 In this step, I explain the purpose of this tool and implement the *render* mode `turbo_stream` along with `broadcast`
 via *ActionCable*. The result of this step is divided into two parts: the *branch*
-[blog-part-2.1](https://github.com/callmarx/LearningHotwire/tree/blog-part-2.1){:target="_blank"}, where I use only
+[blog-part-2.1](https://github.com/eugeniojimenes/LearningHotwire/tree/blog-part-2.1){:target="_blank"}, where I use only
 `turbo_stream` without `broadcast`, and the final one with `broadcast` in the *branch*
-[blog-part-2.2](https://github.com/callmarx/LearningHotwire/tree/blog-part-2.2){:target="_blank"}.
+[blog-part-2.2](https://github.com/eugeniojimenes/LearningHotwire/tree/blog-part-2.2){:target="_blank"}.
 
 ### Conceptually: Turbo what?
 Consulting the introduction of the [Handbook](https://turbo.hotwired.dev/handbook/introduction){:target="_blank"},we
@@ -93,14 +93,14 @@ Turbo Frames are evaluated on any navigation inside a turbo-frame element.  |  T
 
 ### Starting with *Turbo Stream*
 To separately explain the *render* mode `turbo_stream`, I included the code for this subpart in the *branch*
-[blog-part-2.1](https://github.com/callmarx/LearningHotwire/tree/blog-part-2.1){:target="_blank"}.
+[blog-part-2.1](https://github.com/eugeniojimenes/LearningHotwire/tree/blog-part-2.1){:target="_blank"}.
 
 In the `ChoresController` that we generated with `rails generate scaffold` in the
 [previous step]({% post_url en/2021-12-09-tutorial-rails7-hotwire-part-1 %}#a-simple-scaffold){:target="_blank"} of
 this tutorial, Rails included multiple rendering formats by default, in this case, HTML and JSON. Since we included
 `gem "turbo-rails"` in the Gemfile, we also have access to rendering via *Turbo Stream*, just by adding
 `format.turbo_stream` inside the `respond_to do |format|` block. Doing this for the *create* and *destroy* methods, we
-have in [app/controllers/chores_controller.rb](https://github.com/callmarx/LearningHotwire/blob/blog-part-2.1/app/controllers/chores_controller.rb){:target="_blank"}:
+have in [app/controllers/chores_controller.rb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-2.1/app/controllers/chores_controller.rb){:target="_blank"}:
 ```ruby
 # file app/controllers/chores_controller.rb of blog-part-2.1 branch
 class ChoresController < ApplicationController
@@ -132,7 +132,7 @@ end
 ```
 
 For this type of rendering, we also need dedicated files in `app/views`, just like we have for HTML and JSON. Thus, we
-have the following [app/views/chores/create.turbo_stream.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-2.1/app/views/chores/create.turbo_stream.erb){:target="_blank"}:
+have the following [app/views/chores/create.turbo_stream.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-2.1/app/views/chores/create.turbo_stream.erb){:target="_blank"}:
 ```erb
 <!-- file app/views/chores/create.turbo_stream.erb of blog-part-2.1 branch -->
 <%= turbo_stream.append "chores", partial: "chores/chore", locals: { chore: @chore } %>
@@ -143,7 +143,7 @@ Since we want to see this application without reloading the entire page, that is
 of the page, we will do this in the *index* of *chores*. Therefore, we use the methods `turbo_stream.append` and
 `turbo_stream.replace` above, pointing to the DOM ID of the page. In other words, the first arguments `"chores"` and
 `"chore_form"` respectively must be present on the **fully rendered** page by
-[app/views/chores/index.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-2.1/app/views/chores/index.html.erb){:target="_blank"}.
+[app/views/chores/index.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-2.1/app/views/chores/index.html.erb){:target="_blank"}.
 Thus, we need to include `id="chores"` in the `<div>` that wraps the listing of *chores*:
 ```erb
 <!-- file app/views/chores/index.html.erb  of blog-part-2.1 branch -->
@@ -163,7 +163,7 @@ Thus, we need to include `id="chores"` in the `<div>` that wraps the listing of 
 
 Now, for `id="chore_form"`, we can't include it in the `<div>` that wraps `<%= render "form", chore: @chore %>` because
 the `turbo_stream.replace` method **completely replaces the element**. Since we are replacing it with the partial view
-[app/views/chores/_form.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-2.1/app/views/chores/_form.html.erb){:target="_blank"},
+[app/views/chores/_form.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-2.1/app/views/chores/_form.html.erb){:target="_blank"},
 this `<div>` would be deleted. Therefore, we should include `id="chore_form"` in the form file itself:
 ```erb
 <!-- file app/views/chores/_form.html.erb  of blog-part-2.1 branch -->
@@ -173,7 +173,7 @@ this `<div>` would be deleted. Therefore, we should include `id="chore_form"` in
 ```
 
 Now, to delete a *chore* is even simpler. We have the following
-[app/views/chores/destroy.turbo_stream.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-2.1/app/views/chores/destroy.turbo_stream.erb){:target="_blank"}:
+[app/views/chores/destroy.turbo_stream.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-2.1/app/views/chores/destroy.turbo_stream.erb){:target="_blank"}:
 ```erb
 <!-- file app/views/chores/destroy.turbo_stream.erb of blog-part-2.1 branch -->
 <%= turbo_stream.remove dom_id(@chore) %>
@@ -182,7 +182,7 @@ Now, to delete a *chore* is even simpler. We have the following
 Similarly, we need to include the DOM ID, but in this case specific to each *chore*, hence `dom_id(@chore)`.
 Additionally, we also need to edit the `<button>` for the delete icon to point to the *destroy* method of the
 *controller*. Therefore, in
-[app/views/chores/_chore.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-2.1/app/views/chores/_chore.html.erb){:target="_blank"}:
+[app/views/chores/_chore.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-2.1/app/views/chores/_chore.html.erb){:target="_blank"}:
 ```erb
 <!-- file app/views/chores/_chore.html.erb of blog-part-2.1 branch -->
 <div id="<%= dom_id(chore) %>" ...> <!-- include dom_id(chore) for turbo_stream.remove -->
@@ -216,7 +216,7 @@ was performed; **there is no persistence across all sessions**. To achieve that,
 This corresponds to the final part of this tutorial stage. The previous subpart was solely to explain the isolated use
 of `turbo_stream` rendering. As the goal is to create a Kanban-style application, I intend to predominantly use this
 rendering method along with `broadcast` going forward. The complete code for this stage is in the
-[blog-part-2.2](https://github.com/callmarx/LearningHotwire/tree/blog-part-2.2){:target="_blank"} branch.
+[blog-part-2.2](https://github.com/eugeniojimenes/LearningHotwire/tree/blog-part-2.2){:target="_blank"} branch.
 
 To apply changes to *chores* across all sessions, we'll utilize `Turbo::StreamsChannel`, which comes with the
 `turbo-rails` gem. This channel can be invoked directly in the model or controller, depending on the preferred approach.
@@ -227,7 +227,7 @@ these updates to "subscribers".
 In our case, our "subscribers" are all open sessions of
 [http://localhost:3000/chores](http://localhost:3000/chores){:target="_blank"}, and we can map this using the
 `turbo_stream_from` helper. Therefore, in
-[app/views/chores/index.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-2.2/app/views/chores/index.html.erb){:target="_blank"},
+[app/views/chores/index.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-2.2/app/views/chores/index.html.erb){:target="_blank"},
 we have:
 ```erb
 <!-- file app/views/chores/index.html.erb  of blog-part-2.2 branch -->
@@ -245,7 +245,7 @@ callbacks, such as `after_create_commit`, **every time the model is altered**, w
 `rails db:seed`, for example, to trigger this. So, I opted to include it in the controller.
 
 Therefore, in
-[app/controllers/chores_controller.rb](https://github.com/callmarx/LearningHotwire/blob/blog-part-2.2/app/controllers/chores_controller.rb){:target="_blank"},
+[app/controllers/chores_controller.rb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-2.2/app/controllers/chores_controller.rb){:target="_blank"},
 we have:
 ```ruby
 # file app/controllers/chores_controller.rb of blog-part-2.2 branch
@@ -281,7 +281,7 @@ end
 Since the private methods `broadcast_insert` and `broadcast_remove` above handle the insertion and removal of chores,
 we no longer need to do this in the `*.turbo_stream.erb` views created in the previous subpart. Therefore, for this
 final part, I have removed the `app/views/destroy.turbo_stream.erb` view and kept
-[app/views/chores/create.turbo_stream.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-2.2/app/views/chores/create.turbo_stream.erb){:target="_blank"}
+[app/views/chores/create.turbo_stream.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-2.2/app/views/chores/create.turbo_stream.erb){:target="_blank"}
 with the following content:
 ```erb
 <!-- file app/views/chores/create.turbo_stream.erb of blog-part-2.2 branch -->

@@ -34,18 +34,18 @@ avanço nos estudos e na implementação, vou complementando este tutorial. Por 
 O pano de fundo é uma aplicação estilo Kanban, com um quadro em que podemos incluir, ver, editar e
 excluir os cards/tarefas e isso ser persistido simultaneamente via *websockets* para todas as
 sessões abertas da aplicação. Todo código está disponível neste
-[repositório](https://github.com/callmarx/LearningHotwire){:target="_blank"}. Note que incluí
-algumas [*branches*](https://github.com/callmarx/LearningHotwire/branches/all){:target="_blank"} que
+[repositório](https://github.com/eugeniojimenes/LearningHotwire){:target="_blank"}. Note que incluí
+algumas [*branches*](https://github.com/eugeniojimenes/LearningHotwire/branches/all){:target="_blank"} que
 representam as partes abordadas aqui.
 
 ## Etapa 3 - Hotwire Stimulus
 Nesta etapa final, implementei um *modal* (o famoso pop-up que não é exatamente um pop-up) do qual
 será controlado por JS através do Hotwire Stimulus. Dividi essa etapa em 3 *branches*:
-* [blog-part-3.1](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.1){:target="_blank"} -
+* [blog-part-3.1](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.1){:target="_blank"} -
   Em que uso a Turbo Frame e o Stimulus para renderizar um html dinamicamente e depois remove-lo;
-* [blog-part-3.2](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.2){:target="_blank"} -
+* [blog-part-3.2](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.2){:target="_blank"} -
   Em que uso um pouco mais de Tailwind para fazer o *modal* e o Stimulus para lidar com outras ações necessárias;
-* [blog-part-3.4](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.3){:target="_blank"} -
+* [blog-part-3.4](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.3){:target="_blank"} -
   Subparte bônus, em que uso a gema [ViewComponent](https://viewcomponent.org/){:target="_blank"}
   para agrupar melhor o código do *modal*.
 
@@ -57,7 +57,7 @@ oportunidade: com ele podemos renderizar dinamicamente o formulário do *chore* 
 quando ele precisar inserir ou editar.
 
 Primeiro, inclui a linha `<%= turbo_frame_tag "modal" %>` no arquivo
-[app/views/layouts/application.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.1/app/views/layouts/application.html.erb){:target="_blank"},
+[app/views/layouts/application.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.1/app/views/layouts/application.html.erb){:target="_blank"},
 resultando no seguinte:
 ```erb
 <!-- file app/views/layouts/application.html.erb of blog-part-3.1 branch -->
@@ -80,7 +80,7 @@ resultando no seguinte:
 ```
 
 Depois envolvi o conteúdo de
-[app/views/chores/new.html.erb](https://github.com/callmarx/LearningHotwire/blob/46e4871993ac592a990d7d0e3a4e7c29d0e69626/app/views/chores/new.html.erb){:target="_blank"},
+[app/views/chores/new.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/46e4871993ac592a990d7d0e3a4e7c29d0e69626/app/views/chores/new.html.erb){:target="_blank"},
 pelo *block* de `<%= turbo_frame_tag "modal" do %>...<% end %>`, mas que no caso ficou apenas para
 dar o *render* do *partial form*, ou seja:
 ```erb
@@ -92,7 +92,7 @@ dar o *render* do *partial form*, ou seja:
 
 E então, alterei o link de inserir um novo *chore* adicionando a opção
 `data: { turbo_frame: 'modal' }` em
-[app/views/chores/index.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.1/app/views/chores/index.html.erb){:target="_blank"},
+[app/views/chores/index.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.1/app/views/chores/index.html.erb){:target="_blank"},
 também incluí um ícone para o botão e removi o `render` do `form` que tinha no final:
 ```erb
 <!-- file app/views/chores/index.html.erb of blog-part-3.1 branch -->
@@ -120,9 +120,9 @@ também incluí um ícone para o botão e removi o `render` do `form` que tinha 
 com isso, quando você clicar no butão *New Chore*, será incluído
 `src="http://localhost:3000/chores/new"` na área reservado com `<%= turbo_frame_tag "modal" %>` que
 agora está no arquivo
-[app/views/layouts/application.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.1/app/views/layouts/application.html.erb){:target="_blank"}
+[app/views/layouts/application.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.1/app/views/layouts/application.html.erb){:target="_blank"}
 e com isso
-[app/views/chores/new.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.1/app/views/chores/new.html.erb){:target="_blank"}
+[app/views/chores/new.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.1/app/views/chores/new.html.erb){:target="_blank"}
 será renderizado dinamicamente dentro desta tag.
 ![Triggering Turbo Frame](/assets/gifs/triggering-turbo-frame.gif){: .align-center}
 
@@ -147,7 +147,7 @@ $ rails generate stimulus chore-modal
 
 Como observado antes, não estamos "removendo" o html inserido dinamicamente pelo turbo-frame,
 então vamos fazer isso como nosso primeiro método de `ChoreModalController`, em
-[app/javascript/controllers/chore_modal_controller.js](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.1/app/javascript/controllers/chore_modal_controller.js){:target="_blank"}:
+[app/javascript/controllers/chore_modal_controller.js](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.1/app/javascript/controllers/chore_modal_controller.js){:target="_blank"}:
 ```js
 // file app/javascript/controllers/chore_modal_controller.js of blog-part-3.1 branch
 import { Controller } from "@hotwired/stimulus"
@@ -176,7 +176,7 @@ Agora precisamos dizer em que parte do nosso html iremos chamá-lo, para isso ba
 alguma `div` com `data-controller="chore-modal"`. Também é necessário dizer onde estará a ação que
 invocará `ChoreModalController#hideModal` e isso é feito com `data-action="chore-modal#hideModal"`.
 Sendo assim,
-[app/views/chores/new.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.1/app/views/chores/new.html.erb){:target="_blank"}
+[app/views/chores/new.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.1/app/views/chores/new.html.erb){:target="_blank"}
 ficou:
 ```erb
 <!-- file app/views/chores/new.html.erb of blog-part-3.1 branch -->
@@ -208,7 +208,7 @@ E na aba "Console" podemos ver os `Console.log()` que coloquei:
 ![Removing rendered Turbo Frame with Stimulus - Console](/assets/gifs/removing-turbo-frame-console.gif){: .align-center}
 
 Tudo o que foi feito até aqui é o que corresponde a *branch*
-[blog-part-3.1](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.1).
+[blog-part-3.1](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.1).
 
 ### Mas e o modal?
 Bem, o formulário de inserção por enquanto é incluído no topo da página movendo todo resto para
@@ -216,7 +216,7 @@ baixo. Definitivamente não é um *modal* ~~e nada bonito ou agradável~~. Para 
 Tailwind.
 
 Em
-[app/views/chores/new.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.2/app/views/chores/new.html.erb){:target="_blank"},
+[app/views/chores/new.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.2/app/views/chores/new.html.erb){:target="_blank"},
 temos:
 ```erb
 <!-- file app/views/chores/new.html.erb of blog-part-3.2 branch -->
@@ -259,7 +259,7 @@ verificada [aqui](https://turbo.hotwired.dev/reference/events){:target="_blank"}
 Para o nosso caso, temos o evento `turbo:submit-end` que é disparado logo depois que uma submissão
 de formulário é feita, armazenando as propriedade de `FormSubmissionResult`, ou seja, o resultado
 da submissão, em `event.detail`. Assim, em
-[app/javascript/controllers/chore_modal_controller.js](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.2/app/javascript/controllers/chore_modal_controller.js){:target="_blank"},
+[app/javascript/controllers/chore_modal_controller.js](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.2/app/javascript/controllers/chore_modal_controller.js){:target="_blank"},
 temos:
 ```js
 // file app/javascript/controllers/chore_modal_controller.js of blog-part-3.2 branch
@@ -285,7 +285,7 @@ Perceba que verificamos se `e.detail` foi bem sucedido para então chamar o mét
 Vale ressaltar que o método nomeado `submitEnd()` **não está relacionado** ainda ao evento
 `turbo:submit-end`. Isso deve ser feito no atributo `data-action` onde `ChoreModalController` é
 chamado, ou seja, em
-[app/views/chores/new.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.2/app/views/chores/new.html.erb){:target="_blank"}:
+[app/views/chores/new.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.2/app/views/chores/new.html.erb){:target="_blank"}:
 ```erb
 <!-- file app/views/chores/new.html.erb of blog-part-3.2 branch -->
 <%= turbo_frame_tag "modal" do %>
@@ -314,7 +314,7 @@ Quando incluo `<div ... data-action="turbo:submit-end->chore-modal#submitEnd" ..
 estou dizendo para chamar `ChoreModalController#submitEnd()` quando o evento `turbo:submit-end` for
 disparado. Para testar que inserção mal sucedida de um *chore* não feche o *modal*, inclui o seguinte
 validador em
-[app/models/chore.rb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.2/app/models/chore.rb){:target="_blank"}:
+[app/models/chore.rb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.2/app/models/chore.rb){:target="_blank"}:
 ```ruby
 # file app/models/chore.rb of blog-part-3.2 branch
 
@@ -330,7 +330,7 @@ O resultado ficou o seguinte:
 Aproveitei outros eventos para implementar mais situações em que o usuário gostaria que o *modal*
 feche, no caso ao pressionar a tecla ESC e ao clicar "fora" do *modal*, ou seja, no background cinza
 transparente. Em
-[app/javascript/controllers/chore_modal_controller.js](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.2/app/javascript/controllers/chore_modal_controller.js){:target="_blank"}:
+[app/javascript/controllers/chore_modal_controller.js](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.2/app/javascript/controllers/chore_modal_controller.js){:target="_blank"}:
 ```js
 // file app/javascript/controllers/chore_modal_controller.js of blog-part-3.2 branch
 import { Controller } from "@hotwired/stimulus"
@@ -379,7 +379,7 @@ Você pode ler mais sobre esses eventos
 [aqui](https://www.w3.org/TR/DOM-Level-3-Events/#dom-event-architecture){:target="_blank"}.
 
 Para esses novos métodos, em
-[app/views/chores/new.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.2/app/views/chores/new.html.erb){:target="_blank"},
+[app/views/chores/new.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.2/app/views/chores/new.html.erb){:target="_blank"},
 incluí:
 ```erb
 <!-- file app/views/chores/new.html.erb of blog-part-3.2 branch -->
@@ -408,22 +408,22 @@ incluí:
 ```
 
 Repare que uso também o atributo `<div data-chore-modal-target="form" ...>` em
-[app/views/chores/new.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.2/app/views/chores/new.html.erb){:target="_blank"},
+[app/views/chores/new.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.2/app/views/chores/new.html.erb){:target="_blank"},
 isso corresponde a [uma funcionalidade](https://stimulus.hotwired.dev/reference/targets){:target="_blank"}
 do pacote Hotwire Stimulus que nos permite referenciar um elemento, ou seja, no caso para que o
 método `ChoreModalController#closeBackground()` saiba quando o usuário clica fora do formulário no
 *modal*, e é justamento por isso que defino o *target*, como é possível ver na linha
 `static targets = ["form"]` em
-[app/javascript/controllers/chore_modal_controller.js](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.2/app/javascript/controllers/chore_modal_controller.js){:target="_blank"},
+[app/javascript/controllers/chore_modal_controller.js](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.2/app/javascript/controllers/chore_modal_controller.js){:target="_blank"},
 acessível dentro de `ChoreModalController` com `this.formTarget`, ou seja, na forma
 `this.<target name>Target`.
 
 Tudo o que foi feito até aqui é o que corresponde a *branch*
-[blog-part-3.2](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.2).
+[blog-part-3.2](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.2).
 
 ### Bonus: aplicando o modal com ViewComponent
 Até agora o *modal* está disponível apenas na *view*
-[app/views/chores/new.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.2/app/views/chores/new.html.erb){:target="_blank"},
+[app/views/chores/new.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.2/app/views/chores/new.html.erb){:target="_blank"},
 logo teria que replicar o código para a *view* de edição, o que não é organizacionalmente correto.
 Para fazer isso, ao invés de criar o clássico [*partial* do Rails](https://guides.rubyonrails.org/layouts_and_rendering.html#using-partials){:target="_blank"},
 resolvi testar a gema [ViewComponent](https://viewcomponent.org/){:target="_blank"} que,
@@ -431,7 +431,7 @@ resumindo grosseiramente, permite a "componentização" dinâmica de "pedaços d
 introduzido pelo framework [React](https://reactjs.org/){:target="_blank"}.
 
 No
-[Gemfile](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.3/Gemfile){:target="_blank"},
+[Gemfile](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.3/Gemfile){:target="_blank"},
 incluí:
 ```ruby
 gem "view_component"
@@ -455,7 +455,7 @@ $ rails generate component ChoreModal title
 Como o comando acima, ViewComponent irá criar já com `initialize()` para a variável `title`, da qual
 irei utilizar para nomear o *modal* quando for de inserção e quando for de edição. Além disso, como
 utilizo Turbo Frame, preciso inserir também `include Turbo::FramesHelper` em
-[app/components/chore_modal_component.rb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.3/app/components/chore_modal_component.rb){:target="_blank"}:
+[app/components/chore_modal_component.rb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.3/app/components/chore_modal_component.rb){:target="_blank"}:
 ```ruby
 class ChoreModalComponent < ViewComponent::Base
   include Turbo::FramesHelper # add this
@@ -468,7 +468,7 @@ end
 ```
 
 Então, eu basicamente passei todo código do *modal* para
-[app/components/chore_modal_component.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.3/app/components/chore_modal_component.html.erb){:target="_blank"}:
+[app/components/chore_modal_component.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.3/app/components/chore_modal_component.html.erb){:target="_blank"}:
 ```erb
 <!-- file app/components/chore_modal_component.html.erb of blog-part-3.3 branch -->
 <%= turbo_frame_tag "modal" do %>
@@ -496,9 +496,9 @@ Então, eu basicamente passei todo código do *modal* para
 
 A linha com `<%= content %>` irá renderizar o conteúdo do bloco onde `ChoreModalComponent.new` for
 chamado, ou seja, respectivamente para
-[app/views/chores/new.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.3/app/views/chores/new.html.erb){:target="_blank"},
+[app/views/chores/new.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.3/app/views/chores/new.html.erb){:target="_blank"},
 e para
-[app/views/chores/edit.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.3/app/views/chores/edit.html.erb){:target="_blank"},
+[app/views/chores/edit.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.3/app/views/chores/edit.html.erb){:target="_blank"},
 ficando assim, respectivamente:
 ```erb
 <!-- file app/views/chores/new.html.erb of blog-part-3.3 branch -->
@@ -518,7 +518,7 @@ de antes, algo como:
 
 **Por quê?** Acontece que preciso agora informar o Tailwind, para "olhar" também para os
 arquivos presente na pasta `app/components/`. Sendo assim, em
-[tailwind.config.js](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.3/tailwind.config.js){:target="_blank"}:
+[tailwind.config.js](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.3/tailwind.config.js){:target="_blank"}:
 ```js
 // file tailwind.config.js of blog-part-3.3 branch
 module.exports = {
@@ -534,7 +534,7 @@ module.exports = {
 ```
 Além disso, precisamos "linkar" a edição de um *chore*, para isso eu aproveitei o ícone de edição
 que tínhamos incluído, mas que estava *dummy*. Em
-[app/views/chores/_chore.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.3/app/views/chores/_chore.html.erb){:target="_blank"},
+[app/views/chores/_chore.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.3/app/views/chores/_chore.html.erb){:target="_blank"},
 temos:
 ```erb
 <div

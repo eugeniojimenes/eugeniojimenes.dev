@@ -46,7 +46,7 @@ from the [Pygments CSS project](https://github.com/richleland/pygments-css){:tar
 meet the [WCAG](https://www.w3.org/WAI/WCAG2AA-Conformance){:target="_blank"} accessibility standard.
 
 As I mentioned earlier, I intend to release a template with everything I did here. Until then, the code for
-this blog is available [in this repository](https://github.com/callmarx/callmarx.dev){:target="_blank"}.
+this blog is available [in this repository](https://github.com/eugeniojimenes/eugeniojimenes.dev){:target="_blank"}.
 
 ## Next steps
 

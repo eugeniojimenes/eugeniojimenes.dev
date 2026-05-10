@@ -35,18 +35,18 @@ we have:
 The backdrop is a Kanban-style application, featuring a board where we can include, view, edit,
 and delete cards/tasks, with simultaneous persistence via *websockets* for all open sessions
 of the application. All code is available in this
-[repository](https://github.com/callmarx/LearningHotwire){:target="_blank"}. Note that it includes
-some [*branches*](https://github.com/callmarx/LearningHotwire/branches/all){:target="_blank"} that
+[repository](https://github.com/eugeniojimenes/LearningHotwire){:target="_blank"}. Note that it includes
+some [*branches*](https://github.com/eugeniojimenes/LearningHotwire/branches/all){:target="_blank"} that
 represent the parts covered here.
 
 ## Step 3 - Hotwire Stimulus
 In this final stage, I implemented a modal (the famous pop-up that's not exactly a pop-up) controlled via JS through
 Hotwire Stimulus. I divided this stage into 3 branches:
-* [blog-part-3.1](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.1){:target="_blank"} -
+* [blog-part-3.1](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.1){:target="_blank"} -
   Where I use Turbo Frame and Stimulus to dynamically render and remove HTML.
-* [blog-part-3.2](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.2){:target="_blank"} -
+* [blog-part-3.2](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.2){:target="_blank"} -
   Where I use more Tailwind to create the modal and Stimulus to handle other necessary actions.
-* [blog-part-3.4](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.3){:target="_blank"} -
+* [blog-part-3.4](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.3){:target="_blank"} -
   Bonus subpart where I use the gem [ViewComponent](https://viewcomponent.org/){:target="_blank"} to better organize
   the modal's code.
 
@@ -57,7 +57,7 @@ I mentioned that I didn't intend to use Turbo Frame. However, an opportunity aro
 dynamically render the chore form for the user when they need to insert or edit.
 
 First, I added the line `<%= turbo_frame_tag "modal" %>` to the file
-[app/views/layouts/application.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.1/app/views/layouts/application.html.erb){:target="_blank"},
+[app/views/layouts/application.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.1/app/views/layouts/application.html.erb){:target="_blank"},
 resulting in the following:
 ```erb
 <!-- file app/views/layouts/application.html.erb of blog-part-3.1 branch -->
@@ -80,7 +80,7 @@ resulting in the following:
 ```
 
 Then I wrapped the content of
-[app/views/chores/new.html.erb](https://github.com/callmarx/LearningHotwire/blob/46e4871993ac592a990d7d0e3a4e7c29d0e69626/app/views/chores/new.html.erb){:target="_blank"}
+[app/views/chores/new.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/46e4871993ac592a990d7d0e3a4e7c29d0e69626/app/views/chores/new.html.erb){:target="_blank"}
 inside a `<%= turbo_frame_tag "modal" do %>...</% end %>` block, which in this case was used solely to render the
 partial form:
 ```erb
@@ -91,7 +91,7 @@ partial form:
 ```
 
 And then I modified the link to add a new *chore*, adding the option `data: { turbo_frame: 'modal' }` in
-[app/views/chores/index.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.1/app/views/chores/index.html.erb){:target="_blank"},
+[app/views/chores/index.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.1/app/views/chores/index.html.erb){:target="_blank"},
 also including an icon for the button and removing the `render` for the `form` that was at the end:
 ```erb
 <!-- file app/views/chores/index.html.erb of blog-part-3.1 branch -->
@@ -118,8 +118,8 @@ also including an icon for the button and removing the `render` for the `form` t
 ```
 With this change, when you click on the *New Chore* button, `src="http://localhost:3000/chores/new"` will be included
 in the area reserved with `<%= turbo_frame_tag "modal" %>` which is now in the file
-[app/views/layouts/application.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.1/app/views/layouts/application.html.erb){:target="_blank"}.
-As a result, [app/views/chores/new.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.1/app/views/chores/new.html.erb){:target="_blank"}
+[app/views/layouts/application.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.1/app/views/layouts/application.html.erb){:target="_blank"}.
+As a result, [app/views/chores/new.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.1/app/views/chores/new.html.erb){:target="_blank"}
 will be dynamically rendered within this tag.
 ![Triggering Turbo Frame](/assets/gifs/triggering-turbo-frame.gif){: .align-center}
 
@@ -142,7 +142,7 @@ $ rails generate stimulus chore-modal
 
 As noted earlier, we are not "removing" the dynamically inserted HTML by Turbo Frame, so let's implement this as our
 first method in `ChoreModalController`, located in
-[app/javascript/controllers/chore_modal_controller.js](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.1/app/javascript/controllers/chore_modal_controller.js){:target="_blank"}:
+[app/javascript/controllers/chore_modal_controller.js](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.1/app/javascript/controllers/chore_modal_controller.js){:target="_blank"}:
 ```js
 // file app/javascript/controllers/chore_modal_controller.js of blog-part-3.1 branch
 import { Controller } from "@hotwired/stimulus"
@@ -169,7 +169,7 @@ passing through each part of `ChoreModalController`.
 Now we need to specify where in our HTML we will call it, for that we just need to wrap it under a `div` with
 `data-controller="chore-modal"`. It is also necessary to indicate where the action that will invoke
 `ChoreModalController#hideModal` will be, and this is done with `data-action="chore-modal#hideModal"`. Therefore,
-[app/views/chores/new.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.1/app/views/chores/new.html.erb){:target="_blank"}
+[app/views/chores/new.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.1/app/views/chores/new.html.erb){:target="_blank"}
 looks like this:
 ```erb
 <!-- file app/views/chores/new.html.erb of blog-part-3.1 branch -->
@@ -200,13 +200,13 @@ In the "Console" tab, we can see the `console.log()` messages that I added:
 ![Removing rendered Turbo Frame with Stimulus - Console](/assets/gifs/removing-turbo-frame-console.gif){: .align-center}
 
 All the work done up to this point corresponds to the *branch*
-[blog-part-3.1](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.1).
+[blog-part-3.1](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.1).
 
 ### But where is the modal?
 Well, currently the insertion form is included at the top of the page, pushing everything else down. It's definitely
 not a modal ~~and not at all pretty or pleasant~~. To fix this, we just need to use Tailwind.
 
-In [app/views/chores/new.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.2/app/views/chores/new.html.erb){:target="_blank"},
+In [app/views/chores/new.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.2/app/views/chores/new.html.erb){:target="_blank"},
 we have:
 ```erb
 <!-- file app/views/chores/new.html.erb of blog-part-3.2 branch -->
@@ -246,7 +246,7 @@ The complete list of these events can be checked [here](https://turbo.hotwired.d
 
 For our case, we have the `turbo:submit-end` event which is triggered immediately after a form submission, storing the
 `FormSubmissionResult` properties in `event.detail`. Therefore, in
-[app/javascript/controllers/chore_modal_controller.js](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.2/app/javascript/controllers/chore_modal_controller.js){:target="_blank"},
+[app/javascript/controllers/chore_modal_controller.js](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.2/app/javascript/controllers/chore_modal_controller.js){:target="_blank"},
 we have:
 ```js
 // file app/javascript/controllers/chore_modal_controller.js of blog-part-3.2 branch
@@ -271,7 +271,7 @@ export default class extends Controller {
 Notice that we check if `event.detail` was successful before calling the `hideModal()` method. It's important to note
 that the method named `submitEnd()` **is not yet associated** with the `turbo:submit-end` event. This association needs
 to be made in the `data-action` attribute where `ChoreModalController` is called, specifically in
-[app/views/chores/new.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.2/app/views/chores/new.html.erb){:target="_blank"}:
+[app/views/chores/new.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.2/app/views/chores/new.html.erb){:target="_blank"}:
 ```erb
 <!-- file app/views/chores/new.html.erb of blog-part-3.2 branch -->
 <%= turbo_frame_tag "modal" do %>
@@ -300,12 +300,12 @@ Quando incluo `<div ... data-action="turbo:submit-end->chore-modal#submitEnd" ..
 estou dizendo para chamar `ChoreModalController#submitEnd()` quando o evento `turbo:submit-end` for
 disparado. Para testar que inserção mal sucedida de um *chore* não feche o *modal*, inclui o seguinte
 validador em
-[app/models/chore.rb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.2/app/models/chore.rb){:target="_blank"}:
+[app/models/chore.rb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.2/app/models/chore.rb){:target="_blank"}:
 
 When I include `<div ... data-action="turbo:submit-end->chore-modal#submitEnd" ...>`, I'm now instructing it to call
 `ChoreModalController#submitEnd()` when the `turbo:submit-end` event is triggered. To test that an unsuccessful chore
 insertion doesn't close the modal, I added the following validator in
-[app/models/chore.rb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.2/app/models/chore.rb){:target="_blank"}:
+[app/models/chore.rb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.2/app/models/chore.rb){:target="_blank"}:
 ```ruby
 # file app/models/chore.rb of blog-part-3.2 branch
 
@@ -319,7 +319,7 @@ The result was as follows:
 
 I utilized other events to implement more scenarios where the user would want the modal to close, specifically when
 pressing the ESC key and clicking "outside" the modal, meaning on the transparent gray background. In
-[app/javascript/controllers/chore_modal_controller.js](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.2/app/javascript/controllers/chore_modal_controller.js){:target="_blank"}:
+[app/javascript/controllers/chore_modal_controller.js](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.2/app/javascript/controllers/chore_modal_controller.js){:target="_blank"}:
 ```js
 // file app/javascript/controllers/chore_modal_controller.js of blog-part-3.2 branch
 import { Controller } from "@hotwired/stimulus"
@@ -367,7 +367,7 @@ I used the `keyup@window` and `click@window` events, attached to the
 can read more about these events [here](https://www.w3.org/TR/DOM-Level-3-Events/#dom-event-architecture){:target="_blank"}.
 
 For these new methods, in
-[app/views/chores/new.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.2/app/views/chores/new.html.erb){:target="_blank"},
+[app/views/chores/new.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.2/app/views/chores/new.html.erb){:target="_blank"},
 I included:
 ```erb
 <!-- file app/views/chores/new.html.erb of blog-part-3.2 branch -->
@@ -395,11 +395,11 @@ I included:
 <% end %>
 ```
 Note that I also use the `<div data-chore-modal-target="form" ...>` attribute in
-[app/views/chores/new.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.2/app/views/chores/new.html.erb){:target="_blank"}.
+[app/views/chores/new.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.2/app/views/chores/new.html.erb){:target="_blank"}.
 This corresponds to a functionality of the Hotwire Stimulus package that allows us to reference an element. In this
 case, it enables the `ChoreModalController#closeBackground()` method to detect when the user clicks outside the form in
 the modal. This is why I define the target, as you can see in the line `static targets = ["form"]` in
-[app/javascript/controllers/chore_modal_controller.js](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.2/app/javascript/controllers/chore_modal_controller.js){:target="_blank"},
+[app/javascript/controllers/chore_modal_controller.js](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.2/app/javascript/controllers/chore_modal_controller.js){:target="_blank"},
 accessible within `ChoreModalController` as `this.formTarget`, where `<target name>` is replaced with the actual target
 name.
 
@@ -407,7 +407,7 @@ All that has been done up to this point corresponds to the `blog-part-3.2` branc
 
 ### Bonus: Applying the Modal with ViewComponent
 So far, the modal is only available in the
-[app/views/chores/new.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.2/app/views/chores/new.html.erb){:target="_blank"}
+[app/views/chores/new.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.2/app/views/chores/new.html.erb){:target="_blank"}
 view, which means I would have to replicate the code for the edit view, which is not organizationally correct. To
 address this, instead of creating a traditional
 [Rails partial](https://guides.rubyonrails.org/layouts_and_rendering.html#using-partials){:target="_blank"}, I decided
@@ -415,7 +415,7 @@ to test the [ViewComponent](https://viewcomponent.org/){:target="_blank"} gem, w
 dynamic "componentization" of HTML pieces, a concept introduced by the [React](https://reactjs.org/){:target="_blank"}
 framework.
 
-In the [Gemfile](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.3/Gemfile){:target="_blank"}, I included:
+In the [Gemfile](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.3/Gemfile){:target="_blank"}, I included:
 ```ruby
 gem "view_component"
 ```
@@ -438,7 +438,7 @@ $ rails generate component ChoreModal title
 With the command above, ViewComponent will already create an `initialize()` method for the `title` variable, which I'll
 use to name the modal whether it's for insertion or editing. Additionally, because I use Turbo Frame, I need to include
 `include Turbo::FramesHelper` in
-[app/components/chore_modal_component.rb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.3/app/components/chore_modal_component.rb){:target="_blank"}:
+[app/components/chore_modal_component.rb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.3/app/components/chore_modal_component.rb){:target="_blank"}:
 ```ruby
 class ChoreModalComponent < ViewComponent::Base
   include Turbo::FramesHelper # add this
@@ -451,7 +451,7 @@ end
 ```
 
 So, I basically moved all the modal code to
-[app/components/chore_modal_component.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.3/app/components/chore_modal_component.html.erb){:target="_blank"}:
+[app/components/chore_modal_component.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.3/app/components/chore_modal_component.html.erb){:target="_blank"}:
 ```erb
 <!-- file app/components/chore_modal_component.html.erb of blog-part-3.3 branch -->
 <%= turbo_frame_tag "modal" do %>
@@ -479,8 +479,8 @@ So, I basically moved all the modal code to
 
 The line with `<%= content %>` will render the content of the block where `ChoreModalComponent.new` is called,
 specifically for
-[app/views/chores/new.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.3/app/views/chores/new.html.erb){:target="_blank"}
-and [app/views/chores/edit.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.3/app/views/chores/edit.html.erb){:target="_blank"}
+[app/views/chores/new.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.3/app/views/chores/new.html.erb){:target="_blank"}
+and [app/views/chores/edit.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.3/app/views/chores/edit.html.erb){:target="_blank"}
 as follows:
 ```erb
 <!-- file app/views/chores/new.html.erb of blog-part-3.3 branch -->
@@ -500,7 +500,7 @@ expected, something like:
 
 **Why?** This happens because I need to instruct Tailwind to also "look" at the files present in the `app/components/`
 folder. Therefore, in
-[tailwind.config.js](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.3/tailwind.config.js){:target="_blank"}:
+[tailwind.config.js](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.3/tailwind.config.js){:target="_blank"}:
 ```js
 // file tailwind.config.js of blog-part-3.3 branch
 module.exports = {
@@ -516,7 +516,7 @@ module.exports = {
 ```
 Additionally, we need to link the editing of a *chore*. For this, I utilized the edit icon that we had included but was
 previously dummy. In
-[app/views/chores/_chore.html.erb](https://github.com/callmarx/LearningHotwire/blob/blog-part-3.3/app/views/chores/_chore.html.erb){:target="_blank"},
+[app/views/chores/_chore.html.erb](https://github.com/eugeniojimenes/LearningHotwire/blob/blog-part-3.3/app/views/chores/_chore.html.erb){:target="_blank"},
 we have:
 ```erb
 <div
