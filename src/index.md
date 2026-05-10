@@ -1,6 +1,6 @@
 ---
 layout: index
-title: "CallMarx.dev"
+title: "EugenioJimenes.dev"
 locale: pt_BR
 main_image: /assets/images/eu.webp
 image: /assets/images/eu.webp
