@@ -8,6 +8,7 @@ tags: Tutorial Rails Ruby Tailwind Hotwire
 main_image: /assets/svg/rails7-tailwind-hotwire.svg
 image: /assets/images/rails7-tailwind-hotwire.webp
 image_alt: "Rails 7 + Tailwind + Hotwire Logo"
+image_light_bg: true
 description: >-
   Tutorial on Rails 7 with esbuild, Tailwind, and Hotwire (Turbo and Stimulus). How to develop a
   Kanban-style application with cards/tasks and simultaneous persistence via websockets.

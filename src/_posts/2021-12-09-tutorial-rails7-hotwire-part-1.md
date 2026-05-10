@@ -8,6 +8,7 @@ tags: Tutorial Rails Ruby Tailwind Hotwire
 main_image: /assets/svg/tailwind.svg
 image: /assets/images/tailwind.webp
 image_alt: "Tailwind Logo"
+image_light_bg: true
 description: >-
   Part 1: Building a layout with Tailwind - Tutorial on Rails 7 with esbuild, tailwind,
   and Hotwire (Turbo and Stimulus). How to develop a Kanban-style application with cards/tasks

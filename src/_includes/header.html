@@ -5,12 +5,12 @@
   {% assign root_path = '/' %}
   {% assign translated_locale = 'pt_BR' %}
 {% endif %}
-<header id="site-header" data-turbo-permanent class="flex justify-between pt-6 pb-3 border-b-2 border-stone-400 dark:border-stone-100">
-  <div class="flex justify-between text-stone-900 dark:text-gray-200">
+<header id="site-header" data-turbo-permanent class="flex justify-between pt-6 pb-3 border-b border-stone-400 dark:border-tokyo-border">
+  <div class="flex justify-between text-stone-900 dark:text-tokyo-fg">
     {% include translate-icon.html translated_locale=translated_locale %}
   </div>
-  <a class="font-marker text-2xl xs:text-3xl md:text-4xl text-stone-900 dark:text-stone-200 hover:opacity-40 transition duration-200 ease-in-out" href="{{ root_path }}">{{ site.title }}</a>
-  <div class="flex justify-between text-stone-900 dark:text-gray-200" data-controller="dark-mode">
+  <a class="font-marker text-2xl xs:text-3xl md:text-4xl text-stone-900 dark:text-tokyo-fg hover:text-tokyo-blue dark:hover:text-tokyo-blue transition duration-200 ease-in-out" href="{{ root_path }}">{{ site.title }}</a>
+  <div class="flex justify-between text-stone-900 dark:text-tokyo-fg" data-controller="dark-mode">
     <a class="flex hover:opacity-40 transition duration-200 ease-in-out" href="{{ root_path }}tags/" aria-label="Tags icon">
       <svg class="w-6 h-6 mt-1" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
         <path d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>

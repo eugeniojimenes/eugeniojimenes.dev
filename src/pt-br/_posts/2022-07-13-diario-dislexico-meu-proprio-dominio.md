@@ -8,6 +8,7 @@ tags: Jekyll Hotwire Tailwind
 main_image: /assets/svg/jekyll-netlify.svg
 image: /assets/images/jekyll-netlify.webp
 image_alt: "Jekyll and Netlify logos"
+image_light_bg: true
 description: >-
   Refiz meu blog com Jekyll, Tailwind e Hotwire Turbo.
 

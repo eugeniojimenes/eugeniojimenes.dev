@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div class="flex flex-col pt-6 md:pt-12 max-w-3xl mx-auto">
+  <img class="w-full rounded-2xl object-cover border-double border-4 border-beige-500 dark:border-tokyo-border shadow-lg dark:shadow-tokyo-bg-alt mb-4"
+       src="{{ page.image }}"
+       alt="{{ page.image_alt | default: page.title }}">
+
+  <div class="flex justify-center mb-6">
+    {% include social-networks.html %}
+  </div>
+
+  <div class="font-mono text-sm md:text-base text-stone-600 dark:text-tokyo-fg-dim mb-2">
+    <span class="text-tokyo-green">eugenio@dev</span><span class="text-stone-500 dark:text-tokyo-fg-dim">:</span><span class="text-tokyo-blue">~</span><span class="text-stone-500 dark:text-tokyo-fg-dim">$</span> cat ~/about.md
+  </div>
+
+  <div class="prose prose-custom prose-base md:prose-lg lg:prose-2xl dark:prose-invert">
+    {{ content }}
+  </div>
+
+  <div class="mt-8 flex flex-wrap items-center gap-3 font-mono text-sm md:text-base">
+    <a href="https://github.com/eugeniojimenes/eugenio-resume/releases/latest/download/resume.pdf"
+       target="_blank" rel="noopener"
+       class="px-3 py-1 border border-stone-400 dark:border-tokyo-border rounded-sm text-stone-700 dark:text-tokyo-fg hover:border-tokyo-green hover:text-tokyo-green dark:hover:border-tokyo-green dark:hover:text-tokyo-green transition duration-200">
+      [ resume.pdf <span class="text-xs">↗</span> ]
+    </a>
+    <a href="mailto:eugeniojimenes@gmail.com"
+       class="px-3 py-1 border border-stone-400 dark:border-tokyo-border rounded-sm text-stone-700 dark:text-tokyo-fg hover:border-tokyo-yellow hover:text-tokyo-yellow dark:hover:border-tokyo-yellow dark:hover:text-tokyo-yellow transition duration-200">
+      [ mailto ]
+    </a>
+    <a href="{% if page.locale == 'pt_BR' %}/pt-br/{% else %}/{% endif %}"
+       class="px-3 py-1 border border-stone-400 dark:border-tokyo-border rounded-sm text-stone-700 dark:text-tokyo-fg hover:border-tokyo-blue hover:text-tokyo-blue dark:hover:border-tokyo-blue dark:hover:text-tokyo-blue transition duration-200">
+      [ ~/posts ]
+    </a>
+  </div>
+</div>

@@ -1,10 +1,10 @@
-<footer id="site-footer" data-turbo-permanent class="mt-4 mb-20 pt-3 border-t-2 border-stone-400 dark:border-stone-100">
+<footer id="site-footer" data-turbo-permanent class="mt-4 mb-20 pt-3 border-t border-stone-400 dark:border-tokyo-border">
   <div class="container mx-auto">
     <div class="flex mb-6">
       {% include social-networks.html %}
     </div>
-    <div class="text-sm text-gray-600 dark:text-gray-200">
-      <span>
-        &copy; {{ site.time | date: '%Y' }} {{ site.author }}. {{ site.data.translations.developedWith[page.locale] }}</span>
+    <div class="text-sm font-mono text-gray-600 dark:text-tokyo-fg-dim">
+      <span class="text-tokyo-green">[exit 0]</span>
+      &nbsp;&copy; {{ site.time | date: '%Y' }} {{ site.author }}. {{ site.data.translations.developedWith[page.locale] }}
     </div>
 </footer>

@@ -1,18 +1,26 @@
 ---
 title: "Sobre mim"
 locale: pt_BR
-layout: post
+layout: about
 permalink: /pt-br/about/
-
+lang-ref: about
+image: /assets/images/eu.webp
+image_alt: "Um homem com cabelo curto grisalho, óculos, cavanhaque pequeno e brinco, usando uma camisa rosa clara de botão, sentado em uma cadeira de escritório, com um monitor e uma lousa ao fundo."
+description: >-
+  Engenheiro Sênior Ruby on Rails, 8+ anos de Rails, disléxico, linux fanboy,
+  viciado/hipster em café.
 ---
 
-Nerd, disléxico, linux *fanboy*, desenvolvedor, esquerdopata convicto, viciado/*hipster*
-em café e paulistano nato, daqueles com sotaque mezzo italiano que gosta de cannoli na mooca e
-sanduíche de mortadela do mercadão.
+Bacharel em Ciências da Computação pela USP, trabalho na área desde 2012 (época dos primeiros estágios). Curioso e apaixonado por tecnologia, mas mantenho minha **"Credo, que delícia!"** relação dúbia com TI — clássica batalha de gerir expectativas, foco e frustrações.
 
-Bacharel em Ciências da Computação pela USP, trabalho na área desde 2012 (época dos meus primeiros
-estágios). Apesar de curioso e apaixonado por tecnologias, mantenho minha **relação dúbia de
-“Credo! Que delícia”** com TI, na clássica batalha de gerir expectativas, foco e frustrações.
+<div class="not-prose font-mono text-sm md:text-base text-stone-600 dark:text-tokyo-fg-dim mt-8 mb-2"><span class="text-tokyo-green">eugenio@dev</span><span class="text-stone-500 dark:text-tokyo-fg-dim">:</span><span class="text-tokyo-blue">~</span><span class="text-stone-500 dark:text-tokyo-fg-dim">$</span> cat stack.md</div>
 
-![Eu e minha gatinha Nila](/assets/images/eu-e-nila.webp){: .align-center}
-Eu e a Nila, minha gatinha idosa.
+Rails, Ruby, JavaScript/TypeScript, Vue.js, Node.js, PostgreSQL, MongoDB, Redis, Hotwire, Docker, AWS (EC2, RDS, S3, IAM, Cognito, Route 53), Linux, Git, e uma obsessão saudável por terminais.
+
+<div class="not-prose font-mono text-sm md:text-base text-stone-600 dark:text-tokyo-fg-dim mt-8 mb-2"><span class="text-tokyo-green">eugenio@dev</span><span class="text-stone-500 dark:text-tokyo-fg-dim">:</span><span class="text-tokyo-blue">~</span><span class="text-stone-500 dark:text-tokyo-fg-dim">$</span> cat now.md</div>
+
+Brasil (UTC−3). Aberto a vagas remotas em times de língua inglesa. Pausa de carreira desde jan/2026, me preparando para vagas sênior remotas.
+
+<div class="not-prose font-mono text-sm md:text-base text-stone-600 dark:text-tokyo-fg-dim mt-8 mb-2"><span class="text-tokyo-green">eugenio@dev</span><span class="text-stone-500 dark:text-tokyo-fg-dim">:</span><span class="text-tokyo-blue">~</span><span class="text-stone-500 dark:text-tokyo-fg-dim">$</span> cat trivia.md</div>
+
+Desenvolvedor, nerd, disléxico, linux fanboy, viciado/hipster em café.
