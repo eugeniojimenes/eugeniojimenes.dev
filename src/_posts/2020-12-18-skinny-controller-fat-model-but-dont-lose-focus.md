@@ -97,7 +97,7 @@ terrible with all these ORs in the SQL query, it doesn't consider typos and cohe
 searched phrase. In short, it just removes accents with *unaccent* from PostgreSQL. There are
 innumerable Full Text Searching techniques such as lexical indexing, wildcards, word ranking etc.
 But that's a topic for another time, ~~who knows.~~ &#10144;
-[Optimized text search with pg_search gem]({% post_url en/2021-01-17-optimized-text-search-with-pg-search-p1 %}){:target="_blank"}
+[Optimized text search with pg_search gem]({% post_url 2021-01-17-optimized-text-search-with-pg-search-p1 %}){:target="_blank"}
 {: .note-info }
 
 ## It's always good to control cholesterol

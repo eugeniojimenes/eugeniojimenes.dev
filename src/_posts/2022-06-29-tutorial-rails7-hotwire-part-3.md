@@ -15,7 +15,7 @@ description: >-
 
 ---
 
-In the [previous part]({% post_url en/2021-12-19-tutorial-rails7-hotwire-part-2 %}){:target="_blank"} of this tutorial,
+In the [previous part]({% post_url 2021-12-19-tutorial-rails7-hotwire-part-2 %}){:target="_blank"} of this tutorial,
 I explained how to use partial HTML rendering with `turbo_stream` from
 [Hotwire Turbo](https://turbo.hotwired.dev){:target="_blank"}, allowing us to display newly inserted or deleted cards
 in our humble Kanban prototype. Now, I'll delve into the
@@ -27,9 +27,9 @@ The goal is to develop (and learn) using Rails 7, esbuild, Tailwind, and Hotwire
 Stimulus), but my focus will mainly be on the Hotwire package and how it can help us. As I
 progress through the studies and implementation, I'll continue to add to this tutorial. For now,
 we have:
-* [Part 0: Rails 7]({% post_url en/2021-12-07-tutorial-rails7-hotwire %}){:target="_blank"}
-* [Part 1: Tailwind]({% post_url en/2021-12-09-tutorial-rails7-hotwire-part-1 %}){:target="_blank"}
-* [Part 2: Hotwire Turbo]({% post_url en/2021-12-19-tutorial-rails7-hotwire-part-2 %}){:target="_blank"}
+* [Part 0: Rails 7]({% post_url 2021-12-07-tutorial-rails7-hotwire %}){:target="_blank"}
+* [Part 1: Tailwind]({% post_url 2021-12-09-tutorial-rails7-hotwire-part-1 %}){:target="_blank"}
+* [Part 2: Hotwire Turbo]({% post_url 2021-12-19-tutorial-rails7-hotwire-part-2 %}){:target="_blank"}
 * [Part 3: Hotwire Stimulus](#step-3---hotwire-stimulus)  → current page
 
 The backdrop is a Kanban-style application, featuring a board where we can include, view, edit,
@@ -52,7 +52,7 @@ Hotwire Stimulus. I divided this stage into 3 branches:
 
 ### Just when I said I wouldn't use Turbo Frame...
 In the previous stage, while briefly explaining the difference between
-[turbo-frame and turbo-stream]({% post_url en/2021-12-19-tutorial-rails7-hotwire-part-2 %}#turbo-frame-vs-turbo-stream){:target="_blank"},
+[turbo-frame and turbo-stream]({% post_url 2021-12-19-tutorial-rails7-hotwire-part-2 %}#turbo-frame-vs-turbo-stream){:target="_blank"},
 I mentioned that I didn't intend to use Turbo Frame. However, an opportunity arose: with Turbo Frame, we can
 dynamically render the chore form for the user when they need to insert or edit.
 

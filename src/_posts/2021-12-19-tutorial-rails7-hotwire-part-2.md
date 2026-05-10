@@ -15,7 +15,7 @@ description: >-
 
 ---
 
-In the [previous part]({% post_url en/2021-12-09-tutorial-rails7-hotwire-part-1 %}){:target="_blank"} of this tutorial,
+In the [previous part]({% post_url 2021-12-09-tutorial-rails7-hotwire-part-1 %}){:target="_blank"} of this tutorial,
 I explained how to customize and use Tailwind without a single line of CSS and JavaScript. Now, I'll discuss a bit
 about the [Hotwire Turbo](https://turbo.hotwired.dev){:target="_blank"} package.
 <!-- excerpt-end -->
@@ -25,10 +25,10 @@ The goal is to develop (and learn) using Rails 7, esbuild, Tailwind, and Hotwire
 Stimulus), but my focus will mainly be on the Hotwire package and how it can help us. As I
 progress through the studies and implementation, I'll continue to add to this tutorial. For now,
 we have:
-* [Part 0: Rails 7]({% post_url en/2021-12-07-tutorial-rails7-hotwire %}){:target="_blank"}
-* [Part 1: Tailwind]({% post_url en/2021-12-09-tutorial-rails7-hotwire-part-1 %}){:target="_blank"}
+* [Part 0: Rails 7]({% post_url 2021-12-07-tutorial-rails7-hotwire %}){:target="_blank"}
+* [Part 1: Tailwind]({% post_url 2021-12-09-tutorial-rails7-hotwire-part-1 %}){:target="_blank"}
 * [Part 2: Hotwire Turbo](#step-2---hotwire-turbo) → current page
-* [Part 3: Hotwire Stimulus]({% post_url en/2022-06-29-tutorial-rails7-hotwire-part-3 %}){:target="_blank"}
+* [Part 3: Hotwire Stimulus]({% post_url 2022-06-29-tutorial-rails7-hotwire-part-3 %}){:target="_blank"}
 
 The backdrop is a Kanban-style application, featuring a board where we can include, view, edit,
 and delete cards/tasks, with simultaneous persistence via *websockets* for all open sessions
@@ -96,7 +96,7 @@ To separately explain the *render* mode `turbo_stream`, I included the code for 
 [blog-part-2.1](https://github.com/eugeniojimenes/LearningHotwire/tree/blog-part-2.1){:target="_blank"}.
 
 In the `ChoresController` that we generated with `rails generate scaffold` in the
-[previous step]({% post_url en/2021-12-09-tutorial-rails7-hotwire-part-1 %}#a-simple-scaffold){:target="_blank"} of
+[previous step]({% post_url 2021-12-09-tutorial-rails7-hotwire-part-1 %}#a-simple-scaffold){:target="_blank"} of
 this tutorial, Rails included multiple rendering formats by default, in this case, HTML and JSON. Since we included
 `gem "turbo-rails"` in the Gemfile, we also have access to rendering via *Turbo Stream*, just by adding
 `format.turbo_stream` inside the `respond_to do |format|` block. Doing this for the *create* and *destroy* methods, we

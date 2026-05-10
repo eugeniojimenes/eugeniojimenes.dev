@@ -2,6 +2,7 @@
 title: About me
 layout: post
 locale: en_US
+permalink: /about/
 description: >-
   Senior Software Developer · Rails since 2012 · dyslexic, linux fanboy,
   coffee hipster/addict.

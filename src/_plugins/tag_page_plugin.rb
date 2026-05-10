@@ -18,11 +18,11 @@ module TagPagePlugin
       if lang == 'pt_BR'
         @dir = 'pt-br/tags'
         @page_title = "Posts sob a tag '#{tag}'"
-        @root_path = ''
+        @root_path = '/pt-br'
       else
-        @dir = 'en/tags'
+        @dir = 'tags'
         @page_title = "Posts under the '#{tag}' tag"
-        @root_path = '/en'
+        @root_path = ''
       end
 
       # All pages have the same filename.

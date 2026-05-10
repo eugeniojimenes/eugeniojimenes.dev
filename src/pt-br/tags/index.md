@@ -1,7 +1,7 @@
 ---
 title: "Selecione uma tag para filtrar os posts"
 locale: pt_BR
-permalink: /tags/
+permalink: /pt-br/tags/
 layout: autopages_tags
 selected_tag: index
 pagination:

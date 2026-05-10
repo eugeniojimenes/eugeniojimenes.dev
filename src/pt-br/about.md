@@ -2,7 +2,7 @@
 title: "Sobre mim"
 locale: pt_BR
 layout: post
-permalink: /about/
+permalink: /pt-br/about/
 
 ---
 

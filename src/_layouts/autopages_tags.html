@@ -19,9 +19,9 @@ layout: default
 {% endfor %}
 {% assign sorted_tags = sorted_tags | split: ';' %}
 {% if page.locale == 'en_US' %}
-  {% assign root_path = '/en/' %}
-{% else %}
   {% assign root_path = '/' %}
+{% else %}
+  {% assign root_path = '/pt-br/' %}
 {% endif %}
 
 <div class="flex flex-col pt-6 md:pt-12 lg:w-11/12 mx-auto">

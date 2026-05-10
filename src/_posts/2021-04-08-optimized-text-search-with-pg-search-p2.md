@@ -13,7 +13,7 @@ description: >-
 
 ---
 
-In [part I]({% post_url en/2021-01-17-optimized-text-search-with-pg-search-p1 %}){:target="_blank"}
+In [part I]({% post_url 2021-01-17-optimized-text-search-with-pg-search-p1 %}){:target="_blank"}
 of this post I explained a little about the concept and features of
 [Full Text Searching do PostgreSQL](https://www.postgresql.org/docs/current/textsearch-intro.html){:target="_blank"}
 and I committed to explain with a little Ruby on Rails project through

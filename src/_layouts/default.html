@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.language | default: "en-US" }}">
+<html lang="{% if page.url contains '/pt-br' %}pt-BR{% else %}en{% endif %}">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">

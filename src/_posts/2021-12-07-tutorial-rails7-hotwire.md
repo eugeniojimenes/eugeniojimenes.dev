@@ -31,9 +31,9 @@ In this tutorial, I aim to develop (and learn) using Rails 7, esbuild, Tailwind,
 As I progress with studies and implementation, I will continue to update this tutorial. For now,
 we have:
 * [Part 0: Rails 7](#etapa-zero---rails-7) - Current page
-* [Part 1: Tailwind]({% post_url en/2021-12-09-tutorial-rails7-hotwire-part-1 %}){:target="_blank"}
-* [Part 2: Hotwire Turbo]({% post_url en/2021-12-19-tutorial-rails7-hotwire-part-2 %}){:target="_blank"}
-* [Part 3: Hotwire Stimulus]({% post_url en/2022-06-29-tutorial-rails7-hotwire-part-3 %}){:target="_blank"}
+* [Part 1: Tailwind]({% post_url 2021-12-09-tutorial-rails7-hotwire-part-1 %}){:target="_blank"}
+* [Part 2: Hotwire Turbo]({% post_url 2021-12-19-tutorial-rails7-hotwire-part-2 %}){:target="_blank"}
+* [Part 3: Hotwire Stimulus]({% post_url 2022-06-29-tutorial-rails7-hotwire-part-3 %}){:target="_blank"}
 
 The backdrop is a Kanban-style application, with a board where we can add, view, edit, and delete
 cards/tasks, all persisted simultaneously via websockets to all open application sessions. All code

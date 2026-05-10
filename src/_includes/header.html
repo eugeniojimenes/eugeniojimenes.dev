@@ -1,9 +1,9 @@
-{% if page.locale == 'en_US' %}
-  {% assign root_path = '/en/' %}
-  {% assign translated_locale = 'pt_BR' %}
+{% if page.url contains '/pt-br' %}
+  {% assign root_path = '/pt-br/' %}
+  {% assign translated_locale = 'en_US' %}
 {% else %}
   {% assign root_path = '/' %}
-  {% assign translated_locale = 'en_US' %}
+  {% assign translated_locale = 'pt_BR' %}
 {% endif %}
 <header id="site-header" data-turbo-permanent class="flex justify-between pt-6 pb-3 border-b-2 border-stone-400 dark:border-stone-100">
   <div class="flex justify-between text-stone-900 dark:text-gray-200">
