@@ -25,12 +25,11 @@ layout: default
 {% endif %}
 
 <div class="flex flex-col pt-6 md:pt-12 lg:w-11/12 mx-auto">
-  <turbo-frame id="listing-tags">
     <div class="flex flex-col mb-8">
       <h1 class="font-mono text-base md:text-lg text-stone-700 dark:text-tokyo-fg-dim mb-6">
         <span class="text-tokyo-pink"># </span>{{ page.title }}
         {% if page.selected_tag != 'index' %}
-          <a href="{{ root_path }}tags/" data-turbo-frame="listing-tags" data-turbo-action="advance"
+          <a href="{{ root_path }}tags/" data-turbo-action="advance"
              class="ml-2 text-xs text-tokyo-fg-dim hover:text-tokyo-pink transition duration-200">[ clear filter ]</a>
         {% endif %}
       </h1>
@@ -38,12 +37,12 @@ layout: default
         {% for tag in sorted_tags %}
           {% assign tag_slugify = tag | slugify %}
           {% if page.selected_tag == tag_slugify %}
-            <a href="{{ root_path }}tags/" data-turbo-frame="listing-tags" data-turbo-action="advance"
+            <a href="{{ root_path }}tags/" data-turbo-action="advance"
                class="font-mono text-sm md:text-base px-3 py-1 border border-tokyo-pink rounded-sm text-tokyo-pink hover:border-tokyo-fg-dim hover:text-tokyo-fg-dim transition duration-200">
               --{{ tag | downcase | replace: ' ', '-' }}
             </a>
           {% else %}
-            <a href="{{ root_path }}tags/{{ tag_slugify }}" data-turbo-frame="listing-tags" data-turbo-action="advance"
+            <a href="{{ root_path }}tags/{{ tag_slugify }}" data-turbo-action="advance"
                class="font-mono text-sm md:text-base px-3 py-1 border border-stone-400 dark:border-tokyo-border rounded-sm text-stone-700 dark:text-tokyo-fg hover:border-tokyo-blue hover:text-tokyo-blue dark:hover:border-tokyo-blue dark:hover:text-tokyo-blue transition duration-200">
               --{{ tag | downcase | replace: ' ', '-' }}
             </a>
@@ -52,5 +51,4 @@ layout: default
       </div>
     </div>
      {% include listed-post.html posts=paginator.posts align="start" %}
-  </turbo-frame>
 </div>
