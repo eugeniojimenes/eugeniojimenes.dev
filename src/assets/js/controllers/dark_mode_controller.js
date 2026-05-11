@@ -1,42 +1,38 @@
 import { Controller } from "@hotwired/stimulus"
 
+// Dark-mode toggle. Pre-paint FOUC guard lives in
+// `_includes/head-darkmode-check.html` — it sets `<html class="dark">`
+// before stylesheet parse based on `localStorage.theme` + system preference.
+// This controller only owns the click-to-toggle behavior and the icon swap.
 export default class extends Controller {
-  static targets = [ "darkIcon", "lightIcon" ]
+  static targets = ["darkIcon", "lightIcon"]
 
   connect() {
-    // console.log(`Hello, I'm the Stimulus DarkModeController`)
-
-    // Change the icons inside the button based on previous settings
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      this.lightIconTarget.classList.remove('hidden');
+    // Sync icon to whatever state the FOUC guard already applied.
+    // Show light-icon (i.e. "switch to light" affordance) when dark is active,
+    // and vice versa.
+    if (this.isDark()) {
+      this.lightIconTarget.classList.remove("hidden")
     } else {
-      this.darkIconTarget.classList.remove('hidden');
+      this.darkIconTarget.classList.remove("hidden")
     }
   }
 
   toggle() {
-    // toggle icons inside button
-    this.lightIconTarget.classList.toggle('hidden');
-    this.darkIconTarget.classList.toggle('hidden');
-    // if set via local storage previously
-    if (localStorage.theme) {
-        if (localStorage.theme === 'light') {
-            document.documentElement.classList.add('dark');
-            localStorage.theme = 'dark'
-        } else {
-            document.documentElement.classList.remove('dark');
-            localStorage.theme = 'light'
-        }
+    // Flip both icons. Whichever was hidden becomes visible.
+    this.lightIconTarget.classList.toggle("hidden")
+    this.darkIconTarget.classList.toggle("hidden")
 
-    // if NOT set via local storage previously
-    } else {
-        if (document.documentElement.classList.contains('dark')) {
-            document.documentElement.classList.remove('dark');
-            localStorage.theme = 'light'
-        } else {
-            document.documentElement.classList.add('dark');
-            localStorage.theme = 'dark'
-        }
-    }
+    // Single source of truth: the DOM class on <html>. Flip it, persist the
+    // new state to localStorage so the FOUC guard restores it on next load.
+    document.documentElement.classList.toggle("dark")
+    localStorage.theme = document.documentElement.classList.contains("dark") ? "dark" : "light"
+  }
+
+  // Resolves the current effective theme. Default is dark — only an explicit
+  // 'light' choice in localStorage opts out. Mirrors the FOUC guard logic so
+  // icons render in sync on first paint.
+  isDark() {
+    return localStorage.theme !== "light"
   }
 }
