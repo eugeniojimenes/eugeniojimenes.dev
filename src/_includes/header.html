@@ -26,26 +26,40 @@
   {%- comment -%} Desktop icons (md+) {%- endcomment -%}
   <div class="hidden md:flex items-center text-stone-900 dark:text-tokyo-fg shrink-0" data-controller="dark-mode">
     <a class="flex items-center p-1 -m-1 transition duration-200 ease-in-out {% if tags_active %}text-tokyo-pink{% else %}hover:opacity-40{% endif %}" href="{{ root_path }}tags/" data-tip="Tags"{% if tags_active %} aria-current="page"{% endif %}>
-      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
-        <path d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043-7.457-7.457z"/>
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <line x1="4" y1="9" x2="20" y2="9"/>
+        <line x1="4" y1="15" x2="20" y2="15"/>
+        <line x1="10" y1="3" x2="8" y2="21"/>
+        <line x1="16" y1="3" x2="14" y2="21"/>
       </svg>
-      <strong class="ml-1 {% if tags_active %}font-semibold{% endif %}">Tags</strong>
+      <strong class="ml-1.5 {% if tags_active %}font-semibold{% endif %}">Tags</strong>
     </a>
     <a class="flex items-center ml-4 p-1 -m-1 transition duration-200 ease-in-out {% if about_active %}text-tokyo-pink{% else %}hover:opacity-40{% endif %}" href="{{ root_path }}about/" data-tip="{{ site.data.translations.about[page.locale] }}"{% if about_active %} aria-current="page"{% endif %}>
-      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-        <path d="M13 20h-7c-2.174-3.004-4-6.284-4-12h15c0 5.667-1.88 9.089-4 12zm5.119-10c-.057.701-.141 1.367-.252 2h1.55c-.449 1.29-1.5 2.478-2.299 2.914-.358 1.038-.787 1.981-1.26 2.852 3.274-1.143 5.846-4.509 6.142-7.766h-3.881zm-7.745-3.001c4.737-4.27-.98-4.044.117-6.999-3.783 3.817 1.409 3.902-.117 6.999zm-2.78.001c3.154-2.825-.664-3.102.087-5.099-2.642 2.787.95 2.859-.087 5.099zm9.406 15h-15v2h15v-2z"/>
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M17 8h1a4 4 0 0 1 0 8h-1"/>
+        <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/>
+        <line x1="7" y1="2" x2="7" y2="5"/>
+        <line x1="11" y1="2" x2="11" y2="5"/>
+        <line x1="15" y1="2" x2="15" y2="5"/>
       </svg>
-      <strong class="ml-1 {% if about_active %}font-semibold{% endif %}">{{ site.data.translations.about[page.locale] }}</strong>
+      <strong class="ml-1.5 {% if about_active %}font-semibold{% endif %}">{{ site.data.translations.about[page.locale] }}</strong>
     </a>
     <button data-action="click->dark-mode#toggle" aria-label="Toggle dark mode" data-tip="{{ site.data.translations.theme[page.locale] }}" class="flex items-center ml-3 p-1 -m-1 hover:opacity-40 transition duration-200 ease-in-out">
-      <svg data-dark-mode-target="darkIcon" class="w-8 h-8 hidden" fill="currentColor" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
-        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+      <svg data-dark-mode-target="darkIcon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
       </svg>
-      <svg data-dark-mode-target="lightIcon" class="w-8 h-8 hidden" fill="currentColor" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+      <svg data-dark-mode-target="lightIcon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"/>
+        <line x1="12" y1="2" x2="12" y2="4"/>
+        <line x1="12" y1="20" x2="12" y2="22"/>
+        <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/>
+        <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/>
+        <line x1="2" y1="12" x2="4" y2="12"/>
+        <line x1="20" y1="12" x2="22" y2="12"/>
+        <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"/>
+        <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"/>
       </svg>
-      <strong class="ml-1">{{ site.data.translations.theme[page.locale] }}</strong>
+      <strong class="ml-1.5">{{ site.data.translations.theme[page.locale] }}</strong>
     </button>
   </div>
 </header>
