@@ -30,7 +30,7 @@ layout: default
         <span class="text-tokyo-pink"># </span>{{ page.title }}
         {% if page.selected_tag != 'index' %}
           <a href="{{ root_path }}tags/" data-turbo-action="advance"
-             class="ml-2 text-xs text-tokyo-fg-dim hover:text-tokyo-pink transition duration-200">[ clear filter ]</a>
+             class="inline-block ml-2 px-2 py-1 text-xs text-tokyo-fg-dim hover:text-tokyo-pink transition duration-200">[ clear filter ]</a>
         {% endif %}
       </h1>
       <div class="flex flex-wrap gap-2 md:gap-3 lg:w-11/12 lg:mx-auto">
