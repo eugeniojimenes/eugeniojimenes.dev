@@ -19,7 +19,7 @@ layout: default
     {{ content }}
   </div>
 
-  <div class="mt-8 flex flex-wrap items-center gap-3 font-mono text-sm md:text-base">
+  <div class="mt-8 flex flex-nowrap items-center gap-2 sm:gap-3 font-mono text-xs xs:text-sm md:text-base whitespace-nowrap">
     <a href="https://github.com/eugeniojimenes/eugenio-resume/releases/latest/download/resume.pdf"
        target="_blank" rel="noopener"
        class="px-3 py-1 border border-stone-400 dark:border-tokyo-border rounded-sm text-stone-700 dark:text-tokyo-fg hover:border-tokyo-green hover:text-tokyo-green dark:hover:border-tokyo-green dark:hover:text-tokyo-green transition duration-200">
@@ -29,7 +29,7 @@ layout: default
        class="px-3 py-1 border border-stone-400 dark:border-tokyo-border rounded-sm text-stone-700 dark:text-tokyo-fg hover:border-tokyo-yellow hover:text-tokyo-yellow dark:hover:border-tokyo-yellow dark:hover:text-tokyo-yellow transition duration-200">
       [ mailto ]
     </a>
-    <a href="{% if page.locale == 'pt_BR' %}/pt-br/{% else %}/{% endif %}"
+    <a href="{% if page.locale == 'pt_BR' %}/pt-br/#posts{% else %}/#posts{% endif %}"
        class="px-3 py-1 border border-stone-400 dark:border-tokyo-border rounded-sm text-stone-700 dark:text-tokyo-fg hover:border-tokyo-blue hover:text-tokyo-blue dark:hover:border-tokyo-blue dark:hover:text-tokyo-blue transition duration-200">
       [ ~/posts ]
     </a>
