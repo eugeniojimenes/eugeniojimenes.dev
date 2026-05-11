@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Tracking my English mistakes with a Claude Code hook"
-date:   2026-05-08 10:00:00 -0300
+date:   2026-05-11 20:37:00 -0300
 locale: en_US
 lang-ref: english-notes-claude-hook
 tags: ClaudeCode Hooks SQLite English TIL Bash
