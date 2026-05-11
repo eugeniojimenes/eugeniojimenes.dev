@@ -5,11 +5,18 @@
   {% else %}
     {% assign translated_url=false %}
   {% endif %}
-{% else %}
-  {% if include.translated_locale == 'en_US' %}
-    {% assign translated_url=page.url | prepend: "/en" | remove_first: "index.html" %}
+{% elsif page.selected_tag %}
+  {% if include.translated_locale == 'pt_BR' %}
+    {% assign translated_url = page.selected_tag | prepend: "/pt-br/tags/" | append: "/" %}
   {% else %}
-    {% assign translated_url=page.url | remove_first: "/en" | remove_first: "index.html" | remove_first: ".html" %}
+    {% assign translated_url = page.selected_tag | prepend: "/tags/" | append: "/" %}
+  {% endif %}
+{% else %}
+  {% assign base_url = page.url | split: '/page/' | first | remove: "index.html" | remove: ".html" | append: "/" | replace: "//", "/" %}
+  {% if include.translated_locale == 'pt_BR' %}
+    {% assign translated_url = base_url | prepend: "/pt-br" %}
+  {% else %}
+    {% assign translated_url = base_url | remove_first: "/pt-br" %}
   {% endif %}
 {% endif %}
 

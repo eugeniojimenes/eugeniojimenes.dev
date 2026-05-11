@@ -1,10 +1,10 @@
 title: "EugenioJimenes.dev"
-tagline: "Desenvolvedor senior, disléxico e esquerdopata convicto"
-description: "Blog/diário sobre minha relação de \"Credo, que delícia!\" com TI."
+tagline: "Senior Software Developer · Rails since 2012"
+description: "Notes on Rails, Ruby, Hotwire and the developer's classic battle of managing expectations, focus and frustration."
 url: "https://eugeniojimenes.dev"
 author: "Eugenio A. Jimenes"
 image: "/assets/images/eu.webp"
-language: "pt-BR"
+language: "en"
 baseurl: ""
 
 google_analytics: G-M04ER887TV

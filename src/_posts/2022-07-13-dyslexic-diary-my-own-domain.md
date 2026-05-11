@@ -8,6 +8,7 @@ tags: Jekyll Hotwire Tailwind
 main_image: /assets/svg/jekyll-netlify.svg
 image: /assets/images/jekyll-netlify.webp
 image_alt: "Jekyll and Netlify logos"
+image_light_bg: true
 description: >-
   I rebuilt my blog using Jekyll, Tailwind, and Hotwire Turbo.
 
@@ -27,7 +28,7 @@ In mid-December 2020, I used [Github Pages](https://pages.github.com/){:target="
 with no intention of promotion, just to force myself to have some organization and focus on what I was studying
 and developing.
 
-As I wrote in my [first post]({% post_url en/2020-12-10-my-first-post %}){:target="_blank"},
+As I wrote in my [first post]({% post_url 2020-12-10-my-first-post %}){:target="_blank"},
 I've always admired (in a good way) programming blogs, whether they feature extensive and valuable tutorials or
 even those with small yet valuable **TIL** ("Today I Learned") articles. Now, I have my humble technological corner.
 

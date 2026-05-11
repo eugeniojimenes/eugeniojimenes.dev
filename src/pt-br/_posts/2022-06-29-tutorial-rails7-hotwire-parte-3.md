@@ -8,6 +8,7 @@ tags: Tutorial Rails Ruby Tailwind Hotwire
 main_image: /assets/svg/stimulus.svg
 image: /assets/images/stimulus.webp
 image_alt: "Hotwire Stimulus Logo"
+image_light_bg: true
 description: >-
   Parte 3: Modal para inserção e edição com Stimulus. Rails 7 com esbuild, tailwind e
   Hotwire (Turbo e Stimulus) - Como desenvolver um aplicação estilo Kanban, com cards/tarefas e

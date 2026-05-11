@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="{{ site.language | default: "en-US" }}">
+<html lang="{% if page.url contains '/pt-br' %}pt-BR{% else %}en{% endif %}">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/main-bundle.css' }}">
     {% seo %}
     {% include analytics.html %}
@@ -17,11 +17,30 @@
     <meta name="turbo-prefetch" content="true">
     <script type="text/javascript" src="{{ '/assets/main-bundle.js' }}"></script>
   </head>
-  <body class="bg-beige-100 dark:bg-slate-900">
+  <body class="bg-beige-100 dark:bg-tokyo-bg font-mono text-stone-800 dark:text-tokyo-fg" data-controller="command-palette">
     <div class="container mx-auto px-6 md:px-4">
       {% include header.html %}
       {{content}}
       {% include footer.html %}
+    </div>
+
+    <div data-command-palette-target="dialog"
+         data-action="click->command-palette#backdropClick"
+         class="hidden fixed inset-0 bg-black/60 z-50 items-start justify-center pt-24"
+         data-turbo-permanent
+         id="command-palette-dialog">
+      <div class="w-full max-w-xl mx-4 bg-white dark:bg-tokyo-bg-alt border border-stone-300 dark:border-tokyo-border rounded-md shadow-2xl overflow-hidden">
+        <div class="flex items-center px-4 py-2 border-b border-stone-200 dark:border-tokyo-border">
+          <span class="text-tokyo-green text-sm mr-2">$</span>
+          <input data-command-palette-target="input"
+                 data-action="input->command-palette#filter"
+                 type="text"
+                 placeholder="search posts, tags, pages..."
+                 class="flex-1 bg-transparent outline-none text-stone-800 dark:text-tokyo-fg placeholder-stone-400 dark:placeholder-tokyo-fg-dim text-sm">
+          <kbd class="ml-2 text-xs text-stone-400 dark:text-tokyo-fg-dim">esc</kbd>
+        </div>
+        <ul data-command-palette-target="list" class="max-h-80 overflow-y-auto text-sm"></ul>
+      </div>
     </div>
   </body>
 </html>

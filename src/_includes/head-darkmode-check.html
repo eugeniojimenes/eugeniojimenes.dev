@@ -1,8 +1,10 @@
 <!-- This must be placed inside the head tag before the body tag to avoid FOUC (flash of unstyled content) when changing pages or themes -->
 <script>
-  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark')
-  } else {
+  // Default theme is dark (terminal aesthetic). Only opt-out is an explicit
+  // 'light' choice persisted to localStorage by the dark-mode controller.
+  if (localStorage.theme === 'light') {
     document.documentElement.classList.remove('dark')
+  } else {
+    document.documentElement.classList.add('dark')
   }
 </script>

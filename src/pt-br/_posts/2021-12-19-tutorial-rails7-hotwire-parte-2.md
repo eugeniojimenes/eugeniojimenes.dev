@@ -8,6 +8,7 @@ tags: Tutorial Rails Ruby Tailwind Hotwire
 main_image: /assets/svg/hotwire-turbo.svg
 image: /assets/images/hotwire-turbo.webp
 image_alt: "Hotwire Turbo Logo"
+image_light_bg: true
 description: >-
   Parte 2: Renderização parcial com Hotwire Turbo - Tutorial sobre Rails 7 com esbuild, tailwind e
   Hotwire (Turbo e Stimulus). Como desenvolver um aplicação estilo Kanban, com cards/tarefas e

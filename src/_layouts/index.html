@@ -5,14 +5,33 @@ layout: default
 <div class="flex flex-col pt-6 md:pt-12 lg:w-11/12 mx-auto">
   <div class="w-full flex flex-col-reverse md:flex-row justify-between mb-8 md:mb-16 lg:mb-24">
     <div class="self-start md:self-center md:w-1/3 mt-4 md:mt-0 flex flex-row md:flex-col justify-start md:justify-between">
-      <img class="self-center h-24 w-24 xs:h-28 xs:w-28 sm:h-32 sm:w-32 md:h-36 md:w-36 lg:h-40 lg:w-40 xl:h-48 xl:w-48 rounded-full border-double border-4 border-beige-500 dark:border-gray-600 shadow-lg dark:shadow-gray-700" src="{{ page.image }}" alt="Rounded avatar">
+      <img class="self-center h-24 w-24 xs:h-28 xs:w-28 sm:h-32 sm:w-32 md:h-36 md:w-36 lg:h-40 lg:w-40 xl:h-48 xl:w-48 rounded-full object-cover border-double border-4 border-beige-500 dark:border-tokyo-border shadow-lg dark:shadow-tokyo-bg-alt" src="{{ page.image }}" alt="Rounded avatar">
       <div class="flex justify-center self-center md:mt-4 ml-4 md:ml-0">
         {% include social-networks.html %}
       </div>
     </div>
-    <div class="md:w-3/4 prose prose-custom prose-base prose-p:font-codepro prose-h2:font-codepro md:prose-lg lg:prose-2xl dark:prose-invert">
-      {{ content | markdownify }}
+    <div class="md:w-3/4">
+      <div class="font-mono text-sm md:text-base text-stone-600 dark:text-tokyo-fg-dim mb-2">
+        <span class="text-tokyo-green">eugenio@dev</span><span class="text-stone-500 dark:text-tokyo-fg-dim">:</span><span class="text-tokyo-blue">~</span><span class="text-stone-500 dark:text-tokyo-fg-dim">$</span> whoami
+      </div>
+      <div class="prose prose-custom prose-base md:prose-lg lg:prose-2xl dark:prose-invert">
+        {{ content | markdownify }}
+      </div>
+      <div class="mt-4 flex flex-wrap gap-3 font-mono text-sm md:text-base">
+        <a href="#posts"
+           class="px-3 py-1 border border-stone-400 dark:border-tokyo-border rounded-sm text-stone-700 dark:text-tokyo-fg hover:border-tokyo-blue hover:text-tokyo-blue dark:hover:border-tokyo-blue dark:hover:text-tokyo-blue transition duration-200">
+          [ ~/posts ]
+        </a>
+        <a href="https://github.com/eugeniojimenes/eugenio-resume/releases/latest/download/resume.pdf"
+           target="_blank" rel="noopener"
+           class="px-3 py-1 border border-stone-400 dark:border-tokyo-border rounded-sm text-stone-700 dark:text-tokyo-fg hover:border-tokyo-green hover:text-tokyo-green dark:hover:border-tokyo-green dark:hover:text-tokyo-green transition duration-200">
+          [ resume.pdf <span class="text-xs">↗</span> ]
+        </a>
+      </div>
     </div>
   </div>
-  {% include listed-post.html posts=paginator.posts align="start" %}
+
+  <div id="posts">
+    {% include listed-post.html posts=paginator.posts align="start" %}
+  </div>
 </div>

@@ -1,10 +1,9 @@
 ---
 title: "Select a tag to filter posts"
 locale: en_US
+permalink: /tags/
 layout: autopages_tags
-description: >-
-  Developer, geek, dyslexic, linux fanboy, coffee hipster/addict and staunch
-  leftist - CallMarx, get it?
+selected_tag: index
 pagination:
   enabled: true
   locale: en_US

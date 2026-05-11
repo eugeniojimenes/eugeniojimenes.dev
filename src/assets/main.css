@@ -18,8 +18,21 @@
   --color-beige-800: #c9b596;
   --color-beige-900: #c2ac8a;
 
-  --font-marker:  "Permanent Marker", cursive;
-  --font-codepro: "Source Code Pro", monospace;
+  /* Tokyo Night dark theme */
+  --color-tokyo-bg:      #1a1b26;
+  --color-tokyo-bg-alt:  #24283b;
+  --color-tokyo-fg:      #c0caf5;
+  --color-tokyo-fg-dim:  #9aa5ce;
+  --color-tokyo-blue:    #7aa2f7;
+  --color-tokyo-green:   #9ece6a;
+  --color-tokyo-pink:    #f7768e;
+  --color-tokyo-yellow:  #e0af68;
+  --color-tokyo-purple:  #bb9af7;
+  --color-tokyo-border:  #414868;
+
+  --font-marker: "Permanent Marker", cursive;
+  --font-mono:   "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-codepro: "Geist Mono", ui-monospace, monospace;
 }
 
 @utility prose-custom {
@@ -39,22 +52,22 @@
   --tw-prose-pre-bg:         var(--color-stone-800);
   --tw-prose-th-borders:     var(--color-stone-300);
   --tw-prose-td-borders:     var(--color-stone-200);
-  --tw-prose-invert-body:          var(--color-stone-200);
+  --tw-prose-invert-body:          var(--color-tokyo-fg);
   --tw-prose-invert-headings:      var(--color-white);
-  --tw-prose-invert-lead:          var(--color-stone-400);
-  --tw-prose-invert-links:         var(--color-sky-400);
+  --tw-prose-invert-lead:          var(--color-tokyo-fg-dim);
+  --tw-prose-invert-links:         var(--color-tokyo-blue);
   --tw-prose-invert-bold:          var(--color-white);
-  --tw-prose-invert-counters:      var(--color-stone-400);
-  --tw-prose-invert-bullets:       var(--color-stone-600);
-  --tw-prose-invert-hr:            var(--color-stone-700);
-  --tw-prose-invert-quotes:        var(--color-stone-100);
-  --tw-prose-invert-quote-borders: var(--color-stone-700);
-  --tw-prose-invert-captions:      var(--color-stone-400);
-  --tw-prose-invert-code:          var(--color-white);
-  --tw-prose-invert-pre-code:      var(--color-stone-300);
-  --tw-prose-invert-pre-bg:        rgb(0 0 0 / 50%);
-  --tw-prose-invert-th-borders:    var(--color-stone-600);
-  --tw-prose-invert-td-borders:    var(--color-stone-700);
+  --tw-prose-invert-counters:      var(--color-tokyo-fg-dim);
+  --tw-prose-invert-bullets:       var(--color-tokyo-border);
+  --tw-prose-invert-hr:            var(--color-tokyo-border);
+  --tw-prose-invert-quotes:        var(--color-tokyo-fg);
+  --tw-prose-invert-quote-borders: var(--color-tokyo-border);
+  --tw-prose-invert-captions:      var(--color-tokyo-fg-dim);
+  --tw-prose-invert-code:          var(--color-tokyo-green);
+  --tw-prose-invert-pre-code:      var(--color-tokyo-fg);
+  --tw-prose-invert-pre-bg:        var(--color-tokyo-bg-alt);
+  --tw-prose-invert-th-borders:    var(--color-tokyo-border);
+  --tw-prose-invert-td-borders:    var(--color-tokyo-border);
 }
 
 @import "./css/syntax-highlight/highcontrast-monokai.css";
@@ -66,3 +79,35 @@
 
 .note-info    { @apply py-4 px-6 text-sm sm:text-base lg:text-xl bg-sky-100/70    rounded-md dark:bg-sky-400/20; }
 .note-warning { @apply py-4 px-6 text-sm sm:text-base lg:text-xl bg-orange-100/70 rounded-md dark:bg-orange-400/20; }
+
+/* Thin terminal-style scrollbars (code blocks, command palette, any overflow) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-stone-400) transparent;
+}
+:where(.dark, .dark *) {
+  scrollbar-color: var(--color-tokyo-border) transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-stone-400);
+  border-radius: 4px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-tokyo-blue);
+}
+:where(.dark, .dark *)::-webkit-scrollbar-thumb {
+  background-color: var(--color-tokyo-border);
+}
+:where(.dark, .dark *)::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-tokyo-blue);
+}
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}

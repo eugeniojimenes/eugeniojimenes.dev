@@ -1,23 +1,20 @@
 ---
 layout: index
 title: "EugenioJimenes.dev"
-locale: pt_BR
-main_image: /assets/images/eu.webp
-image: /assets/images/eu.webp
+locale: en_US
+main_image: /assets/images/eu-v2.webp
+image: /assets/images/eu-v2.webp
 description: >-
-  Desenvolvedor, nerd, disléxico, linux fanboy, viciado/hipster em café e
-  esquerdopata convicto - CallMarx, sacou?
+  Senior Ruby on Rails Engineer, 8+ yrs Rails, dyslexic, linux fanboy,
+  coffee hipster/addict.
 pagination:
   enabled: true
-  locale: pt_BR
+  locale: en_US
 
 ---
 
 ## Eugenio A. Jimenes
 
-Desenvolvedor, nerd, disléxico, linux *fanboy*, viciado/*hipster* em café e esquerdopata convicto -
-**CallMarx**, sacou?
+Senior Ruby on Rails Engineer, 8+ yrs Rails, based in Brazil (UTC−3), open to remote roles in English-speaking teams. Career break since Jan 2026, prepping for senior remote.
 
-Bacharel em Ciências da Computação pela USP, trabalho na área desde 2012. Apesar
-de curioso e apaixonado por tecnologias, mantenho minha relação dúbia de *“Credo, que delícia!”* com
-TI, na clássica batalha de gerir expectativas, foco e frustrações.
+Bachelor's degree in Computer Science from University of São Paulo. Working in the area since 2012. Despite being curious and passionate about technology I maintain my ambiguous **"Pain and joy"** relationship with IT in the classic battle of managing expectations, focus, and frustration.
