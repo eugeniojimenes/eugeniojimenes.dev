@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Personal blog at https://callmarx.dev — Jekyll + Tailwind + Hotwire, deployed on Netlify. This file orients Claude (and future-me) on conventions and workflows specific to this repo.
+Personal blog at https://eugeniojimenes.dev — Jekyll + Tailwind v4 + Hotwire, deployed on Netlify. Terminal-flavored UI, Tokyo Night dark theme by default with a beige light mode. This file orients Claude (and future-me) on conventions and workflows specific to this repo.
 
 ## Stack snapshot
 
@@ -19,28 +19,30 @@ See "Upgrade backlog" at bottom — most pins are behind latest.
 
 ```
 src/
-├── _config.yml           # Jekyll site config (PT-BR is default locale)
+├── _config.yml           # Jekyll site config (EN is default locale)
 ├── _data/
 │   ├── translations.yml  # i18n strings keyed by `en_US` / `pt_BR`
 │   └── social-networks.yml
-├── _includes/            # header, footer, analytics, translate-icon, etc.
-├── _layouts/             # default | index | post | autopages_tags
+├── _includes/            # header, footer, analytics, translate-icon, listed-post, etc.
+├── _layouts/             # default | index | post | about | autopages_tags
 ├── _plugins/
 │   └── tag_page_plugin.rb  # generates /tags/:slug for both locales
 ├── assets/
+│   ├── favicon.svg       # terminal-style SVG favicon
 │   ├── main.js           # Webpack entry — imports main.css + Turbo + Stimulus auto-loader
-│   ├── main.css          # Tailwind v4 CSS-first config (@theme, @utility prose-custom, @custom-variant dark) + custom utilities (.align-*, .note-*)
-│   ├── js/controllers/   # Stimulus controllers (dark_mode_controller.js)
+│   ├── main.css          # Tailwind v4 CSS-first config (@theme, @utility prose-custom, @custom-variant dark) + Tokyo Night palette + CRT scanlines/grain overlay + custom utilities
+│   ├── js/controllers/   # Stimulus: dark_mode, command_palette, copy_code
+│   ├── gifs/             # animated assets
 │   └── css/syntax-highlight/  # Rouge theme (highcontrast-monokai)
-├── index.md              # PT-BR home (default locale)
-├── pt-br/
-│   ├── about.md
-│   ├── _posts/           # PT-BR posts
-│   └── tags/             # tag index
-└── en/
+├── index.md              # EN home (default locale)
+├── about.md              # EN about
+├── search.json           # post index consumed by command palette (Cmd/Ctrl+K)
+├── _posts/               # EN posts
+├── tags/                 # EN tag index
+└── pt-br/
     ├── about.md
     ├── index.md
-    ├── _posts/           # EN posts
+    ├── _posts/           # PT-BR posts
     └── tags/
 bin/
 ├── dev    # foreman start -f Procfile.dev (jekyll + webpack watchers)
@@ -65,7 +67,7 @@ Direct npm scripts (rarely needed):
 
 ## Authoring posts (bilingual)
 
-Every post is **paired**: write the PT-BR version in `src/pt-br/_posts/` AND the EN version in `src/en/_posts/`. Same date, same slug-style filename. The header's translate-icon links between them via the `lang-ref` field — if you forget to pair, the toggle becomes a dead link.
+Every post is **paired**: write the EN version in `src/_posts/` AND the PT-BR version in `src/pt-br/_posts/`. Same date, same slug-style filename. The header's translate-icon links between them via the `lang-ref` field — if you forget to pair, the toggle becomes a dead link.
 
 Filename: `YYYY-MM-DD-slug.md` (slug differs per language — e.g. `etags-in-rails.md` vs `etags-no-rails.md`).
 
@@ -96,19 +98,22 @@ Body conventions:
 
 ## i18n internals
 
-- Default locale = PT-BR. EN routes live under `/en/`.
-- `page.locale` (`pt_BR` | `en_US`) drives all translation lookups via `site.data.translations[key][page.locale]`.
+- Default locale = EN (at root `/`). PT-BR routes live under `/pt-br/`.
+- `page.locale` (`en_US` | `pt_BR`) drives all translation lookups via `site.data.translations[key][page.locale]`.
+- `<html lang>` is derived from `page.url` (paginate-v2 mangles `page.locale` on paginated pages).
 - Add a new translatable string by editing `src/_data/translations.yml` — both keys required.
-- `_includes/translate-icon.html` resolves the cross-language URL: posts via `lang-ref` match, regular pages by URL prefix (`/en/` ↔ `/`).
+- `_includes/translate-icon.html` resolves the cross-language URL: posts via `lang-ref` match, regular pages by URL prefix (`/` ↔ `/pt-br/`).
 - The custom `tag_page_plugin.rb` generates a `/tags/:slug` page per language for every tag found in `site.tags`.
+- Netlify `_redirects` keep old `/en/*` paths 301'd to the new root.
 
 ## Layouts
 
 | Layout | Use |
 |---|---|
-| `default` | shell — head, header, footer wrapper |
-| `index` | home page (avatar + about blurb + paginated post list inside `<turbo-frame id="listing-posts">`) |
-| `post` | article view (title, date, hero image, prose) |
+| `default` | shell — head, header, footer, command-palette dialog (`data-turbo-permanent`) |
+| `index` | home page (terminal hero `$ whoami` + bio + `[ ~/posts ]` / `[ resume.pdf ↗ ]` CTAs + paginated post list under `$ ls ~/posts/` inside `<turbo-frame id="listing-posts">`) |
+| `about` | about page wrapper |
+| `post` | article view (sans-serif body, Tokyo palette for code/links) |
 | `autopages_tags` | per-tag landing page (rendered by `tag_page_plugin.rb`) |
 
 Pagination uses `jekyll-paginate-v2` (`per_page: 4`, descending by date), wrapped in a Turbo Frame so prev/next never reloads the page.
@@ -117,13 +122,17 @@ Pagination uses `jekyll-paginate-v2` (`per_page: 4`, descending by date), wrappe
 
 - Webpack entry: `src/assets/main.js` → emits `src/assets/main-bundle.js` + `main-bundle.css` (extracted via `mini-css-extract-plugin`).
 - CSS pipeline: `css-loader` → `@tailwindcss/webpack` (no PostCSS, no `postcss.config.js`, no `tailwind.config.js`). All Tailwind setup lives in `src/assets/main.css`.
-- Stimulus controllers auto-loaded from `src/assets/js/controllers/**/*.js` via `@hotwired/stimulus-webpack-helpers`.
+- Stimulus controllers auto-loaded from `src/assets/js/controllers/**/*.js` via `@hotwired/stimulus-webpack-helpers`:
+  - `dark_mode_controller` — flips `.dark` on `<html>`, persists in `localStorage.theme`. Dark is default (no OS-pref fallback).
+  - `command_palette_controller` — `Cmd/Ctrl+K` opens CLI-style search dialog; fetches `/search.json`, filters by current `<html lang>`, arrow-keys + Enter to navigate via `Turbo.visit`, Esc / backdrop to close. Dialog markup lives in `_layouts/default.html` with `data-turbo-permanent`.
+  - `copy_code_controller` — per-block copy button on Rouge code blocks. `main.js` re-attaches it after `turbo:load` / `turbo:render` so new blocks pick it up across Turbo navs.
 - Tailwind config — declared inside `src/assets/main.css`:
   - `@import "tailwindcss"` + `@plugin "@tailwindcss/typography"`.
-  - `@custom-variant dark (&:where(.dark, .dark *))` — class-strategy dark mode (toggled by dark-mode controller, persisted in `localStorage.theme`; FOUC guard in `_includes/head-darkmode-check.html`).
-  - `@theme {}` block: custom `beige` palette (`--color-beige-*`), `xs` breakpoint (`--breakpoint-xs: 28rem`), `--spacing-112`, `--font-marker`, `--font-codepro`.
-  - `@utility prose-custom` defines all `--tw-prose-*` tokens (typography plugin v4 entrypoint).
-  - Fonts: `Permanent Marker` (`font-marker`), `Source Code Pro` (`font-codepro`) — loaded from Google Fonts in `_layouts/default.html`.
+  - `@custom-variant dark (&:where(.dark, .dark *))` — class-strategy dark mode (toggled by `dark_mode_controller`, persisted in `localStorage.theme`; FOUC guard in `_includes/head-darkmode-check.html`).
+  - `@theme {}` block: Tokyo Night palette (`--color-tokyo-*`: bg `#1a1b26`, fg `#c0caf5`, accents `#7aa2f7` / `#9ece6a` / `#f7768e`), beige "paper" palette for light mode, `xs` breakpoint, `--spacing-112`, `--font-marker`, `--font-codepro` (aliased to Geist Mono).
+  - CRT scanlines + grain overlay (dark only) via `body::before` / `body::after`.
+  - `@utility prose-custom` defines all `--tw-prose-*` tokens (prose-invert repointed to Tokyo palette).
+  - Fonts: `Geist Mono` (body/UI, exposed as `font-codepro`), `Permanent Marker` (wordmark accent, `font-marker`) — loaded from Google Fonts in `_layouts/default.html`. Post bodies use `font-sans` for long-form readability.
 - `main-bundle.*` is gitignored — webpack must run before Jekyll (the `bin/build` script and Netlify config both order it that way).
 
 ## Commit / branch conventions
@@ -152,12 +161,3 @@ Pagination uses `jekyll-paginate-v2` (`per_page: 4`, descending by date), wrappe
 - Don't add a post in only one language unless it's intentional (the translate icon goes dead).
 - Don't reuse a `lang-ref` value across unrelated posts — it's the join key for translation pairs.
 - Don't change `develop` branch protection without remembering there's no `main` to fall back to.
-
-## Upgrade backlog (May 2026)
-
-Stack pins are current. Remaining cleanup:
-
-| Component | Current | Latest | Notes |
-|---|---|---|---|
-| Twitter link | active | dead-ish | `twitter.com/callmarx_dev` → consider X domain or remove. |
-| `deploy` branch | stale | — | delete locally + on origin. |

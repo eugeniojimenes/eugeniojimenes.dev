@@ -2,16 +2,18 @@
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-lightblue)](/code_of_conduct.md)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
-# My blog
+# eugeniojimenes.dev
 
-I finally built it in my own domain with Jekyll, Tailwind and Turbo Frame. Deployed it with Netlify.
+Personal blog at [eugeniojimenes.dev](https://eugeniojimenes.dev) — terminal-flavored, Tokyo Night dark theme by default, with a beige light mode. Built with Jekyll, Tailwind CSS v4, and Hotwire (Turbo + Stimulus). Deployed on Netlify.
 
-## To Do
+## Features
 
-  - ~~Dark mode layout~~ --> Done!
-  - Mult Language
-  - Retire my old GithubPage (redirect each link to my domain)
-  - Smooth scrolling to anchor links
+- Bilingual (EN default, PT-BR under `/pt-br/`) with paired posts and a translate toggle
+- Terminal aesthetic: Geist Mono UI, `$ ls ~/posts/` headers, `--tag` flag-style tag chips
+- `Cmd/Ctrl+K` command palette for fuzzy post search
+- Per-block copy button on code snippets
+- Dark mode by default, light mode opt-in (persisted in `localStorage`)
+- Turbo morph + View Transitions for instant navigation
 
 ## Licence
 Licensed under 3-Clause BSD, see [LICENSE](/LICENSE).
