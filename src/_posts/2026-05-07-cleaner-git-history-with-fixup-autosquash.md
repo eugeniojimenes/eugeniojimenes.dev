@@ -71,7 +71,7 @@ pick   789abcd  feat(article): Add ArticleController
 
 Save and close. The fix collapses into `abc1234`, the `fixup!` message is dropped and the original commit message survives untouched. Clean and readable history.
 
-![mind blown - gif](/assets/images/cosmo-kramer-mind-blown.gif){: .align-center}
+![mind blown - gif](/assets/gifs/cosmo-kramer-mind-blown.gif){: .align-center}
 
 ## `fixup` vs `squash`
 
@@ -157,7 +157,7 @@ Merging *after* `git rebase -i --autosquash origin/main`:
 
 So if your team squash-merges, the long-term `git log` payoff vanishes, but the **review experience** still wins. Reviewers read commit-by-commit on the PR's "Commits" tab and see a clean story: `Add User model` → `Add Article model` → `Add ArticleController`. It's better than the same three commits plus a `fixup! Add User model` floating at the end. Faster review, less mental load.
 
-![Ok - gif](/assets/images/ok-computer-boy.gif){: .align-center}
+![Ok - gif](/assets/gifs/ok-computer-boy.gif){: .align-center}
 
 ## References
  - <https://git-scm.com/docs/git-commit>
