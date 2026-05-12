@@ -15,6 +15,6 @@ pagination:
 
 ## Eugenio A. Jimenes
 
-Engenheiro Sênior Ruby on Rails, 8+ anos de Rails, baseado no Brasil (UTC−3), aberto a vagas remotas em times de língua inglesa. Pausa de carreira desde jan/2026, me preparando para vagas sênior remotas.
+Engenheiro Sênior Ruby on Rails, 8+ anos de Rails, baseado no Brasil (UTC−3), aberto a vagas remotas em times de língua inglesa. Pausa de carreira desde jan/2026 para transição a vagas remotas internacionais.
 
 Bacharel em Ciências da Computação pela USP, trabalho na área desde 2012. Apesar de curioso e apaixonado por tecnologias, mantenho minha relação dúbia de *“Credo, que delícia!”* com TI, na clássica batalha de gerir expectativas, foco e frustrações.

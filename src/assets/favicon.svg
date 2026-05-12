@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>
+    .bg { fill: #1a1b26; }
+    .prompt { fill: #9ece6a; }
+    .cursor { fill: #c0caf5; }
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #faf6ee; }
+      .prompt { fill: #5a8a3a; }
+      .cursor { fill: #2a2a2a; }
+    }
+  </style>
+  <rect class="bg" width="32" height="32" rx="6"/>
+  <text x="5" y="23" class="prompt"
+        font-family="ui-monospace, 'Geist Mono', 'SF Mono', Menlo, monospace"
+        font-size="18" font-weight="700">$</text>
+  <rect class="cursor" x="17" y="19" width="9" height="3" rx="0.5">
+    <animate attributeName="opacity" values="1;1;0;0" dur="1.1s" repeatCount="indefinite"/>
+  </rect>
+</svg>

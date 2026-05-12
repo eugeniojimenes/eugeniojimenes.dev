@@ -19,7 +19,7 @@ Rails, Ruby, JavaScript/TypeScript, Vue.js, Node.js, PostgreSQL, MongoDB, Redis,
 
 <div class="not-prose font-mono text-sm md:text-base text-stone-600 dark:text-tokyo-fg-dim mt-8 mb-2"><span class="text-tokyo-green">eugenio@dev</span><span class="text-stone-500 dark:text-tokyo-fg-dim">:</span><span class="text-tokyo-blue">~</span><span class="text-stone-500 dark:text-tokyo-fg-dim">$</span> cat now.md</div>
 
-Brasil (UTC−3). Aberto a vagas remotas em times de língua inglesa. Pausa de carreira desde jan/2026, me preparando para vagas sênior remotas.
+Brasil (UTC−3). Aberto a vagas remotas em times de língua inglesa. Pausa de carreira desde jan/2026 para transição a vagas remotas internacionais.
 
 <div class="not-prose font-mono text-sm md:text-base text-stone-600 dark:text-tokyo-fg-dim mt-8 mb-2"><span class="text-tokyo-green">eugenio@dev</span><span class="text-stone-500 dark:text-tokyo-fg-dim">:</span><span class="text-tokyo-blue">~</span><span class="text-stone-500 dark:text-tokyo-fg-dim">$</span> cat trivia.md</div>
 

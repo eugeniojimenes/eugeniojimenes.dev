@@ -15,6 +15,6 @@ pagination:
 
 ## Eugenio A. Jimenes
 
-Senior Ruby on Rails Engineer, 8+ yrs Rails, based in Brazil (UTC−3), open to remote roles in English-speaking teams. Career break since Jan 2026, prepping for senior remote.
+Senior Ruby on Rails Engineer, 8+ yrs Rails, based in Brazil (UTC−3), open to remote roles in English-speaking teams. Career break since Jan 2026 to transition into international remote roles.
 
 Bachelor's degree in Computer Science from University of São Paulo. Working in the area since 2012. Despite being curious and passionate about technology I maintain my ambiguous **"Pain and joy"** relationship with IT in the classic battle of managing expectations, focus, and frustration.
