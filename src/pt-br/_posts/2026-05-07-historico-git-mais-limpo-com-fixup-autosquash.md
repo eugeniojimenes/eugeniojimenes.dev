@@ -71,7 +71,7 @@ pick   789abcd  feat(article): Add ArticleController
 
 Salve e feche. A correção colapsa dentro do `abc1234`, a mensagem do `fixup!` é descartada e a mensagem original do commit sobrevive intacta. Histórico limpo e legivel.
 
-![mind blown - gif](/assets/images/cosmo-kramer-mind-blown.gif){: .align-center}
+![mind blown - gif](/assets/gifs/cosmo-kramer-mind-blown.gif){: .align-center}
 
 ## `fixup` vs `squash`
 
@@ -156,7 +156,7 @@ Mergeando *depois* de `git rebase -i --autosquash origin/main`:
 
 Então, se seu time usa squash-merge, o ganho de longo prazo no `git log` desaparece, mas a **experiência de review** continua valendo. Os revisores leem commit por commit na aba "Commits" do PR e veem uma narrativa limpa: `Add User model` → `Add Article model` → `Add ArticleController`, melhor do que esses três mais um `fixup! Add User model` flutuando no fim. Review mais rápida, menos carga mental.
 
-![Ok - gif](/assets/images/ok-computer-boy.gif){: .align-center}
+![Ok - gif](/assets/gifs/ok-computer-boy.gif){: .align-center}
 
 ## Referências
  - <https://git-scm.com/docs/git-commit>

@@ -127,7 +127,7 @@ O primeiro é óbvio: tenho um dataset real dos meus próprios erros de inglês,
 
 O segundo é menos óbvio: é uma vitrine pequena do que hooks `Stop` conseguem fazer quando você para de pensar neles como "rodar um linter depois de todo turno" e começa a pensar neles como "extrair dado estruturado da própria conversa". O transcript é só um JSONL no disco. O sentinela em comentário HTML é só um jeito de contrabandear dado legível por máquina por uma UI que o esconde. Tem muito espaço pra brincar.
 
-![ok - gif](/assets/images/ok-computer-boy.gif){: .align-center}
+![proud of you - gif](/assets/gifs/proud-of-you.gif){: .align-center}
 
 ## Referências
  - <https://docs.claude.com/en/docs/claude-code/hooks>

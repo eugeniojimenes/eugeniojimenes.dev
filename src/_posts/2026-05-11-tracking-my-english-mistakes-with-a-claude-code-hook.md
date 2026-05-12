@@ -127,7 +127,7 @@ The first one is obvious: I get a real dataset of my own English mistakes, group
 
 The second is less obvious: it's a tiny showcase of what `Stop` hooks can do when you stop thinking of them as "run a linter after every turn" and start thinking of them as "scrape structured data out of the conversation itself". The transcript is just JSONL on disk. The HTML-comment sentinel is just a way to smuggle machine-readable data through a UI that strips it. There is a lot of room to play here.
 
-![ok - gif](/assets/images/ok-computer-boy.gif){: .align-center}
+![proud of you - gif](/assets/gifs/proud-of-you.gif){: .align-center}
 
 ## References
  - <https://docs.claude.com/en/docs/claude-code/hooks>
