@@ -1,16 +1,19 @@
 <turbo-frame id="listing-posts" class="flex flex-col">
   {% assign cur_page = page.pagination_info.curr_page | default: 1 %}
+  {% assign per_page = paginator.per_page | default: 4 %}
   {% if page.selected_tag and page.selected_tag != 'index' %}
-    {% assign prompt_cmd = "--tag " | append: page.selected_tag %}
-    {% if cur_page > 1 %}{% assign prompt_cmd = prompt_cmd | append: " --page " | append: cur_page %}{% endif %}
-  {% elsif cur_page > 1 %}
-    {% assign prompt_cmd = "--page " | append: cur_page %}
+    {% assign prompt_cmd = 'grep -li "' | append: page.selected_tag | append: '" ~/posts/*.md' %}
   {% else %}
-    {% assign prompt_cmd = "--all" %}
+    {% assign prompt_cmd = "ls -lha ~/posts/" %}
+  {% endif %}
+  {% if cur_page > 1 %}
+    {% assign slice_start = cur_page | minus: 1 | times: per_page | plus: 1 %}
+    {% assign slice_end = cur_page | times: per_page %}
+    {% assign prompt_cmd = prompt_cmd | append: " | sed -n '" | append: slice_start | append: "," | append: slice_end | append: "p'" %}
   {% endif %}
 
   <div class="font-mono text-sm md:text-base text-stone-600 dark:text-tokyo-fg-dim mb-4 lg:w-11/12 self-center w-full">
-    <span class="text-tokyo-green">eugenio@dev</span><span class="text-stone-500 dark:text-tokyo-fg-dim">:</span><span class="text-tokyo-blue">~</span><span class="text-stone-500 dark:text-tokyo-fg-dim">$</span> postlist {{ prompt_cmd }}<span class="cursor-blink"></span>
+    <span class="text-tokyo-green">eugenio@dev</span><span class="text-stone-500 dark:text-tokyo-fg-dim">:</span><span class="text-tokyo-blue">~</span><span class="text-stone-500 dark:text-tokyo-fg-dim">$</span> {{ prompt_cmd }}<span class="cursor-blink"></span>
   </div>
 
   <div class="self-center w-full lg:w-11/12 flex flex-row-reverse sm:flex-row items-center mb-2">
