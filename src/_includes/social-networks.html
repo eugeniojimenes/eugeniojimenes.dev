@@ -1,5 +1,6 @@
 {% for network in site.data.social-networks %}
-  <a class="inline-flex items-center justify-center w-11 h-11 mr-1 text-black dark:text-gray-200 hover:opacity-40 transition duration-200 ease-in-out [&>svg]:w-8 [&>svg]:h-8" href="{{ network.link }}" rel="noopener noreferrer nofollow" target="_blank" aria-label="{{ network.name | default: 'Social link' }}" data-tip="{{ network.name | default: 'Social link' }}">
+  {% if network.name == 'Resume' and page.url contains '/pt-br' %}{% assign network_link = network.link | replace: 'resume.pdf', 'resume-pt-br.pdf' %}{% else %}{% assign network_link = network.link %}{% endif %}
+  <a class="inline-flex items-center justify-center w-11 h-11 mr-1 text-black dark:text-gray-200 hover:opacity-40 transition duration-200 ease-in-out [&>svg]:w-8 [&>svg]:h-8" href="{{ network_link }}" rel="noopener noreferrer nofollow" target="_blank" aria-label="{{ network.name | default: 'Social link' }}" data-tip="{{ network.name | default: 'Social link' }}">
     {{ network.logo }}
   </a>
 {% endfor %}
