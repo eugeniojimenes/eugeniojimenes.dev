@@ -161,3 +161,4 @@ Pagination uses `jekyll-paginate-v2` (`per_page: 4`, descending by date), wrappe
 - Don't add a post in only one language unless it's intentional (the translate icon goes dead).
 - Don't reuse a `lang-ref` value across unrelated posts — it's the join key for translation pairs.
 - Don't change `develop` branch protection without remembering there's no `main` to fall back to.
+- Don't use em-dashes (`—`, `–`, or ` — `) in site copy, bios, or any prose written for the user. Join clauses with commas or split into separate sentences instead.
