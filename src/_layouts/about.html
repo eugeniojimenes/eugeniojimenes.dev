@@ -12,7 +12,7 @@ layout: default
   </div>
 
   <div class="font-mono text-sm md:text-base text-stone-600 dark:text-tokyo-fg-dim mb-2">
-    <span class="text-tokyo-green">eugenio@dev</span><span class="text-stone-500 dark:text-tokyo-fg-dim">:</span><span class="text-tokyo-blue">~</span><span class="text-stone-500 dark:text-tokyo-fg-dim">$</span> cat ~/about.md
+    <span class="text-tokyo-green">eugenio@dev</span><span class="text-stone-500 dark:text-tokyo-fg-dim">:</span><span class="text-tokyo-blue">~</span><span class="text-stone-500 dark:text-tokyo-fg-dim">$</span> cat ~/{{ page.terminal_file | default: 'about.md' }}
   </div>
 
   <div class="prose prose-custom prose-base md:prose-lg lg:prose-2xl dark:prose-invert">

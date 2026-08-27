@@ -15,6 +15,6 @@ pagination:
 
 ## Eugenio A. Jimenes
 
-Senior Ruby on Rails Engineer, 8+ yrs Rails, based in Brazil (UTC−3), open to remote roles in Brazil and abroad, comfortable in English-speaking or Portuguese-speaking teams. Career break since Jan 2026: focused study and upskilling in system design, data structures and algorithms, Ruby on Rails internals, and English fluency (target: C1).
+Senior Ruby on Rails Engineer, 8+ yrs Rails, based in Brazil (UTC−3), working fully remote. Currently a Senior Software Engineer at [Jaya Tech](https://jaya.tech), allocated to [Pipefy](https://www.pipefy.com) (a workflow automation SaaS).
 
 Bachelor's degree in Computer Science from University of São Paulo. Working in the area since 2012. Despite being curious and passionate about technology I maintain my ambiguous **"Pain and joy"** relationship with IT in the classic battle of managing expectations, focus, and frustration.

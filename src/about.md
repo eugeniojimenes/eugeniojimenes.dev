@@ -19,7 +19,7 @@ Rails, Ruby, JavaScript/TypeScript, Vue.js, Node.js, PostgreSQL, MongoDB, Redis,
 
 <div class="not-prose font-mono text-sm md:text-base text-stone-600 dark:text-tokyo-fg-dim mt-8 mb-2"><span class="text-tokyo-green">eugenio@dev</span><span class="text-stone-500 dark:text-tokyo-fg-dim">:</span><span class="text-tokyo-blue">~</span><span class="text-stone-500 dark:text-tokyo-fg-dim">$</span> cat now.md</div>
 
-Based in Brazil (UTC−3). Open to remote roles in Brazil and abroad, comfortable in English-speaking or Portuguese-speaking teams. Career break since Jan 2026: focused study and upskilling in system design, data structures and algorithms, Ruby on Rails internals, and English fluency (target: C1).
+Senior Software Engineer at [Jaya Tech](https://jaya.tech), allocated to [Pipefy](https://www.pipefy.com) (a workflow automation SaaS). Based in Brazil (UTC−3), fully remote, comfortable in English-speaking or Portuguese-speaking teams.
 
 <div class="not-prose font-mono text-sm md:text-base text-stone-600 dark:text-tokyo-fg-dim mt-8 mb-2"><span class="text-tokyo-green">eugenio@dev</span><span class="text-stone-500 dark:text-tokyo-fg-dim">:</span><span class="text-tokyo-blue">~</span><span class="text-stone-500 dark:text-tokyo-fg-dim">$</span> cat trivia.md</div>
 
